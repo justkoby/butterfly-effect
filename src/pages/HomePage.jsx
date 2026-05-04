@@ -37,20 +37,21 @@ export default function HomePage() {
                 Butterfly Effect Concepts
               </span>
               <h1 style={{
-                fontSize: isMobile ? '38px' : '64px',
+                fontSize: isMobile ? '36px' : '58px',
                 fontWeight: 700,
-                lineHeight: 1.08,
+                lineHeight: 1.1,
                 letterSpacing: '-0.02em',
                 color: '#ffffff',
                 margin: 0
               }}>
-                We build visual systems for brands.
+                We build visual systems for brands — across packaging, campaigns, and digital platforms.
               </h1>
             </div>
 
             <p style={{ color: 'rgba(255, 255, 255, 0.85)', fontSize: '1.15rem', lineHeight: 1.55, maxWidth: '600px', margin: 0 }}>
-              From packaging to websites, we design experiences that bring clarity and presence to brands.
+              From product packaging to digital platforms, we design experiences that bring clarity and presence to brands.
             </p>
+
 
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.25rem' }}>
               <Link to="/contact" className="cta-button" style={{ background: '#ffffff', color: '#0A0A0A', border: '1px solid #ffffff' }}>
