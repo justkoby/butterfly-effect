@@ -6,7 +6,7 @@ import ServicesPage from './pages/ServicesPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ContactPage from './pages/ContactPage';
 import ProjectDetailPage from './pages/ProjectDetailPage';
-import { ArrowRight, MessageCircle } from 'lucide-react';
+import { ArrowRight, MessageCircle, ShoppingBag, ArrowUpRight } from 'lucide-react';
 import './App.css';
 
 // Component to scroll to top on route change
@@ -20,6 +20,7 @@ function ScrollToTop() {
 
 export default function App() {
   const [showWA, setShowWA] = useState(false);
+  const [activeMenu, setActiveMenu] = useState(null); // 'pages' or null
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,19 +39,19 @@ export default function App() {
       <ScrollToTop />
 
       {/* Main Navigation Header */}
-      <header className="main-header">
+      <header 
+        className="main-header"
+        onMouseLeave={() => setActiveMenu(null)}
+      >
         <div className="header-inner">
           <Link to="/" className="logo-wrapper">
-            <span className="logo-text">Butterfly Effect</span>
+            <img src="/butterfly - logo.png" alt="Butterfly Effect" style={{ height: '36px', width: 'auto', display: 'block' }} />
           </Link>
 
-          <nav>
+          <nav className="main-nav">
             <ul className="nav-links">
-              <li>
-                <NavLink to="/" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
-                  Home
-                </NavLink>
-              </li>
+
+
               <li>
                 <NavLink to="/projects" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
                   Work
@@ -74,12 +75,15 @@ export default function App() {
             </ul>
           </nav>
 
-          <div className="nav-cta">
-            <Link to="/contact" className="cta-button">
-              Start a Project <ArrowRight size={18} />
+          <div className="header-actions">
+
+            <Link to="/contact" className="circular-cta" aria-label="Start a project">
+              <ArrowUpRight size={20} />
             </Link>
           </div>
         </div>
+
+
       </header>
 
       {/* Main Content Router */}
@@ -96,43 +100,37 @@ export default function App() {
       </main>
 
       {/* Main Simplified Footer */}
-      <footer className="main-footer">
-        <div className="footer-top">
-          <div className="footer-brand">
-            <h3 className="logo-text">Butterfly Effect</h3>
-            <p>
-              We build visual systems for brands — across packaging, campaigns, and digital platforms.
-            </p>
-            <div className="social-icons">
-              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="social-link" aria-label="Facebook">FB</a>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="social-link" aria-label="Instagram">IG</a>
-              <a href="https://behance.net" target="_blank" rel="noreferrer" className="social-link" aria-label="Behance">BE</a>
+      <footer style={{ background: '#0A0A0A', color: '#FFFFFF', padding: '80px 0 40px' }}>
+        <div className="section-container">
+          <div className="footer-grid-black" style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr 1fr', gap: '3rem', marginBottom: '4rem' }}>
+            <div>
+              <h3 style={{ fontSize: '1.4rem', color: '#FFFFFF', margin: '0 0 1.5rem' }}>Butterfly Effect</h3>
+              <p style={{ color: 'rgba(255, 255, 255, 0.6)', fontSize: '0.95rem', lineHeight: 1.6, maxWidth: '320px', margin: 0 }}>
+                We build visual systems for brands — across packaging, campaigns, and digital platforms.
+              </p>
+            </div>
+            <div>
+              <h4 style={{ fontSize: '1rem', color: '#FFFFFF', margin: '0 0 1.5rem', fontWeight: 600 }}>Get in Touch</h4>
+              <a href="mailto:kobbydarko2016@gmail.com" style={{ display: 'block', color: 'rgba(255, 255, 255, 0.6)', fontSize: '0.95rem', margin: '0 0 0.75rem' }}>kobbydarko2016@gmail.com</a>
+              <span style={{ color: 'rgba(255, 255, 255, 0.6)', fontSize: '0.95rem' }}>+233546379235</span>
+            </div>
+            <div>
+              <h4 style={{ fontSize: '1rem', color: '#FFFFFF', margin: '0 0 1.5rem', fontWeight: 600 }}>Social Media</h4>
+              <div style={{ display: 'flex', gap: '1.5rem', fontSize: '0.95rem' }}>
+                <a href="https://wa.me/233546379235" target="_blank" rel="noreferrer" style={{ color: 'rgba(255, 255, 255, 0.6)' }}>WhatsApp</a>
+                <a href="https://instagram.com" target="_blank" rel="noreferrer" style={{ color: 'rgba(255, 255, 255, 0.6)' }}>Instagram</a>
+                <a href="https://behance.net" target="_blank" rel="noreferrer" style={{ color: 'rgba(255, 255, 255, 0.6)' }}>Behance</a>
+              </div>
             </div>
           </div>
-
-          <div className="footer-nav">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/projects">Work</Link></li>
-              <li><Link to="/services">What We Build</Link></li>
-              <li><Link to="/about">About Us</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
-            </ul>
+          <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.1)', paddingTop: '3rem', textAlign: 'center' }}>
+            <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 7rem)', color: 'rgba(255, 255, 255, 0.9)', margin: 0, fontWeight: 800, letterSpacing: '-0.02em', textTransform: 'uppercase' }}>
+              BUTTERFLY EFFECT
+            </h2>
+            <div style={{ marginTop: '2rem', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.4)' }}>
+              &copy; {new Date().getFullYear()} Butterfly Effect Concepts. All rights reserved.
+            </div>
           </div>
-
-          <div className="footer-nav">
-            <h4>Contact Details</h4>
-            <ul>
-              <li><a href="mailto:kobbydarko2016@gmail.com">kobbydarko2016@gmail.com</a></li>
-              <li><span>Accra, Ghana</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="footer-bottom">
-          <span>&copy; {new Date().getFullYear()} Butterfly Effect Concepts. All rights reserved.</span>
-          <span>Powered by React & Vite.</span>
         </div>
       </footer>
 
