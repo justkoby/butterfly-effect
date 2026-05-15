@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ArrowUpRight, CheckCircle2, Award, Briefcase, Eye, Move, Palette, Sparkles, MessageCircle } from 'lucide-react';
-import JellyfishSimulation from '../components/JellyfishSimulation';
 import FireWallSimulation from '../components/FireWallSimulation';
+import WorkSlideshow from '../components/WorkSlideshow';
 
 
 export default function HomePage() {
@@ -128,7 +128,7 @@ export default function HomePage() {
             alignItems: 'center'
           }}>
             <div style={{ flex: '1', position: 'relative', borderRadius: '32px', overflow: 'hidden', height: isMobile ? '320px' : '520px', background: '#000', width: isMobile ? '100%' : '50%' }}>
-              <JellyfishSimulation />
+              <WorkSlideshow />
             </div>
             <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: '2rem', width: isMobile ? '100%' : '50%' }}>
               <p style={{ 

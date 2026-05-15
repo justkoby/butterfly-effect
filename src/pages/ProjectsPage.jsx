@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight, ArrowRight } from 'lucide-react';
+import WorkSlideshow from '../components/WorkSlideshow';
 
 const portfolioProjects = [
   {
     id: 'vianexta',
     title: 'ViaNexta',
-    category: 'Digital Platform',
+    category: 'Websites',
     role: 'UI/UX Design & Development',
     description: 'AI-powered supply chain platform designed to simplify product creation and distribution.',
     link: 'https://vianexta.com',
@@ -15,7 +16,7 @@ const portfolioProjects = [
   {
     id: 'global-student-forum',
     title: 'Global Student Forum',
-    category: 'Digital Platform',
+    category: 'Websites',
     role: 'UI/UX Design',
     description: 'Global digital platform supporting student leadership, advocacy, and international collaboration.',
     link: 'http://globalstudentforum.org/',
@@ -24,7 +25,7 @@ const portfolioProjects = [
   {
     id: 'foreign-africa',
     title: 'Foreign Africa',
-    category: 'Digital Platform',
+    category: 'Websites',
     role: 'UI/UX Design & Development',
     description: 'A modern web platform connecting African voices, ideas, and opportunities across borders.',
     link: 'https://www.foreignafrica.org/',
@@ -33,7 +34,7 @@ const portfolioProjects = [
   {
     id: 'justice-for-africa',
     title: 'Justice for Africa',
-    category: 'Digital Platform',
+    category: 'Websites',
     role: 'UI/UX Design & Development',
     description: 'A civic-focused platform built to drive awareness, advocacy, and justice-oriented initiatives.',
     link: 'https://justice4africa.org/',
@@ -42,7 +43,7 @@ const portfolioProjects = [
   {
     id: 'all-africa-students-union',
     title: 'All Africa Students Union (AASU)',
-    category: 'Website',
+    category: 'Websites',
     role: 'UI/UX Design & Development',
     description: 'Official digital platform representing student unions across Africa and driving continental initiatives.',
     link: 'https://aasuonline.org/',
@@ -51,7 +52,7 @@ const portfolioProjects = [
   {
     id: 'cosmotech-projects',
     title: 'Cosmotech Projects',
-    category: 'Website',
+    category: 'Websites',
     role: 'UI/UX Design & Development',
     description: 'Corporate website for a technology and infrastructure solutions company in Ghana.',
     link: 'https://www.cosmotechprojects.com/',
@@ -60,7 +61,7 @@ const portfolioProjects = [
   {
     id: 'win-win-coffee',
     title: 'Win Win Coffee',
-    category: 'E-commerce',
+    category: 'Branding',
     role: 'UI/UX Design & Branding',
     description: 'E-commerce platform and brand experience for a specialty coffee business.',
     link: 'https://winwin.coffee/',
@@ -69,7 +70,7 @@ const portfolioProjects = [
   {
     id: 'the-jeans-shop-gh',
     title: 'The Jeans Shop GH',
-    category: 'E-commerce / Fashion Website',
+    category: 'Websites',
     role: 'UI/UX Design & Branding',
     description: 'Fashion e-commerce platform designed to showcase and sell contemporary apparel online.',
     link: 'https://www.thejeansshopgh.com/',
@@ -78,7 +79,7 @@ const portfolioProjects = [
   {
     id: 'ug-src-welfare-scheme',
     title: 'UG SRC Welfare Scheme',
-    category: 'Website',
+    category: 'Websites',
     role: 'UI/UX Design & Branding',
     description: 'Digital platform supporting student welfare services and access to essential resources.',
     link: 'https://ugsrcwelfarescheme.ug.edu.gh/',
@@ -87,7 +88,7 @@ const portfolioProjects = [
   {
     id: 'democrat-union-of-africa',
     title: 'Democrat Union of Africa',
-    category: 'Digital Platform',
+    category: 'Websites',
     role: 'UI/UX Design & Development',
     description: 'Political and organizational platform designed to communicate vision, structure, and initiatives.',
     link: 'https://democratunionofafrica.org/',
@@ -96,7 +97,7 @@ const portfolioProjects = [
   {
     id: 'alice-talk-world',
     title: 'Alice Talk World',
-    category: 'Digital Platform',
+    category: 'Websites',
     role: 'UI/UX Design & Development',
     description: 'A storytelling and media platform focused on conversations, perspectives, and digital engagement.',
     link: 'https://alicetalkworld.org/',
@@ -105,7 +106,7 @@ const portfolioProjects = [
   {
     id: 'rxnetwork',
     title: 'RxNetwork',
-    category: 'Digital Platform',
+    category: 'Websites',
     role: 'UI/UX Design & Development',
     description: 'A digital platform connecting healthcare communication, campaigns, and medical audiences.',
     link: 'https://rxnetwork.net/',
@@ -114,27 +115,82 @@ const portfolioProjects = [
   {
     id: 'the-bag-shop-gh',
     title: 'The Bag Shop GH',
-    category: 'E-commerce / Fashion Website',
+    category: 'Branding',
     role: 'UI/UX Design',
     description: 'E-commerce interface designed to present and sell fashion accessories online.',
     link: 'https://www.thebagshopgh.com/',
     image: 'https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&q=80&w=600'
+  },
+  {
+    id: 'stillwaters-campaign',
+    title: 'Stillwaters',
+    category: 'Campaigns',
+    role: 'Creative Direction & Motion',
+    description: 'Visual campaign and motion graphics for a premium lifestyle brand.',
+    link: '#',
+    image: 'https://images.unsplash.com/photo-1516245834210-c4c142787335?auto=format&fit=crop&q=80&w=600'
+  },
+  {
+    id: 'adonteng-eid',
+    title: 'Adonteng Eid',
+    category: 'Posters',
+    role: 'Graphic Design',
+    description: 'Thematic poster series celebrating cultural heritage and festive joy.',
+    link: '#',
+    image: 'https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&q=80&w=600'
   }
 ];
 
+const filterCategories = ['All', 'Websites', 'Branding', 'Campaigns', 'Packaging', 'Posters', 'Logos'];
+
 export default function ProjectsPage() {
+  const [activeFilter, setActiveFilter] = useState('All');
+
+  const filteredProjects = activeFilter === 'All' 
+    ? portfolioProjects 
+    : portfolioProjects.filter(p => p.category === activeFilter);
+
   return (
     <div className="projects-page">
       <section className="page-section">
         <div className="section-container">
+          <WorkSlideshow height="600px" borderRadius="32px" marginBottom="4rem" />
           <span className="section-subtitle">Our Portfolios</span>
           <h1 className="section-title">Selected Work</h1>
           <p className="section-desc">
             Explore our high-impact visual design systems that enabled distinct brands to build real presence and reach.
           </p>
 
+          <div className="filter-bar" style={{ 
+            display: 'flex', 
+            flexWrap: 'wrap', 
+            gap: '0.75rem', 
+            marginBottom: '3.5rem',
+            marginTop: '1rem' 
+          }}>
+            {filterCategories.map(cat => (
+              <button
+                key={cat}
+                onClick={() => setActiveFilter(cat)}
+                style={{
+                  padding: '0.65rem 1.5rem',
+                  borderRadius: '100px',
+                  fontSize: '0.9rem',
+                  fontWeight: 600,
+                  transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                  background: activeFilter === cat ? '#0A0A0A' : 'transparent',
+                  color: activeFilter === cat ? '#FFFFFF' : '#444444',
+                  border: `1px solid ${activeFilter === cat ? '#0A0A0A' : 'rgba(0,0,0,0.1)'}`,
+                  cursor: 'pointer'
+                }}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+
           <div className="projects-grid">
-            {portfolioProjects.map((proj, idx) => (
+            {filteredProjects.map((proj, idx) => (
               <div className="project-card" key={idx}>
                 <div className="project-visual">
                   <img src={proj.image} alt={proj.title} className="project-img" />
