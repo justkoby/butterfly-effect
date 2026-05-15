@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, ArrowUpRight, ArrowRight } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, ArrowRight, ArrowDown } from 'lucide-react';
 
 const portfolioProjects = [
   {
@@ -168,6 +168,48 @@ const portfolioProjects = [
     outcome: 'A highly effective digital platform that organizes resources and drives medical campaign engagement.'
   },
   {
+    id: 'idbf',
+    title: 'IDBF',
+    category: 'Campaign & Event Design',
+    role: 'Visual Communication & Event Branding',
+    description: 'Comprehensive visual system and promotional collateral for the IDBF international event.',
+    link: '#',
+    image: '/cover-idbf-01.jpg',
+    heroVideo: 'https://res.cloudinary.com/justkoby/video/upload/v1778860137/0515_nyfplc.mp4',
+    overview: 'IDBF required a powerful and cohesive visual identity to support its international event presence.',
+    outcome: 'A successful and visually unified event presence that helped strengthen the brand’s international recognition.',
+    sections: [
+      { type: 'full-image', image: 'https://res.cloudinary.com/justkoby/image/upload/v1778860814/ChatGPT_Image_May_15_2026_03_58_27_PM_huncio.png' },
+      { type: 'text', title: 'Independence Day Basketball Festival', subtitle: 'A vibrant visual system built to capture the energy of a premium international basketball event.' },
+      { type: 'full-image', image: 'https://res.cloudinary.com/justkoby/image/upload/v1778861642/ChatGPT_Image_May_15_2026_04_13_15_PM_bozsj2.png' },
+      { 
+        type: 'grid-2', 
+        items: [
+          { type: 'video', url: 'https://res.cloudinary.com/justkoby/video/upload/v1778845759/0120_qi5blb.mp4' },
+          { type: 'image', url: 'https://res.cloudinary.com/justkoby/image/upload/v1778861754/ChatGPT_Image_May_15_2026_04_15_02_PM_wpjzhz.png' }
+        ] 
+      },
+      { type: 'text', subtitle: 'IDBF 2025 was designed as more than a basketball event. The goal was to create a visual identity system that merged Ghanaian independence culture with the rising energy of basketball among the youth. The project explored how sport, music, food, and community could coexist under one scalable event brand.' },
+      { 
+        type: 'grid-2', 
+        variant: 'portrait',
+        items: [
+          { type: 'video', url: 'https://res.cloudinary.com/justkoby/video/upload/v1778863791/Recording_2025-01-04_155221_ym9fny.mp4' },
+          { type: 'video', url: 'https://res.cloudinary.com/justkoby/video/upload/v1778863795/Recording_2025-01-04_160440_u5dry1.mp4' }
+        ] 
+      },
+      { type: 'text', title: 'The Challenge', subtitle: 'Designing a visual language that feels global and inclusive while maintaining high-energy engagement for a diverse international audience.' },
+      { 
+        type: 'grid-2', 
+        items: [
+          { type: 'image', url: 'https://res.cloudinary.com/justkoby/image/upload/v1778864404/ChatGPT_Image_May_15_2026_04_59_38_PM_p6ingg.png' },
+          { type: 'image', url: 'https://res.cloudinary.com/justkoby/image/upload/v1778864380/Poster-01_qqdbcb.jpg' }
+        ] 
+      },
+      { type: 'full-image', image: 'https://res.cloudinary.com/justkoby/image/upload/v1778865750/ChatGPT_Image_May_15_2026_05_21_02_PM_jfyfb3.png' }
+    ]
+  },
+  {
     id: 'the-bag-shop-gh',
     title: 'The Bag Shop GH',
     category: 'E-commerce / Fashion Website',
@@ -201,218 +243,144 @@ export default function ProjectDetailPage() {
   const nextProject = portfolioProjects[(currentIdx + 1) % portfolioProjects.length];
 
   return (
-    <div className="project-detail-page">
-      {/* 1. PROJECT HERO */}
-      <section className="page-section" style={{ paddingBottom: '3rem' }}>
-        <div className="section-container">
-          <div className="project-hero" style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-            <div className="project-visual" style={{ width: '100%', height: 'clamp(300px, 45vh, 550px)', overflow: 'hidden', borderRadius: 'var(--radius-lg)', position: 'relative' }}>
-              <img
-                src={project.image}
-                alt={project.title}
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              />
-              <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, background: 'linear-gradient(to top, rgba(6,6,8,0.9), transparent)', padding: '2rem' }}></div>
-            </div>
+    <div className="project-detail-page" style={{ background: 'var(--bg-primary)', color: 'var(--text-primary)', width: '100%', overflowX: 'hidden' }}>
+      {/* 1. TOP HERO (Full Width Breakout) */}
+      <div style={{ 
+        width: '100vw', 
+        height: '100vh', 
+        position: 'relative', 
+        left: '50%',
+        right: '50%',
+        marginLeft: '-50vw',
+        marginRight: '-50vw',
+        overflow: 'hidden'
+      }}>
+        {project.heroVideo ? (
+          <video 
+            src={project.heroVideo}
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          />
+        ) : (
+          <img 
+            src={project.image} 
+            alt={project.title} 
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+          />
+        )}
 
-            <div className="project-hero-content" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              <span className="section-subtitle" style={{ color: 'var(--accent-secondary)' }}>{project.category}</span>
-              <h1 className="section-title" style={{ margin: 0, fontSize: 'clamp(2rem, 4vw, 3.2rem)' }}>{project.title}</h1>
-              <p className="hero-description" style={{ margin: 0, color: 'var(--text-secondary)', maxWidth: '800px', fontSize: '1.15rem' }}>
-                {project.description}
-              </p>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', marginTop: '0.5rem', borderTop: '1px solid var(--border-color)', paddingTop: '1rem' }}>
-                <div>
-                  <span style={{ color: 'var(--text-muted)', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '1px', display: 'block', marginBottom: '0.25rem' }}>Role</span>
-                  <span style={{ color: 'var(--text-primary)', fontWeight: 600 }}>{project.role}</span>
+        {/* Square Scroll Arrow at Bottom Center */}
+        <div 
+          onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
+          style={{ 
+            position: 'absolute', 
+            bottom: '0', 
+            left: '50%', 
+            transform: 'translateX(-50%)',
+            zIndex: 10,
+            cursor: 'pointer'
+          }}
+        >
+          <div style={{ 
+            width: '64px', 
+            height: '64px', 
+            background: 'var(--bg-primary)', 
+            display: 'flex', 
+            alignItems: 'center', 
+            justifyContent: 'center',
+            boxShadow: '0 -5px 20px rgba(0,0,0,0.1)'
+          }}>
+            <ArrowDown size={32} color="var(--text-primary)" />
+          </div>
+        </div>
+      </div>
+
+
+
+      {/* 2. CONTENT SECTIONS */}
+      <div className="project-sections-container" style={{ padding: '4rem 0' }}>
+        {project.sections ? (
+          project.sections.map((section, idx) => {
+            if (section.type === 'text') {
+              return (
+                <div key={idx} style={{ textAlign: 'center', maxWidth: '800px', margin: '6rem auto', padding: '0 2rem' }}>
+                  {section.title && <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '1.5rem', letterSpacing: '-0.02em', color: 'var(--text-primary)' }}>{section.title}</h2>}
+                  {section.subtitle && <p style={{ fontSize: '1.15rem', lineHeight: 1.6, color: 'var(--text-secondary)', margin: 0 }}>{section.subtitle}</p>}
                 </div>
-                <div>
-                  <span style={{ color: 'var(--text-muted)', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '1px', display: 'block', marginBottom: '0.25rem' }}>Year</span>
-                  <span style={{ color: 'var(--text-primary)', fontWeight: 600 }}>2026</span>
+              );
+            }
+            if (section.type === 'full-image') {
+              return (
+                <div key={idx} style={{ width: '100%', maxWidth: '1200px', margin: '4rem auto', padding: '0 2rem' }}>
+                  <div style={{ width: '100%', aspectRatio: '16/9', borderRadius: '12px', overflow: 'hidden', background: 'var(--bg-secondary)' }}>
+                    {section.image ? (
+                      <img src={section.image} alt="Project Visual" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    ) : (
+                      <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-muted)' }}>Placeholder Image</div>
+                    )}
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 2. QUICK ACTIONS */}
-      <section style={{ borderTop: '1px solid var(--border-color)', borderBottom: '1px solid var(--border-color)', background: 'var(--bg-secondary)' }}>
-        <div className="section-container" style={{ padding: '1.5rem 2rem', display: 'flex', flexWrap: 'wrap', gap: '1.5rem', alignItems: 'center', justifyContent: 'space-between' }}>
-          <Link to="/projects" className="outline-button" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.75rem 1.25rem' }}>
-            <ArrowLeft size={16} /> Back to Work
-          </Link>
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noreferrer"
-            className="cta-button"
-            style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.75rem 1.25rem' }}
-          >
-            🔗 View Live Site <ArrowUpRight size={16} />
-          </a>
-        </div>
-      </section>
-
-      {/* 3. PROJECT OVERVIEW & CHALLENGE */}
-      <section className="page-section" style={{ background: 'var(--bg-primary)' }}>
-        <div className="section-container" style={{ maxWidth: '850px', display: 'flex', flexDirection: 'column', gap: '3.5rem' }}>
-          <div>
-            <span className="section-subtitle">Scope & Goal</span>
-            <h2 className="section-title" style={{ fontSize: '1.8rem', margin: '0.5rem 0 1.5rem' }}>Project Overview</h2>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: '1.8', margin: 0 }}>
-              {project.overview}
-            </p>
-          </div>
-
-          {project.challenge && (
-            <div>
-              <span className="section-subtitle" style={{ color: '#ef4444' }}>The Problem</span>
-              <h2 className="section-title" style={{ fontSize: '1.8rem', margin: '0.5rem 0 1.5rem' }}>The Challenge</h2>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: '1.8', margin: 0 }}>
-                {project.challenge}
-              </p>
-            </div>
-          )}
-
-          {project.approach && (
-            <div>
-              <span className="section-subtitle" style={{ color: 'var(--accent-primary)' }}>The Process</span>
-              <h2 className="section-title" style={{ fontSize: '1.8rem', margin: '0.5rem 0 1.5rem' }}>The Approach</h2>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: '1.8', margin: 0 }}>
-                {project.approach}
-              </p>
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* 4. VISUAL SHOWCASE */}
-      <section className="page-section" style={{ background: 'var(--bg-secondary)', borderTop: '1px solid var(--border-color)', borderBottom: '1px solid var(--border-color)' }}>
-        <div className="section-container" style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
-          <span className="section-subtitle" style={{ textAlign: 'center' }}>Visual Showcase</span>
-          <h2 className="section-title" style={{ textAlign: 'center', margin: '0 0 1rem' }}>Interface Architecture</h2>
-
-          <div style={{ width: '100%', height: '400px', borderRadius: 'var(--radius-lg)', overflow: 'hidden' }}>
-            <img src={project.image} alt="Visual Mockup" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-          </div>
-
-          {project.id === 'vianexta' ? (
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
-              <div className="glass-card" style={{ padding: '2rem', textAlign: 'center' }}>
-                <span style={{ color: 'var(--accent-secondary)', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '1px', display: 'block', marginBottom: '0.5rem' }}>Desktop</span>
-                <h4 style={{ margin: 0, fontSize: '1.25rem' }}>Homepage Hero</h4>
-              </div>
-              <div className="glass-card" style={{ padding: '2rem', textAlign: 'center' }}>
-                <span style={{ color: 'var(--accent-secondary)', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '1px', display: 'block', marginBottom: '0.5rem' }}>System</span>
-                <h4 style={{ margin: 0, fontSize: '1.25rem' }}>AI Agents Workspace</h4>
-              </div>
-              <div className="glass-card" style={{ padding: '2rem', textAlign: 'center' }}>
-                <span style={{ color: 'var(--accent-secondary)', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '1px', display: 'block', marginBottom: '0.5rem' }}>Process</span>
-                <h4 style={{ margin: 0, fontSize: '1.25rem' }}>How It Works</h4>
-              </div>
-              <div className="glass-card" style={{ padding: '2rem', textAlign: 'center' }}>
-                <span style={{ color: 'var(--accent-secondary)', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '1px', display: 'block', marginBottom: '0.5rem' }}>Interactions</span>
-                <h4 style={{ margin: 0, fontSize: '1.25rem' }}>Product Creation Wizard</h4>
-              </div>
-              <div className="glass-card" style={{ padding: '2rem', textAlign: 'center' }}>
-                <span style={{ color: 'var(--accent-secondary)', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '1px', display: 'block', marginBottom: '0.5rem' }}>Analytics</span>
-                <h4 style={{ margin: 0, fontSize: '1.25rem' }}>Metrics & Traction</h4>
-              </div>
-              <div className="glass-card" style={{ padding: '2rem', textAlign: 'center' }}>
-                <span style={{ color: 'var(--accent-secondary)', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '1px', display: 'block', marginBottom: '0.5rem' }}>Adaptive</span>
-                <h4 style={{ margin: 0, fontSize: '1.25rem' }}>Mobile Responsive Views</h4>
-              </div>
-            </div>
-          ) : (
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
-              <div style={{ height: '300px', borderRadius: 'var(--radius-lg)', overflow: 'hidden' }}>
-                <img src="https://images.unsplash.com/photo-1581291518655-9523c932694b?auto=format&fit=crop&q=80&w=600" alt="UI Component" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-              </div>
-              <div style={{ height: '300px', borderRadius: 'var(--radius-lg)', overflow: 'hidden' }}>
-                <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=600" alt="Mobile View" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-              </div>
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* 5. SELECTED DETAILS */}
-      {project.details && (
-        <section className="page-section" style={{ background: 'var(--bg-primary)' }}>
-          <div className="section-container" style={{ maxWidth: '850px' }}>
-            <span className="section-subtitle">Aesthetic Decisions</span>
-            <h2 className="section-title" style={{ fontSize: '1.8rem', margin: '0.5rem 0 1.5rem' }}>Selected Details</h2>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-              {project.details.split('\n').map((line, idx) => {
-                const parts = line.split(':');
-                if (parts.length > 1) {
-                  return (
-                    <div className="glass-card" key={idx} style={{ padding: '1.5rem 2rem' }}>
-                      <h4 style={{ color: 'var(--accent-secondary)', marginTop: 0, marginBottom: '0.5rem' }}>{parts[0]}</h4>
-                      <p style={{ color: 'var(--text-secondary)', margin: 0, fontSize: '1.05rem' }}>{parts.slice(1).join(':')}</p>
+              );
+            }
+            if (section.type === 'full-video') {
+              return (
+                <div key={idx} style={{ width: '100%', maxWidth: '1200px', margin: '4rem auto', padding: '0 2rem' }}>
+                  <div style={{ width: '100%', aspectRatio: '16/9', borderRadius: '12px', overflow: 'hidden', background: 'var(--bg-secondary)' }}>
+                    <video 
+                      src={section.video} 
+                      autoPlay 
+                      muted 
+                      loop 
+                      playsInline 
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                    />
+                  </div>
+                </div>
+              );
+            }
+            if (section.type === 'grid-2') {
+              const aspectRatio = section.variant === 'portrait' ? '9/16' : '1/1';
+              return (
+                <div key={idx} style={{ width: '100%', maxWidth: '1200px', margin: '4rem auto', padding: '0 2rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+                  {(section.items || []).map((item, i) => (
+                    <div key={i} style={{ width: '100%', aspectRatio, borderRadius: '12px', overflow: 'hidden', background: 'var(--bg-secondary)' }}>
+                      {item.type === 'video' ? (
+                        <video src={item.url} autoPlay muted loop playsInline style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                      ) : item.url ? (
+                        <img src={item.url} alt="Project Visual" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                      ) : (
+                        <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-muted)' }}>Placeholder Image</div>
+                      )}
                     </div>
-                  );
-                }
-                return (
-                  <p key={idx} style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: '1.8', margin: 0 }}>
-                    {line}
-                  </p>
-                );
-              })}
-            </div>
+                  ))}
+                </div>
+              );
+            }
+            return null;
+          })
+        ) : (
+          /* Default Fallback for projects without custom sections */
+          <div className="section-container" style={{ maxWidth: '900px', margin: '0 auto', padding: '4rem 2rem' }}>
+             <h1 style={{ fontSize: '3rem', fontWeight: 700, marginBottom: '2rem' }}>{project.title}</h1>
+             <p style={{ fontSize: '1.25rem', color: '#444', lineHeight: 1.6, marginBottom: '4rem' }}>{project.description}</p>
+             <div style={{ width: '100%', height: '500px', background: '#f5f5f5', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ccc' }}>
+               Visual Showcase Placeholder
+             </div>
           </div>
-        </section>
-      )}
+        )}
+      </div>
 
-      {/* 6. RESULTS / IMPACT */}
-      {project.outcome && (
-        <section className="page-section" style={{ background: 'var(--bg-secondary)', borderTop: '1px solid var(--border-color)', borderBottom: '1px solid var(--border-color)' }}>
-          <div className="section-container" style={{ maxWidth: '850px' }}>
-            <span className="section-subtitle">Real Impact</span>
-            <h2 className="section-title" style={{ fontSize: '1.8rem', margin: '0.5rem 0 1.5rem' }}>Outcome</h2>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: '1.8', margin: 0 }}>
-              {project.outcome}
-            </p>
-          </div>
-        </section>
-      )}
-
-      {/* 7. NEXT PROJECT */}
-      <section className="page-section" style={{ background: 'var(--bg-primary)' }}>
-        <div className="section-container">
-          <span className="section-subtitle">Keep Browsing</span>
-          <h2 className="section-title" style={{ margin: '0.5rem 0 2rem' }}>Next Project</h2>
-
-          <div className="glass-card" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', padding: '2rem', maxWidth: '650px', margin: '0 auto', textAlign: 'center' }}>
-            <span style={{ color: 'var(--accent-secondary)', fontWeight: 600 }}>{nextProject.category}</span>
-            <h3 style={{ fontSize: '1.6rem', margin: 0 }}>{nextProject.title}</h3>
-            <p style={{ color: 'var(--text-secondary)', margin: 0 }}>{nextProject.description}</p>
-            <div style={{ marginTop: '0.5rem' }}>
-              <Link to={`/projects/${nextProject.id}`} className="cta-button" style={{ display: 'inline-flex', gap: '0.5rem' }}>
-                View Next Work <ArrowRight size={18} />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 8. CTA */}
-      <section className="page-section" style={{ background: 'var(--bg-secondary)', borderTop: '1px solid var(--border-color)' }}>
-        <div className="section-container" style={{ textAlign: 'center', maxWidth: '800px' }}>
-          <span className="section-subtitle">Get Started</span>
-          <h2 className="section-title">{project.cta?.headline || 'Have a similar project in mind?'}</h2>
-          <p className="section-desc" style={{ margin: '0 auto 3rem' }}>
-            {project.cta?.copy || 'Let’s build something that works just as well.'}
-          </p>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem' }}>
-            <Link to="/contact" className="cta-button">
-              Start a Project <ArrowRight size={18} />
-            </Link>
-            <Link to="/projects" className="outline-button">
-              View More Work
-            </Link>
-          </div>
+      {/* 3. NEXT PROJECT & FOOTER */}
+      <section style={{ padding: '8rem 0', borderTop: '1px solid var(--border-color)', background: 'var(--bg-secondary)' }}>
+        <div className="section-container" style={{ textAlign: 'center' }}>
+          <span style={{ fontSize: '0.9rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '2px' }}>Next Project</span>
+          <h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginTop: '1rem', marginBottom: '3rem', color: 'var(--text-primary)' }}>{nextProject.title}</h2>
+          <Link to={`/projects/${nextProject.id}`} className="cta-button" style={{ background: 'var(--text-primary)', color: 'var(--bg-primary)' }}>
+            View Case Study <ArrowRight size={18} />
+          </Link>
         </div>
       </section>
     </div>

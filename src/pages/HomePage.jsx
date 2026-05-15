@@ -15,10 +15,10 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="homepage" style={{ background: '#FFFFFF', color: '#0A0A0A', minHeight: '100vh', fontSmooth: 'always' }}>
+    <div className="homepage" style={{ background: 'var(--bg-primary)', color: 'var(--text-primary)', minHeight: '100vh', fontSmooth: 'always' }}>
       
       {/* 1. HERO SECTION */}
-      <section style={{ padding: isMobile ? '48px 16px 32px' : '120px 24px 64px' }}>
+      <section style={{ padding: isMobile ? '120px 16px 32px' : '120px 24px 64px' }}>
         <div className="section-container" style={{
           background: 'linear-gradient(135deg, rgba(10, 10, 10, 0.96), rgba(20, 20, 20, 0.98)), url("https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200")',
           backgroundSize: 'cover',
@@ -72,30 +72,32 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: isMobile ? 'flex-start' : 'flex-end', justifyContent: 'start', gap: '1.5rem', zIndex: 2, position: 'relative' }}>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', justifyContent: isMobile ? 'flex-start' : 'flex-end', maxWidth: '400px' }}>
-              {['UI/UX Design', 'Web Design', 'Motion Graphics', 'Product Design', 'Brand Strategy'].map((tag, idx) => (
-                <span key={idx} style={{
-                  background: 'rgba(255, 255, 255, 0.08)',
-                  backdropFilter: 'blur(10px)',
-                  border: '1px solid rgba(255, 255, 255, 0.12)',
-                  color: '#ffffff',
-                  padding: '0.65rem 1.25rem',
-                  borderRadius: '100px',
-                  fontSize: '0.9rem',
-                  fontWeight: 500,
-                  whiteSpace: 'nowrap'
-                }}>
-                  {tag}
-                </span>
-              ))}
+          {!isMobile && (
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', justifyContent: 'start', gap: '1.5rem', zIndex: 2, position: 'relative' }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', justifyContent: 'flex-end', maxWidth: '400px' }}>
+                {['UI/UX Design', 'Web Design', 'Motion Graphics', 'Product Design', 'Brand Strategy'].map((tag, idx) => (
+                  <span key={idx} style={{
+                    background: 'rgba(255, 255, 255, 0.08)',
+                    backdropFilter: 'blur(10px)',
+                    border: '1px solid rgba(255, 255, 255, 0.12)',
+                    color: '#ffffff',
+                    padding: '0.65rem 1.25rem',
+                    borderRadius: '100px',
+                    fontSize: '0.9rem',
+                    fontWeight: 500,
+                    whiteSpace: 'nowrap'
+                  }}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </section>
 
       {/* 2. ABOUT SNAPSHOT */}
-      <section style={{ padding: isMobile ? '64px 16px' : '120px 0', background: '#FFFFFF', borderBottom: '1px solid #f0f0f0' }}>
+      <section style={{ padding: isMobile ? '64px 16px' : '120px 0', background: 'var(--bg-primary)', borderBottom: '1px solid var(--border-color)' }}>
         <div className="section-container">
           <div style={{ 
             display: 'grid', 
@@ -108,14 +110,14 @@ export default function HomePage() {
               fontSize: isMobile ? '32px' : '58px', 
               fontWeight: 600, 
               lineHeight: 1.1, 
-              color: '#0A0A0A',
+              color: 'var(--text-primary)',
               maxWidth: '900px',
               letterSpacing: '-0.02em'
             }}>
               Small details. Big effect.
             </h2>
             <div style={{ display: 'flex', justifyContent: isMobile ? 'flex-start' : 'flex-end' }}>
-              <Link to="/about" className="hero-cta-secondary" style={{ border: '1px solid rgba(10,10,10,0.2)', color: '#0A0A0A' }}>
+              <Link to="/about" className="hero-cta-secondary" style={{ border: '1px solid var(--border-color)', color: 'var(--text-primary)' }}>
                 Learn More <ArrowUpRight size={18} />
               </Link>
             </div>
@@ -127,14 +129,14 @@ export default function HomePage() {
             gap: isMobile ? '3rem' : '6rem',
             alignItems: 'center'
           }}>
-            <div style={{ flex: '1', position: 'relative', borderRadius: '32px', overflow: 'hidden', height: isMobile ? '320px' : '520px', background: '#000', width: isMobile ? '100%' : '50%' }}>
+            <div style={{ flex: '1', position: 'relative', borderRadius: '32px', overflow: 'hidden', height: isMobile ? '320px' : '520px', background: 'var(--bg-tertiary)', width: isMobile ? '100%' : '50%' }}>
               <WorkSlideshow />
             </div>
             <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: '2rem', width: isMobile ? '100%' : '50%' }}>
               <p style={{ 
                 fontSize: isMobile ? '1.25rem' : '1.85rem', 
                 lineHeight: 1.3, 
-                color: '#0A0A0A',
+                color: 'var(--text-primary)',
                 fontWeight: 600,
                 letterSpacing: '-0.01em',
                 margin: 0
@@ -143,7 +145,7 @@ export default function HomePage() {
               </p>
               
               <div style={{ marginTop: '1rem' }}>
-                <span style={{ fontSize: '0.9rem', color: '#555555', display: 'block', marginBottom: '1.25rem', fontWeight: 500 }}>Trusted by brands</span>
+                <span style={{ fontSize: '0.9rem', color: 'var(--text-muted)', display: 'block', marginBottom: '1.25rem', fontWeight: 500 }}>Trusted by brands</span>
                 <div className="logo-marquee-container" style={{ padding: '0', background: 'transparent' }}>
                   <div className="logo-marquee-track">
                     {[
@@ -186,7 +188,7 @@ export default function HomePage() {
       </section>
 
       {/* 3. STATS SECTION */}
-      <section style={{ padding: isMobile ? '60px 16px' : '100px 0', background: '#FFFFFF', borderBottom: '1px solid #f0f0f0' }}>
+      <section style={{ padding: isMobile ? '60px 16px' : '100px 0', background: 'var(--bg-primary)', borderBottom: '1px solid var(--border-color)' }}>
         <div className="section-container">
           <div style={{
             display: 'grid',
@@ -196,16 +198,16 @@ export default function HomePage() {
           }}>
             {/* Stat: Experience */}
             <div style={{
-              background: '#F8F8F8',
+              background: 'var(--bg-secondary)',
               borderRadius: '24px',
               padding: '2.5rem 2rem',
               height: isMobile ? 'auto' : '280px',
               display: 'flex', flexDirection: 'column', justifyContent: 'space-between'
             }}>
-              <span style={{ fontSize: '3.5rem', fontWeight: 800, letterSpacing: '-0.03em', color: '#0A0A0A', lineHeight: 1 }}>6+</span>
+              <span style={{ fontSize: '3.5rem', fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--text-primary)', lineHeight: 1 }}>6+</span>
               <div>
-                <p style={{ fontWeight: 700, fontSize: '1.05rem', margin: '0 0 0.5rem', color: '#0A0A0A' }}>Years Experience</p>
-                <p style={{ color: '#777', fontSize: '0.9rem', lineHeight: 1.5, margin: 0 }}>Working across brands, campaigns, and digital platforms.</p>
+                <p style={{ fontWeight: 700, fontSize: '1.05rem', margin: '0 0 0.5rem', color: 'var(--text-primary)' }}>Years Experience</p>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: 1.5, margin: 0 }}>Working across brands, campaigns, and digital platforms.</p>
               </div>
             </div>
 
@@ -244,16 +246,16 @@ export default function HomePage() {
 
             {/* Stat: Projects */}
             <div style={{
-              background: '#F8F8F8',
+              background: 'var(--bg-secondary)',
               borderRadius: '24px',
               padding: '2.5rem 2rem',
               height: isMobile ? 'auto' : '280px',
               display: 'flex', flexDirection: 'column', justifyContent: 'space-between'
             }}>
-              <span style={{ fontSize: '3.5rem', fontWeight: 800, letterSpacing: '-0.03em', color: '#0A0A0A', lineHeight: 1 }}>50+</span>
+              <span style={{ fontSize: '3.5rem', fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--text-primary)', lineHeight: 1 }}>50+</span>
               <div>
-                <p style={{ fontWeight: 700, fontSize: '1.05rem', margin: '0 0 0.5rem', color: '#0A0A0A' }}>Projects Delivered</p>
-                <p style={{ color: '#777', fontSize: '0.9rem', lineHeight: 1.5, margin: 0 }}>Clients across brands, events, and organizations.</p>
+                <p style={{ fontWeight: 700, fontSize: '1.05rem', margin: '0 0 0.5rem', color: 'var(--text-primary)' }}>Projects Delivered</p>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: 1.5, margin: 0 }}>Clients across brands, events, and organizations.</p>
               </div>
             </div>
           </div>
@@ -261,7 +263,7 @@ export default function HomePage() {
       </section>
 
       {/* 4. WHAT WE BUILD */}
-      <section style={{ padding: isMobile ? '64px 16px' : '120px 0', background: '#FAFAFA' }}>
+      <section style={{ padding: isMobile ? '64px 16px' : '120px 0', background: 'var(--bg-secondary)' }}>
         <div className="section-container">
           <div style={{ textAlign: 'center', marginBottom: isMobile ? '3rem' : '5rem' }}>
             <span style={{ color: '#F43F5E', fontWeight: 700, fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '3px' }}>Services</span>
@@ -297,23 +299,23 @@ export default function HomePage() {
               }
             ].map((svc, i) => (
               <div key={i} style={{
-                background: '#fff',
+                background: 'var(--bg-card)',
                 borderRadius: '24px',
                 padding: '2.5rem 2rem',
-                border: '1px solid #EBEBEB',
+                border: '1px solid var(--border-color)',
                 display: 'flex', flexDirection: 'column', gap: '1.5rem',
                 transition: 'all 0.3s ease'
               }} className="service-card-home">
                 <div>
-                  <h3 style={{ fontSize: '1.5rem', fontWeight: 700, color: '#0A0A0A', margin: '0 0 1rem', letterSpacing: '-0.02em' }}>{svc.title}</h3>
-                  <p style={{ color: '#555', fontSize: '0.97rem', lineHeight: 1.6, margin: 0 }}>{svc.desc}</p>
+                  <h3 style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--text-primary)', margin: '0 0 1rem', letterSpacing: '-0.02em' }}>{svc.title}</h3>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.97rem', lineHeight: 1.6, margin: 0 }}>{svc.desc}</p>
                 </div>
                 <Link to={svc.link} style={{
                   display: 'inline-flex', alignItems: 'center', gap: '0.6rem',
-                  background: '#F8F8F8', color: '#0A0A0A',
+                  background: 'var(--bg-tertiary)', color: 'var(--text-primary)',
                   padding: '0.7rem 1.4rem', borderRadius: '100px',
                   fontWeight: 600, fontSize: '0.9rem', width: 'fit-content',
-                  border: '1px solid #EBEBEB'
+                  border: '1px solid var(--border-color)'
                 }}>
                   Read More <ArrowUpRight size={15} />
                 </Link>
@@ -329,7 +331,7 @@ export default function HomePage() {
           <div style={{ textAlign: 'center', marginTop: '3.5rem' }}>
             <Link to="/services" style={{
               display: 'inline-flex', alignItems: 'center', gap: '0.75rem',
-              background: '#0A0A0A', color: '#fff',
+              background: 'var(--text-primary)', color: 'var(--bg-primary)',
               padding: '1rem 2.25rem', borderRadius: '100px',
               fontWeight: 600, fontSize: '1rem'
             }}>
@@ -340,7 +342,7 @@ export default function HomePage() {
       </section>
 
       {/* 5. SELECTED WORK */}
-      <section style={{ padding: isMobile ? '64px 16px' : '120px 0', background: '#fcfcfc' }}>
+      <section style={{ padding: isMobile ? '64px 16px' : '120px 0', background: 'var(--bg-primary)' }}>
         <div className="section-container">
           <div style={{ marginBottom: isMobile ? '3.5rem' : '6rem', textAlign: 'center' }}>
             <span style={{ color: '#F43F5E', fontWeight: 700, fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '3px' }}>Portfolio</span>
@@ -354,7 +356,7 @@ export default function HomePage() {
           }}>
             {[
               { id: 'ug-src-welfare', title: 'UG SRC Welfare Scheme', category: 'Digital Platform', sub: 'UI/UX Design & Development', img: '/welfare-thumbnail-01.jpg' },
-              { id: 'amace-23', title: 'AMACE 23', category: 'Campaign & Event Design', img: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&q=80&w=1000' },
+              { id: 'idbf', title: 'IDBF', category: 'Campaign & Event Design', img: '/cover-idbf-01.jpg' },
               { id: 'aasu-summit', title: 'AASU / Africa Students & Youth Summit', category: 'Campaign & Event Design', img: 'https://images.unsplash.com/photo-1540575861501-7ad0582371f3?auto=format&fit=crop&q=80&w=1000' },
               { id: 'vianexta', title: 'ViaNexta', category: 'Digital & Web', img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000' },
               { id: 'foreign-africa', title: 'Foreign Africa', category: 'Digital & Web', img: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1000' },
@@ -380,7 +382,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <span style={{ fontSize: '0.85rem', color: '#F43F5E', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 700 }}>{proj.category}</span>
-                  <h3 style={{ fontSize: isMobile ? '1.5rem' : '2rem', fontWeight: 600, marginTop: '0.5rem', color: '#0A0A0A', letterSpacing: '-0.02em' }}>{proj.title}</h3>
+                  <h3 style={{ fontSize: isMobile ? '1.5rem' : '2rem', fontWeight: 600, marginTop: '0.5rem', color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>{proj.title}</h3>
                   {proj.sub && <p style={{ color: '#888', fontSize: '0.95rem', margin: '0.25rem 0 0', fontWeight: 400 }}>{proj.sub}</p>}
                   <Link to={`/projects/${proj.id}`} style={{ 
                     display: 'inline-flex', 
@@ -388,7 +390,7 @@ export default function HomePage() {
                     gap: '0.6rem', 
                     marginTop: '1.25rem',
                     fontWeight: 600,
-                    color: '#0A0A0A',
+                    color: 'var(--text-primary)',
                     fontSize: '1rem',
                     borderBottom: '1px solid transparent',
                     paddingBottom: '2px'
@@ -403,18 +405,18 @@ export default function HomePage() {
       </section>
 
       {/* 4. CTA */}
-      <section style={{ padding: isMobile ? '80px 16px' : '140px 0', background: '#0A0A0A', color: '#FFFFFF' }}>
+      <section style={{ padding: isMobile ? '80px 16px' : '140px 0', background: 'var(--bg-tertiary)', color: 'var(--text-primary)', borderTop: '1px solid var(--border-color)' }}>
         <div className="section-container" style={{ textAlign: 'center', maxWidth: '900px' }}>
           <span style={{ color: '#F43F5E', fontWeight: 700, fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '3px' }}>Get Started</span>
-          <h2 style={{ fontSize: isMobile ? '36px' : '64px', color: '#FFFFFF', margin: '1.5rem 0 2rem', letterSpacing: '-0.03em', lineHeight: 1.1 }}>Have an idea that needs shape?</h2>
-          <p style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '1.2rem', margin: '0 auto 3.5rem', maxWidth: '600px', lineHeight: 1.6 }}>
+          <h2 style={{ fontSize: isMobile ? '36px' : '64px', color: 'var(--text-primary)', margin: '1.5rem 0 2rem', letterSpacing: '-0.03em', lineHeight: 1.1 }}>Have an idea that needs shape?</h2>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', margin: '0 auto 3.5rem', maxWidth: '600px', lineHeight: 1.6 }}>
             Let’s build a visual system that helps your brand show up clearly.
           </p>
           <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '1.5rem' }}>
             <Link to="/contact" className="hero-cta-primary">
               Start a Project <ArrowRight size={18} />
             </Link>
-            <Link to="/projects" className="hero-cta-secondary" style={{ border: '1px solid rgba(255,255,255,0.3)' }}>
+            <Link to="/projects" className="hero-cta-secondary" style={{ border: '1px solid var(--border-color)' }}>
               View Work <ArrowUpRight size={18} />
             </Link>
           </div>

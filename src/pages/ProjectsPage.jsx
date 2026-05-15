@@ -178,9 +178,9 @@ export default function ProjectsPage() {
                   fontSize: '0.9rem',
                   fontWeight: 600,
                   transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                  background: activeFilter === cat ? '#0A0A0A' : 'transparent',
-                  color: activeFilter === cat ? '#FFFFFF' : '#444444',
-                  border: `1px solid ${activeFilter === cat ? '#0A0A0A' : 'rgba(0,0,0,0.1)'}`,
+                  background: activeFilter === cat ? 'var(--text-primary)' : 'transparent',
+                  color: activeFilter === cat ? 'var(--bg-primary)' : 'var(--text-secondary)',
+                  border: `1px solid ${activeFilter === cat ? 'var(--text-primary)' : 'var(--border-color)'}`,
                   cursor: 'pointer'
                 }}
               >
