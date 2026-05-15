@@ -87,11 +87,6 @@ export default function App() {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/services" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
-                  What We Build
-                </NavLink>
-              </li>
-              <li>
                 <NavLink to="/about" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
                   About
                 </NavLink>
@@ -124,7 +119,6 @@ export default function App() {
           <nav className="mobile-nav">
             <ul className="mobile-nav-links">
               <li><NavLink to="/projects" className="mobile-nav-link">Work</NavLink></li>
-              <li><NavLink to="/services" className="mobile-nav-link">What We Build</NavLink></li>
               <li><NavLink to="/about" className="mobile-nav-link">About</NavLink></li>
               <li><NavLink to="/contact" className="mobile-nav-link">Contact</NavLink></li>
             </ul>
