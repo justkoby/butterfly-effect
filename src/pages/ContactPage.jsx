@@ -121,7 +121,7 @@ export default function ContactPage() {
                 </div>
                 <div className="info-content">
                   <h4>Direct Inquiry</h4>
-                  <a href="tel:+23001234567">+23 (00) 123 4567</a>
+                  <a href="tel:+233546379235">+233 54 637 9235</a>
                 </div>
               </div>
 
