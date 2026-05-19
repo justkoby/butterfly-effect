@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+import SEO from '../components/SEO';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -24,6 +25,11 @@ export default function ContactPage() {
 
   return (
     <div className="contact-page">
+      <SEO 
+        title="Contact Us" 
+        description="Get in touch with Butterfly Effect Concepts. Let us know about your brand goals, project ideas, and visual design needs." 
+        path="/contact" 
+      />
       <section className="page-section">
         <div className="section-container">
           <span className="section-subtitle">Get In Touch</span>
@@ -102,7 +108,7 @@ export default function ContactPage() {
                   </div>
                   <h3 style={{ fontSize: '1.6rem', marginBottom: '0.75rem' }}>Message Received!</h3>
                   <p style={{ color: 'var(--text-secondary)' }}>
-                    Thank you, <strong>{formData.name}</strong>. A design lead from the Adoxin studio will reach out within 24 hours.
+                    Thank you, <strong>{formData.name}</strong>. A design lead from the Butterfly Effect studio will reach out within 24 hours.
                   </p>
                 </div>
               )}

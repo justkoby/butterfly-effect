@@ -1,10 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Sparkles, ArrowRight, Eye, ShieldCheck, Award } from 'lucide-react';
+import SEO from '../components/SEO';
 
 export default function AboutPage() {
   return (
     <div className="about-page">
+      <SEO 
+        title="About Us" 
+        description="Learn more about Butterfly Effect Concepts, a full-service design studio building strategic and unique visual communication solutions." 
+        path="/about" 
+      />
       <section className="page-section hero-section">
         <div className="hero-bg-glow"></div>
         <div className="section-container hero-inner">
@@ -14,7 +20,7 @@ export default function AboutPage() {
               Creativity Meets <span>Strategic Vision</span>
             </h1>
             <p className="hero-description">
-              Adoxin is a full-service design agency specializing in creating compelling, strategic, and unique visual communication solutions for businesses of all sizes.
+              Butterfly Effect is a full-service design agency specializing in creating compelling, strategic, and unique visual communication solutions for businesses of all sizes.
             </p>
             <div className="hero-actions">
               <Link to="/contact" className="cta-button">
@@ -38,7 +44,7 @@ export default function AboutPage() {
       <section className="page-section" style={{ background: 'var(--bg-secondary)' }}>
         <div className="section-container">
           <span className="section-subtitle">Our Philosophy</span>
-          <h2 className="section-title">What Drives Adoxin</h2>
+          <h2 className="section-title">What Drives Butterfly Effect</h2>
           <p className="section-desc">
             We believe that extraordinary designs aren't just beautiful; they solve real human and brand challenges with clarity and intent.
           </p>

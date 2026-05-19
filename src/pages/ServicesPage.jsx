@@ -1,10 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Palette, Eye, Move, CheckCircle2, ArrowRight } from 'lucide-react';
+import SEO from '../components/SEO';
 
 export default function ServicesPage() {
   return (
     <div className="services-page">
+      <SEO 
+        title="Services" 
+        description="Our services include Product Design, UI/UX Design, and Web Design tailored to help your brand build clarity and digital presence." 
+        path="/services" 
+      />
       <section className="page-section">
         <div className="section-container">
           <span className="section-subtitle">What We Excel At</span>

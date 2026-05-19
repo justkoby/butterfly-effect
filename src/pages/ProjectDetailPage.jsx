@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ArrowUpRight, ArrowRight, ArrowDown } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const portfolioProjects = [
   {
@@ -244,6 +245,12 @@ export default function ProjectDetailPage() {
 
   return (
     <div className="project-detail-page" style={{ background: 'var(--bg-primary)', color: 'var(--text-primary)', width: '100%', overflowX: 'hidden' }}>
+      <SEO 
+        title={`${project.title} — Case Study`}
+        description={project.overview || project.description}
+        image={project.image}
+        path={`/projects/${project.id}`}
+      />
       {/* 1. TOP HERO (Full Width Breakout) */}
       <div style={{ 
         width: '100vw', 

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, ArrowUpRight, CheckCircle2, Award, Briefcase, Eye, Move, Palette, Sparkles, MessageCircle } from 'lucide-react';
 import FireWallSimulation from '../components/FireWallSimulation';
 import WorkSlideshow from '../components/WorkSlideshow';
+import SEO from '../components/SEO';
 
 
 export default function HomePage() {
@@ -16,6 +17,7 @@ export default function HomePage() {
 
   return (
     <div className="homepage" style={{ background: 'var(--bg-primary)', color: 'var(--text-primary)', minHeight: '100vh', fontSmooth: 'always' }}>
+      <SEO path="/" />
       
       {/* 1. HERO SECTION */}
       <section style={{ padding: isMobile ? '120px 16px 32px' : '120px 24px 64px' }}>

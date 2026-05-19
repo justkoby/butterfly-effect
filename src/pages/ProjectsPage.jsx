@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight, ArrowRight } from 'lucide-react';
 import WorkSlideshow from '../components/WorkSlideshow';
+import SEO from '../components/SEO';
 
 const portfolioProjects = [
   {
@@ -152,6 +153,11 @@ export default function ProjectsPage() {
 
   return (
     <div className="projects-page">
+      <SEO 
+        title="Our Work" 
+        description="Explore our high-impact visual design systems that enabled distinct brands to build real presence and reach." 
+        path="/projects" 
+      />
       <section className="page-section">
         <div className="section-container">
           <WorkSlideshow height="600px" borderRadius="32px" marginBottom="4rem" />
