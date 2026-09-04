@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ArrowUpRight, CheckCircle2, Award, Briefcase, Eye, Move, Palette, Sparkles, MessageCircle } from 'lucide-react';
-import FireWallSimulation from '../components/FireWallSimulation';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import HeroProjectGallery from '../components/HeroProjectGallery';
 import WorkSlideshow from '../components/WorkSlideshow';
 import SEO from '../components/SEO';
+import './HomePage.css';
 
 
 export default function HomePage() {
@@ -19,87 +20,16 @@ export default function HomePage() {
     <div className="homepage" style={{ background: 'var(--bg-primary)', color: 'var(--text-primary)', minHeight: '100vh', fontSmooth: 'always' }}>
       <SEO path="/" />
       
-      {/* 1. HERO SECTION */}
-      <section style={{ padding: isMobile ? '120px 16px 32px' : '120px 24px 64px' }}>
-        <div className="section-container" style={{
-          background: 'linear-gradient(135deg, rgba(10, 10, 10, 0.96), rgba(20, 20, 20, 0.98)), url("https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          borderRadius: '24px',
-          padding: isMobile ? '48px 24px' : '96px 80px 80px',
-          border: '1px solid rgba(255, 255, 255, 0.08)',
-          display: 'grid',
-          gridTemplateColumns: isMobile ? '1fr' : '1.2fr 0.8fr',
-          gap: isMobile ? '2.5rem' : '3rem',
-          alignItems: 'start',
-          position: 'relative',
-          overflow: 'hidden'
-        }}>
-          <FireWallSimulation />
-          {/* Left-to-right gradient overlay */}
-          <div style={{
-            position: 'absolute', top: 0, left: 0, width: '100%', height: '100%',
-            background: 'linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.05) 100%)',
-            zIndex: 1, pointerEvents: 'none', borderRadius: '24px'
-          }} />
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', zIndex: 2, position: 'relative' }}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <span style={{ color: '#F43F5E', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 600 }}>
-                Butterfly Effect Concepts
-              </span>
-              <h1 style={{
-                fontSize: isMobile ? '32px' : '40px',
-                fontWeight: 600,
-                lineHeight: 1.1,
-                letterSpacing: '-0.02em',
-                color: '#ffffff',
-                margin: 0
-              }}>
-                We design brands, campaigns, and digital experiences that people notice and remember.
-              </h1>
-            </div>
+      {/* 1. HERO SECTION WITH ENDLESS SCROLL GALLERY */}
+      <section className="hero-revamp-section">
+        <HeroProjectGallery />
 
-            <p style={{ color: 'rgba(255, 255, 255, 0.85)', fontSize: '1.15rem', lineHeight: 1.55, maxWidth: '600px', margin: 0 }}>
-              From product packaging to digital platforms, we design experiences that bring clarity and presence to brands.
-            </p>
-
-
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.25rem' }}>
-              <Link to="/contact" className="hero-cta-primary">
-                Start a Project <ArrowRight size={18} />
-              </Link>
-              <Link to="/projects" className="hero-cta-secondary">
-                View Work <ArrowUpRight size={18} />
-              </Link>
-            </div>
-          </div>
-
-          {!isMobile && (
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', justifyContent: 'start', gap: '1.5rem', zIndex: 2, position: 'relative' }}>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', justifyContent: 'flex-end', maxWidth: '400px' }}>
-                {['UI/UX Design', 'Web Design', 'Motion Graphics', 'Product Design', 'Brand Strategy'].map((tag, idx) => (
-                  <span key={idx} style={{
-                    background: 'rgba(255, 255, 255, 0.08)',
-                    backdropFilter: 'blur(10px)',
-                    border: '1px solid rgba(255, 255, 255, 0.12)',
-                    color: '#ffffff',
-                    padding: '0.65rem 1.25rem',
-                    borderRadius: '100px',
-                    fontSize: '0.9rem',
-                    fontWeight: 500,
-                    whiteSpace: 'nowrap'
-                  }}>
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
+        {/* Bottom gradient blending smoothly into near-black (#0a0a0a) */}
+        <div className="hero-bottom-gradient" />
       </section>
 
-      {/* 2. ABOUT SNAPSHOT */}
-      <section style={{ padding: isMobile ? '64px 16px' : '120px 0', background: 'var(--bg-primary)', borderBottom: '1px solid var(--border-color)' }}>
+      {/* 2. ABOUT SNAPSHOT - SEAMLESS BLEND SECTION */}
+      <section className="about-seamless-section">
         <div className="section-container">
           <div style={{ 
             display: 'grid', 
@@ -108,18 +38,19 @@ export default function HomePage() {
             alignItems: 'center',
             marginBottom: isMobile ? '3rem' : '6rem'
           }}>
-            <h2 style={{ 
+            <h2 className="about-title" style={{ 
               fontSize: isMobile ? '32px' : '58px', 
               fontWeight: 600, 
               lineHeight: 1.1, 
-              color: 'var(--text-primary)',
+              color: '#ffffff',
               maxWidth: '900px',
-              letterSpacing: '-0.02em'
+              letterSpacing: '-0.02em',
+              margin: 0
             }}>
               Small details. Big effect.
             </h2>
             <div style={{ display: 'flex', justifyContent: isMobile ? 'flex-start' : 'flex-end' }}>
-              <Link to="/about" className="hero-cta-secondary" style={{ border: '1px solid var(--border-color)', color: 'var(--text-primary)' }}>
+              <Link to="/about" className="hero-cta-btn-secondary about-learn-more-btn">
                 Learn More <ArrowUpRight size={18} />
               </Link>
             </div>
@@ -131,14 +62,14 @@ export default function HomePage() {
             gap: isMobile ? '3rem' : '6rem',
             alignItems: 'center'
           }}>
-            <div style={{ flex: '1', position: 'relative', borderRadius: '32px', overflow: 'hidden', height: isMobile ? '320px' : '520px', background: 'var(--bg-tertiary)', width: isMobile ? '100%' : '50%' }}>
+            <div className="about-slideshow-box" style={{ flex: '1', position: 'relative', borderRadius: '32px', overflow: 'hidden', height: isMobile ? '320px' : '520px', width: isMobile ? '100%' : '50%' }}>
               <WorkSlideshow />
             </div>
             <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: '2rem', width: isMobile ? '100%' : '50%' }}>
-              <p style={{ 
+              <p className="about-desc" style={{ 
                 fontSize: isMobile ? '1.25rem' : '1.85rem', 
                 lineHeight: 1.3, 
-                color: 'var(--text-primary)',
+                color: 'rgba(255, 255, 255, 0.9)',
                 fontWeight: 600,
                 letterSpacing: '-0.01em',
                 margin: 0
@@ -147,7 +78,7 @@ export default function HomePage() {
               </p>
               
               <div style={{ marginTop: '1rem' }}>
-                <span style={{ fontSize: '0.9rem', color: 'var(--text-muted)', display: 'block', marginBottom: '1.25rem', fontWeight: 500 }}>Trusted by brands</span>
+                <span className="about-trusted-label" style={{ fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.55)', display: 'block', marginBottom: '1.25rem', fontWeight: 500 }}>Trusted by brands</span>
                 <div className="logo-marquee-container" style={{ padding: '0', background: 'transparent' }}>
                   <div className="logo-marquee-track">
                     {[

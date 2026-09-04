@@ -3,153 +3,37 @@ import { Link } from 'react-router-dom';
 import { ArrowUpRight, ArrowRight } from 'lucide-react';
 import WorkSlideshow from '../components/WorkSlideshow';
 import SEO from '../components/SEO';
+import { portfolioProjects } from '../data/portfolioProjects';
 
-const portfolioProjects = [
-  {
-    id: 'vianexta',
-    title: 'ViaNexta',
-    category: 'Websites',
-    role: 'UI/UX Design & Development',
-    description: 'AI-powered supply chain platform designed to simplify product creation and distribution.',
-    link: 'https://vianexta.com',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600'
-  },
-  {
-    id: 'global-student-forum',
-    title: 'Global Student Forum',
-    category: 'Websites',
-    role: 'UI/UX Design',
-    description: 'Global digital platform supporting student leadership, advocacy, and international collaboration.',
-    link: 'http://globalstudentforum.org/',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600'
-  },
-  {
-    id: 'foreign-africa',
-    title: 'Foreign Africa',
-    category: 'Websites',
-    role: 'UI/UX Design & Development',
-    description: 'A modern web platform connecting African voices, ideas, and opportunities across borders.',
-    link: 'https://www.foreignafrica.org/',
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=600'
-  },
-  {
-    id: 'justice-for-africa',
-    title: 'Justice for Africa',
-    category: 'Websites',
-    role: 'UI/UX Design & Development',
-    description: 'A civic-focused platform built to drive awareness, advocacy, and justice-oriented initiatives.',
-    link: 'https://justice4africa.org/',
-    image: 'https://images.unsplash.com/photo-1554224155-1696413565d3?auto=format&fit=crop&q=80&w=600'
-  },
-  {
-    id: 'all-africa-students-union',
-    title: 'All Africa Students Union (AASU)',
-    category: 'Websites',
-    role: 'UI/UX Design & Development',
-    description: 'Official digital platform representing student unions across Africa and driving continental initiatives.',
-    link: 'https://aasuonline.org/',
-    image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=600'
-  },
-  {
-    id: 'cosmotech-projects',
-    title: 'Cosmotech Projects',
-    category: 'Websites',
-    role: 'UI/UX Design & Development',
-    description: 'Corporate website for a technology and infrastructure solutions company in Ghana.',
-    link: 'https://www.cosmotechprojects.com/',
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=600'
-  },
-  {
-    id: 'win-win-coffee',
-    title: 'Win Win Coffee',
-    category: 'Branding',
-    role: 'UI/UX Design & Branding',
-    description: 'E-commerce platform and brand experience for a specialty coffee business.',
-    link: 'https://winwin.coffee/',
-    image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=600'
-  },
-  {
-    id: 'the-jeans-shop-gh',
-    title: 'The Jeans Shop GH',
-    category: 'Websites',
-    role: 'UI/UX Design & Branding',
-    description: 'Fashion e-commerce platform designed to showcase and sell contemporary apparel online.',
-    link: 'https://www.thejeansshopgh.com/',
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=600'
-  },
-  {
-    id: 'ug-src-welfare-scheme',
-    title: 'UG SRC Welfare Scheme',
-    category: 'Websites',
-    role: 'UI/UX Design & Branding',
-    description: 'Digital platform supporting student welfare services and access to essential resources.',
-    link: 'https://ugsrcwelfarescheme.ug.edu.gh/',
-    image: 'https://images.unsplash.com/photo-1521791136064-7986c2923216?auto=format&fit=crop&q=80&w=600'
-  },
-  {
-    id: 'democrat-union-of-africa',
-    title: 'Democrat Union of Africa',
-    category: 'Websites',
-    role: 'UI/UX Design & Development',
-    description: 'Political and organizational platform designed to communicate vision, structure, and initiatives.',
-    link: 'https://democratunionofafrica.org/',
-    image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=600'
-  },
-  {
-    id: 'alice-talk-world',
-    title: 'Alice Talk World',
-    category: 'Websites',
-    role: 'UI/UX Design & Development',
-    description: 'A storytelling and media platform focused on conversations, perspectives, and digital engagement.',
-    link: 'https://alicetalkworld.org/',
-    image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80&w=600'
-  },
-  {
-    id: 'rxnetwork',
-    title: 'RxNetwork',
-    category: 'Websites',
-    role: 'UI/UX Design & Development',
-    description: 'A digital platform connecting healthcare communication, campaigns, and medical audiences.',
-    link: 'https://rxnetwork.net/',
-    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=600'
-  },
-  {
-    id: 'the-bag-shop-gh',
-    title: 'The Bag Shop GH',
-    category: 'Branding',
-    role: 'UI/UX Design',
-    description: 'E-commerce interface designed to present and sell fashion accessories online.',
-    link: 'https://www.thebagshopgh.com/',
-    image: 'https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&q=80&w=600'
-  },
-  {
-    id: 'stillwaters-campaign',
-    title: 'Stillwaters',
-    category: 'Campaigns',
-    role: 'Creative Direction & Motion',
-    description: 'Visual campaign and motion graphics for a premium lifestyle brand.',
-    link: '#',
-    image: 'https://images.unsplash.com/photo-1516245834210-c4c142787335?auto=format&fit=crop&q=80&w=600'
-  },
-  {
-    id: 'adonteng-eid',
-    title: 'Adonteng Eid',
-    category: 'Posters',
-    role: 'Graphic Design',
-    description: 'Thematic poster series celebrating cultural heritage and festive joy.',
-    link: '#',
-    image: 'https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&q=80&w=600'
-  }
-];
-
-const filterCategories = ['All', 'Websites', 'Branding', 'Campaigns', 'Packaging', 'Posters', 'Logos'];
+const filterCategories = ['All', 'Websites', 'Branding', 'Graphic Design', 'Campaigns', 'Packaging', 'Posters'];
 
 export default function ProjectsPage() {
   const [activeFilter, setActiveFilter] = useState('All');
 
   const filteredProjects = activeFilter === 'All' 
     ? portfolioProjects 
-    : portfolioProjects.filter(p => p.category === activeFilter);
+    : portfolioProjects.filter(p => {
+        if (activeFilter === 'Branding') {
+          return p.category === 'Branding' || 
+                 p.category === 'Branding & Visual Identity' || 
+                 p.category === 'Logo Design' ||
+                 p.category === 'Logo Design & Album Artwork' ||
+                 p.category.includes('Branding') ||
+                 p.category.includes('Logo');
+        }
+        if (activeFilter === 'Graphic Design') {
+          return p.category === 'Graphic Design' ||
+                 p.category === 'Logo Design' ||
+                 p.category === 'Album Artwork' ||
+                 p.category === 'Logo Design & Album Artwork' ||
+                 p.category === 'Posters' ||
+                 p.category === 'Poster Series' ||
+                 p.category.includes('Logo') ||
+                 p.category.includes('Artwork') ||
+                 p.category.includes('Graphic');
+        }
+        return p.category === activeFilter;
+      });
 
   return (
     <div className="projects-page">
@@ -177,6 +61,7 @@ export default function ProjectsPage() {
             {filterCategories.map(cat => (
               <button
                 key={cat}
+                type="button"
                 onClick={() => setActiveFilter(cat)}
                 style={{
                   padding: '0.65rem 1.5rem',
@@ -196,36 +81,159 @@ export default function ProjectsPage() {
           </div>
 
           <div className="projects-grid">
-            {filteredProjects.map((proj, idx) => (
-              <div className="project-card" key={idx}>
-                <div className="project-visual">
-                  <img src={proj.image} alt={proj.title} className="project-img" />
-                </div>
-                <div className="project-content" style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                  <div className="project-meta" style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
-                    <span className="project-category">{proj.category}</span>
-                    <span className="project-year" style={{ color: 'var(--accent-secondary)' }}>Role: {proj.role}</span>
+            {filteredProjects.map((proj) => {
+              const hasExternalLink = Boolean(proj.link && proj.link !== '#');
+              const hasCaseStudy = Boolean(proj.hasDetailPage);
+              const linkText = proj.linkLabel || 'Visit Website';
+
+              return (
+                <div className="project-card" key={proj.id}>
+                  <div className="project-visual">
+                    {proj.image ? (
+                      <img src={proj.image} alt={proj.title} className="project-img" loading="lazy" />
+                    ) : (
+                      <div style={{
+                        width: '100%',
+                        height: '100%',
+                        minHeight: '260px',
+                        background: 'linear-gradient(135deg, rgba(244, 63, 94, 0.08) 0%, rgba(20, 20, 20, 0.95) 100%)',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        padding: '2rem',
+                        textAlign: 'center'
+                      }}>
+                        <span style={{ fontSize: '1.65rem', fontWeight: 800, color: '#ffffff', letterSpacing: '-0.02em', marginBottom: '0.4rem' }}>
+                          {proj.title}
+                        </span>
+                        <span style={{ fontSize: '0.78rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--accent-secondary)', fontWeight: 600 }}>
+                          {proj.category}
+                        </span>
+                        {proj.status && (
+                          <span style={{ 
+                            marginTop: '0.75rem', 
+                            background: 'rgba(244, 63, 94, 0.2)', 
+                            color: '#F43F5E', 
+                            padding: '4px 12px', 
+                            borderRadius: '100px', 
+                            fontSize: '0.72rem', 
+                            fontWeight: 700, 
+                            letterSpacing: '0.05em',
+                            textTransform: 'uppercase'
+                          }}>
+                            {proj.status}
+                          </span>
+                        )}
+                      </div>
+                    )}
                   </div>
-                  <h3 className="project-title" style={{ margin: 0 }}>{proj.title}</h3>
-                  <p className="project-desc" style={{ flexGrow: 1, margin: 0 }}>{proj.description}</p>
-                  
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', marginTop: '0.75rem' }}>
-                    <Link to={`/projects/${proj.id}`} className="outline-button" style={{ justifyContent: 'center', display: 'flex', alignItems: 'center', gap: '0.25rem', padding: '0.5rem' }}>
-                      Case Study <ArrowRight size={14} />
-                    </Link>
-                    <a
-                      href={proj.link}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="cta-button"
-                      style={{ justifyContent: 'center', display: 'flex', alignItems: 'center', gap: '0.25rem', padding: '0.5rem' }}
-                    >
-                      🔗 Live Site <ArrowUpRight size={14} />
-                    </a>
+                  <div className="project-content" style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', flex: 1 }}>
+                    <div className="project-meta" style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem', flexWrap: 'wrap' }}>
+                        <span className="project-category">{proj.category}</span>
+                        {proj.status && (
+                          <span style={{ 
+                            background: 'rgba(244, 63, 94, 0.15)', 
+                            color: '#F43F5E', 
+                            padding: '2px 8px', 
+                            borderRadius: '4px', 
+                            fontSize: '0.7rem', 
+                            fontWeight: 700, 
+                            textTransform: 'uppercase', 
+                            letterSpacing: '0.04em' 
+                          }}>
+                            {proj.status}
+                          </span>
+                        )}
+                      </div>
+                      <span className="project-year" style={{ color: 'var(--accent-secondary)' }}>Role: {proj.role}</span>
+                    </div>
+                    <h3 className="project-title" style={{ margin: 0 }}>{proj.title}</h3>
+                    <p className="project-desc" style={{ flexGrow: 1, margin: 0 }}>{proj.description}</p>
+                    
+                    {/* Action Links */}
+                    {hasCaseStudy && hasExternalLink ? (
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', marginTop: '0.75rem' }}>
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
+                          <Link 
+                            to={`/projects/${proj.id}`} 
+                            className="outline-button" 
+                            style={{ justifyContent: 'center', display: 'flex', alignItems: 'center', gap: '0.35rem', padding: '0.65rem 0.75rem' }}
+                          >
+                            Case Study <ArrowRight size={14} />
+                          </Link>
+                          <a
+                            href={proj.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="cta-button"
+                            style={{ justifyContent: 'center', display: 'flex', alignItems: 'center', gap: '0.35rem', padding: '0.65rem 0.75rem' }}
+                          >
+                            {linkText} <ArrowUpRight size={14} />
+                          </a>
+                        </div>
+                        {(proj.manualPdf || proj.presentationPdf) && (
+                          <a
+                            href={proj.presentationPdf || proj.manualPdf}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="outline-button"
+                            style={{ width: '100%', justifyContent: 'center', display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.6rem 1rem' }}
+                          >
+                            {proj.presentationPdf ? 'View Brand Presentation' : 'View Brand Manual'} <ArrowUpRight size={14} />
+                          </a>
+                        )}
+                      </div>
+                    ) : hasExternalLink ? (
+                      <div style={{ marginTop: '0.75rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                        <a
+                          href={proj.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="cta-button"
+                          style={{ width: '100%', justifyContent: 'center', display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.6rem 1rem' }}
+                        >
+                          {linkText} <ArrowUpRight size={14} />
+                        </a>
+                        {(proj.manualPdf || proj.presentationPdf) && (
+                          <a
+                            href={proj.presentationPdf || proj.manualPdf}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="outline-button"
+                            style={{ width: '100%', justifyContent: 'center', display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.6rem 1rem' }}
+                          >
+                            {proj.presentationPdf ? 'View Brand Presentation' : 'View Brand Manual'} <ArrowUpRight size={14} />
+                          </a>
+                        )}
+                      </div>
+                    ) : hasCaseStudy ? (
+                      <div style={{ marginTop: '0.75rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                        <Link 
+                          to={`/projects/${proj.id}`} 
+                          className="cta-button" 
+                          style={{ width: '100%', justifyContent: 'center', display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.65rem 1rem' }}
+                        >
+                          Case Study <ArrowRight size={14} />
+                        </Link>
+                        {(proj.manualPdf || proj.presentationPdf) && (
+                          <a
+                            href={proj.presentationPdf || proj.manualPdf}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="outline-button"
+                            style={{ width: '100%', justifyContent: 'center', display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.6rem 1rem' }}
+                          >
+                            {proj.presentationPdf ? 'View Brand Presentation' : 'View Brand Manual'} <ArrowUpRight size={14} />
+                          </a>
+                        )}
+                      </div>
+                    ) : null}
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

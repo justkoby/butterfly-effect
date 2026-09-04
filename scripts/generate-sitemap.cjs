@@ -14,20 +14,20 @@ const staticRoutes = [
 
 function getProjectIds() {
   const ids = new Set();
-  const filePath = path.join(__dirname, '../src/pages/ProjectDetailPage.jsx');
+  const filePath = path.join(__dirname, '../src/data/portfolioProjects.js');
   
   try {
     if (fs.existsSync(filePath)) {
       const content = fs.readFileSync(filePath, 'utf8');
-      // Look for id: '...' or id: "..."
-      const regex = /id:\s*['"]([^'"]+)['"]/g;
+      // Look for id: '...' where hasDetailPage: true or in general
+      const regex = /id:\s*['"]([^'"]+)['"][\s\S]*?hasDetailPage:\s*true/g;
       let match;
       while ((match = regex.exec(content)) !== null) {
         ids.add(match[1]);
       }
     }
   } catch (err) {
-    console.error('Error reading ProjectDetailPage.jsx for sitemap:', err);
+    console.error('Error reading portfolioProjects.js for sitemap:', err);
   }
   
   return Array.from(ids);
