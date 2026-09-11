@@ -26,16 +26,17 @@ export default function ContactPage() {
   return (
     <div className="contact-page">
       <SEO 
-        title="Contact Us" 
-        description="Get in touch with Butterfly Effect Concepts. Let us know about your brand goals, project ideas, and visual design needs." 
+        title="Contact Us — Start a Project | Accra, Ghana" 
+        description="Contact Butterfly Effect Concepts design studio in Accra, Ghana. Reach out to collaborate on brand identity, packaging, visual systems, or digital platforms." 
         path="/contact" 
+        keywords="contact Butterfly Effect Concepts, hire branding agency Accra, graphic designer contact Ghana, Accra design studio inquiry, butterfly effect concepts ghana phone"
       />
       <section className="page-section">
         <div className="section-container">
           <span className="section-subtitle">Get In Touch</span>
           <h1 className="section-title">Let’s Start Talking</h1>
           <p className="section-desc">
-            We would love to hear from you—whether you have a concrete project in mind or simply want to inquire about custom solutions.
+            We would love to hear from you — whether you have a concrete project in mind or want to discuss strategic branding for your business in Ghana or abroad.
           </p>
 
           <div className="contact-grid">
@@ -140,8 +141,8 @@ export default function ContactPage() {
                   <MapPin size={22} />
                 </div>
                 <div className="info-content">
-                  <h4>HQ Address</h4>
-                  <p>4th Floor, City Towers, Near Grant Road</p>
+                  <h4>Studio Address</h4>
+                  <p>Adenta Housing Down, Ala Adjetey St, Accra, Ghana</p>
                 </div>
               </div>
             </div>

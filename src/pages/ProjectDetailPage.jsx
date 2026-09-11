@@ -28,10 +28,34 @@ export default function ProjectDetailPage() {
   return (
     <div className="project-detail-page" style={{ background: 'var(--bg-primary)', color: 'var(--text-primary)', width: '100%', overflowX: 'hidden' }}>
       <SEO 
-        title={`${project.title} — Case Study`}
-        description={project.overview || project.description}
+        title={`${project.title} — Case Study | Butterfly Effect Concepts`}
+        description={`${project.overview || project.description} Created by Butterfly Effect Concepts, creative brand design studio based in Accra, Ghana.`}
         image={project.image}
         path={`/projects/${project.id}`}
+        type="article"
+        keywords={`Butterfly Effect Concepts, ${project.title}, ${project.category || 'branding'}, branding studio Accra, visual design case study, Ghana`}
+        schema={{
+          '@context': 'https://schema.org',
+          '@type': 'CreativeWork',
+          '@id': `https://butterflyeffectconcepts.com/projects/${project.id}#project`,
+          'name': project.title,
+          'headline': project.title,
+          'description': project.overview || project.description,
+          'image': project.image ? (project.image.startsWith('http') ? project.image : `https://butterflyeffectconcepts.com${project.image}`) : 'https://butterflyeffectconcepts.com/cover-idbf-01.jpg',
+          'url': `https://butterflyeffectconcepts.com/projects/${project.id}`,
+          'creator': {
+            '@type': 'Organization',
+            '@id': 'https://butterflyeffectconcepts.com/#organization',
+            'name': 'Butterfly Effect Concepts',
+            'url': 'https://butterflyeffectconcepts.com/'
+          },
+          'publisher': {
+            '@type': 'Organization',
+            '@id': 'https://butterflyeffectconcepts.com/#organization',
+            'name': 'Butterfly Effect Concepts'
+          },
+          'inLanguage': 'en'
+        }}
       />
       {/* 1. TOP HERO (Full Width Breakout) */}
       <div style={{ 

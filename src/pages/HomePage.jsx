@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import HeroProjectGallery from '../components/HeroProjectGallery';
 import WorkSlideshow from '../components/WorkSlideshow';
+import InteractiveServicesSection from '../components/InteractiveServicesSection';
 import SEO from '../components/SEO';
 import './HomePage.css';
 
@@ -18,11 +19,33 @@ export default function HomePage() {
 
   return (
     <div className="homepage" style={{ background: 'var(--bg-primary)', color: 'var(--text-primary)', minHeight: '100vh', fontSmooth: 'always' }}>
-      <SEO path="/" />
+      <SEO 
+        title="Butterfly Effect Concepts — Branding &amp; Visual Design Studio in Accra, Ghana"
+        description="Butterfly Effect Concepts is a premier creative design studio based in Accra, Ghana. We build high-impact visual identity systems, packaging, campaigns, websites, and digital experiences."
+        path="/"
+        keywords="Butterfly Effect Concepts, Butterfly Effect, Butterfly Effect Ghana, branding studio Accra, visual identity design Accra, graphic design studio Ghana, packaging design Accra, creative agency Accra, brand design studio Ghana, butterfly effect concepts instagram"
+      />
       
-      {/* 1. HERO SECTION WITH ENDLESS SCROLL GALLERY */}
+      {/* 1. HERO SECTION WITH ENDLESS SCROLL GALLERY & SEARCHABLE H1 */}
       <section className="hero-revamp-section">
         <HeroProjectGallery />
+
+        {/* Searchable Homepage H1 & Studio Badge */}
+        <div className="hero-seo-headline-wrap">
+          <div className="section-container">
+            <div className="hero-seo-badge">
+              <span className="hero-badge-glow" />
+              Creative Studio &bull; Accra, Ghana
+            </div>
+            <h1 className="hero-seo-h1">
+              Butterfly Effect Concepts
+              <span className="hero-seo-sub">Visual Systems for Brands</span>
+            </h1>
+            <p className="hero-seo-tagline">
+              We build distinctive brand identities, packaging, campaigns, and digital platforms with strategic clarity.
+            </p>
+          </div>
+        </div>
 
         {/* Bottom gradient blending smoothly into near-black (#0a0a0a) */}
         <div className="hero-bottom-gradient" />
@@ -74,7 +97,7 @@ export default function HomePage() {
                 letterSpacing: '-0.01em',
                 margin: 0
               }}>
-                We are a team of people who love to create things! Think of us as your partners for making your business look great and get noticed.
+                We are a creative studio based in Accra, Ghana. Think of us as your partners for making your brand look extraordinary and stand out in any market.
               </p>
               
               <div style={{ marginTop: '1rem' }}>
@@ -82,34 +105,34 @@ export default function HomePage() {
                 <div className="logo-marquee-container" style={{ padding: '0', background: 'transparent' }}>
                   <div className="logo-marquee-track">
                     {[
-                      'ugsrcwelfare.png', 
-                      'duaa-logo-color.png', 
-                      'cosmotech-logo.png', 
-                      'logo with black text.png', 
-                      '@5 FULL LOGO GREEN.png', 
-                      'bagsgopgh.png', 
-                      'AMS LOGO WITH TEXT.png', 
-                      'dukari-Logo (BreakFast).png',
-                      'winwin-logo new.png'
-                    ].map((logo, idx) => (
+                      { src: 'ugsrcwelfare.png', name: 'UG SRC Welfare Scheme' }, 
+                      { src: 'duaa-logo-color.png', name: 'Duaa Brand Identity' }, 
+                      { src: 'cosmotech-logo.png', name: 'Cosmotech' }, 
+                      { src: 'logo with black text.png', name: 'Partner Brand' }, 
+                      { src: '@5 FULL LOGO GREEN.png', name: '@5 Brand' }, 
+                      { src: 'bagsgopgh.png', name: 'Bags Go Ghana' }, 
+                      { src: 'AMS LOGO WITH TEXT.png', name: 'AMS Global' }, 
+                      { src: 'dukari-Logo (BreakFast).png', name: 'Dukari Breakfast' },
+                      { src: 'winwin-logo new.png', name: 'Win Win Coffee' }
+                    ].map((brand, idx) => (
                       <div key={idx} className="logo-slide-card">
-                        <img src={`/${logo}`} alt="Brand Logo" />
+                        <img src={`/${brand.src}`} alt={`Butterfly Effect Concepts Client — ${brand.name}`} />
                       </div>
                     ))}
                     {/* Duplicate for seamless loop */}
                     {[
-                      'ugsrcwelfare.png', 
-                      'duaa-logo-color.png', 
-                      'cosmotech-logo.png', 
-                      'logo with black text.png', 
-                      '@5 FULL LOGO GREEN.png', 
-                      'bagsgopgh.png', 
-                      'AMS LOGO WITH TEXT.png', 
-                      'dukari-Logo (BreakFast).png',
-                      'winwin-logo new.png'
-                    ].map((logo, idx) => (
+                      { src: 'ugsrcwelfare.png', name: 'UG SRC Welfare Scheme' }, 
+                      { src: 'duaa-logo-color.png', name: 'Duaa Brand Identity' }, 
+                      { src: 'cosmotech-logo.png', name: 'Cosmotech' }, 
+                      { src: 'logo with black text.png', name: 'Partner Brand' }, 
+                      { src: '@5 FULL LOGO GREEN.png', name: '@5 Brand' }, 
+                      { src: 'bagsgopgh.png', name: 'Bags Go Ghana' }, 
+                      { src: 'AMS LOGO WITH TEXT.png', name: 'AMS Global' }, 
+                      { src: 'dukari-Logo (BreakFast).png', name: 'Dukari Breakfast' },
+                      { src: 'winwin-logo new.png', name: 'Win Win Coffee' }
+                    ].map((brand, idx) => (
                       <div key={`dup-${idx}`} className="logo-slide-card">
-                        <img src={`/${logo}`} alt="Brand Logo" />
+                        <img src={`/${brand.src}`} alt={`Butterfly Effect Concepts Client — ${brand.name}`} />
                       </div>
                     ))}
                   </div>
@@ -120,80 +143,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. STATS SECTION */}
-      <section style={{ padding: isMobile ? '60px 16px' : '100px 0', background: 'var(--bg-primary)', borderBottom: '1px solid var(--border-color)' }}>
-        <div className="section-container">
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: isMobile ? '1fr' : '1fr 1.1fr 1fr',
-            gap: isMobile ? '1.5rem' : '2rem',
-            alignItems: 'center'
-          }}>
-            {/* Stat: Experience */}
-            <div style={{
-              background: 'var(--bg-secondary)',
-              borderRadius: '24px',
-              padding: '2.5rem 2rem',
-              height: isMobile ? 'auto' : '280px',
-              display: 'flex', flexDirection: 'column', justifyContent: 'space-between'
-            }}>
-              <span style={{ fontSize: '3.5rem', fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--text-primary)', lineHeight: 1 }}>6+</span>
-              <div>
-                <p style={{ fontWeight: 700, fontSize: '1.05rem', margin: '0 0 0.5rem', color: 'var(--text-primary)' }}>Years Experience</p>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: 1.5, margin: 0 }}>Working across brands, campaigns, and digital platforms.</p>
-              </div>
-            </div>
-
-            {/* Centre Feature Card */}
-            <div style={{
-              background: 'linear-gradient(160deg, #1a1a1a 0%, #0A0A0A 100%)',
-              borderRadius: '24px',
-              padding: '2.5rem 2rem',
-              height: isMobile ? 'auto' : '340px',
-              display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
-              position: 'relative',
-              overflow: 'hidden',
-              boxShadow: '0 20px 60px rgba(0,0,0,0.15)'
-            }}>
-              <div style={{
-                position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
-                background: 'radial-gradient(circle at 70% 30%, rgba(244, 63, 94, 0.2) 0%, transparent 60%)',
-                zIndex: 0
-              }} />
-              <div style={{ position: 'relative', zIndex: 1 }}>
-                <p style={{ fontWeight: 600, fontSize: '1.05rem', margin: '0', color: '#ffffff', lineHeight: 1.6 }}>
-                  Small details,<br/>big effect.
-
-                </p>
-                <Link to="/contact" style={{
-                  display: 'inline-flex', alignItems: 'center', gap: '0.6rem',
-                  marginTop: '1.5rem',
-                  background: '#F43F5E', color: '#fff',
-                  padding: '0.85rem 1.6rem', borderRadius: '100px',
-                  fontWeight: 600, fontSize: '0.95rem'
-                }}>
-                  Get in Touch <ArrowRight size={16} />
-                </Link>
-              </div>
-            </div>
-
-            {/* Stat: Projects */}
-            <div style={{
-              background: 'var(--bg-secondary)',
-              borderRadius: '24px',
-              padding: '2.5rem 2rem',
-              height: isMobile ? 'auto' : '280px',
-              display: 'flex', flexDirection: 'column', justifyContent: 'space-between'
-            }}>
-              <span style={{ fontSize: '3.5rem', fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--text-primary)', lineHeight: 1 }}>50+</span>
-              <div>
-                <p style={{ fontWeight: 700, fontSize: '1.05rem', margin: '0 0 0.5rem', color: 'var(--text-primary)' }}>Projects Delivered</p>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: 1.5, margin: 0 }}>Clients across brands, events, and organizations.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* 3. INTERACTIVE SERVICES SECTION */}
+      <InteractiveServicesSection />
 
 
       {/* 5. SELECTED WORK */}

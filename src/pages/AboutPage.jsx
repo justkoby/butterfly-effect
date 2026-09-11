@@ -1,15 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Sparkles, ArrowRight, Eye, ShieldCheck, Award } from 'lucide-react';
+import { Sparkles, ArrowRight, Eye, Award } from 'lucide-react';
 import SEO from '../components/SEO';
 
 export default function AboutPage() {
   return (
     <div className="about-page">
       <SEO 
-        title="About Us" 
-        description="Learn more about Butterfly Effect Concepts, a full-service design studio building strategic and unique visual communication solutions." 
+        title="About Us — Creative Vision &amp; Brand Systems Studio in Accra, Ghana" 
+        description="Learn about Butterfly Effect Concepts, a premier brand identity and visual systems design studio in Accra, Ghana crafting distinctive brand experiences for ambitious businesses." 
         path="/about" 
+        keywords="Butterfly Effect Concepts about, branding agency Accra Ghana, creative studio Accra, brand designers Ghana, visual identity studio Accra"
       />
       <section className="page-section hero-section">
         <div className="hero-bg-glow"></div>
@@ -20,7 +21,7 @@ export default function AboutPage() {
               Creativity Meets <span>Strategic Vision</span>
             </h1>
             <p className="hero-description">
-              Butterfly Effect is a full-service design agency specializing in creating compelling, strategic, and unique visual communication solutions for businesses of all sizes.
+              Butterfly Effect Concepts is a full-service brand design and visual systems studio based in Accra, Ghana. We specialize in creating compelling, strategic, and unique visual communication solutions for visionary businesses.
             </p>
             <div className="hero-actions">
               <Link to="/contact" className="cta-button">
@@ -32,7 +33,7 @@ export default function AboutPage() {
             <div className="visual-image-wrapper" style={{ height: '420px' }}>
               <img
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600"
-                alt="Our Creative Studio"
+                alt="Butterfly Effect Concepts Design Team in Accra Ghana"
                 className="visual-image"
               />
             </div>

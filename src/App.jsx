@@ -74,16 +74,19 @@ export default function App() {
       >
         <div className="header-inner">
           <Link to="/" className="logo-wrapper">
-            <img src="/butterfly - logo.png" alt="Butterfly Effect" style={{ height: '36px', width: 'auto', display: 'block' }} />
+            <img src="/butterfly - logo.png" alt="Butterfly Effect" className="header-logo" style={{ height: '36px', width: 'auto', display: 'block' }} />
           </Link>
 
           <nav className="main-nav">
             <ul className="nav-links">
-
-
               <li>
                 <NavLink to="/projects" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
                   Work
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/services" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
+                  Services
                 </NavLink>
               </li>
               <li>
@@ -119,6 +122,7 @@ export default function App() {
           <nav className="mobile-nav">
             <ul className="mobile-nav-links">
               <li><NavLink to="/projects" className="mobile-nav-link">Work</NavLink></li>
+              <li><NavLink to="/services" className="mobile-nav-link">Services</NavLink></li>
               <li><NavLink to="/about" className="mobile-nav-link">About</NavLink></li>
               <li><NavLink to="/contact" className="mobile-nav-link">Contact</NavLink></li>
             </ul>
@@ -149,22 +153,24 @@ export default function App() {
         <div className="section-container">
           <div className="footer-grid-black" style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr 1fr', gap: '3rem', marginBottom: '4rem' }}>
             <div>
-              <h3 style={{ fontSize: '1.4rem', color: 'var(--text-primary)', margin: '0 0 1.5rem' }}>Butterfly Effect</h3>
+              <h3 style={{ fontSize: '1.4rem', color: 'var(--text-primary)', margin: '0 0 1.5rem' }}>Butterfly Effect Concepts</h3>
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6, maxWidth: '320px', margin: 0 }}>
-                We build visual systems for brands — across packaging, campaigns, and digital platforms.
+                Visual systems &amp; brand design studio based in Accra, Ghana — crafting identity, packaging, campaigns, and digital platforms.
               </p>
             </div>
             <div>
               <h4 style={{ fontSize: '1rem', color: 'var(--text-primary)', margin: '0 0 1.5rem', fontWeight: 600 }}>Get in Touch</h4>
-              <a href="mailto:kobbydarko2016@gmail.com" style={{ display: 'block', color: 'var(--text-secondary)', fontSize: '0.95rem', margin: '0 0 0.75rem' }}>kobbydarko2016@gmail.com</a>
-              <span style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>+233546379235</span>
+              <a href="mailto:kobbydarko2016@gmail.com" style={{ display: 'block', color: 'var(--text-secondary)', fontSize: '0.95rem', margin: '0 0 0.5rem' }}>kobbydarko2016@gmail.com</a>
+              <span style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', display: 'block', marginBottom: '0.5rem' }}>+233 54 637 9235</span>
+              <span style={{ color: 'var(--text-secondary)', fontSize: '0.88rem', opacity: 0.85 }}>Adenta Housing Down, Accra, Ghana</span>
             </div>
             <div>
               <h4 style={{ fontSize: '1rem', color: 'var(--text-primary)', margin: '0 0 1.5rem', fontWeight: 600 }}>Social Media</h4>
-              <div style={{ display: 'flex', gap: '1.5rem', fontSize: '0.95rem' }}>
+              <div style={{ display: 'flex', gap: '1.25rem', fontSize: '0.95rem', flexWrap: 'wrap' }}>
                 <a href="https://wa.me/233546379235" target="_blank" rel="noreferrer" style={{ color: 'var(--text-secondary)' }}>WhatsApp</a>
-                <a href="https://instagram.com" target="_blank" rel="noreferrer" style={{ color: 'var(--text-secondary)' }}>Instagram</a>
-                <a href="https://behance.net" target="_blank" rel="noreferrer" style={{ color: 'var(--text-secondary)' }}>Behance</a>
+                <a href="https://www.instagram.com/butterfly_effect.concepts/" target="_blank" rel="me noreferrer" style={{ color: 'var(--text-secondary)' }} aria-label="Butterfly Effect Concepts on Instagram">Instagram</a>
+                <a href="https://www.behance.net/kobbydarko" target="_blank" rel="me noreferrer" style={{ color: 'var(--text-secondary)' }} aria-label="Butterfly Effect Concepts on Behance">Behance</a>
+                <a href="https://www.linkedin.com/in/solomon-darko-9504b1129/" target="_blank" rel="me noreferrer" style={{ color: 'var(--text-secondary)' }} aria-label="Solomon Darko on LinkedIn">LinkedIn</a>
               </div>
             </div>
           </div>

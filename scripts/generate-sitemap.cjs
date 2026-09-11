@@ -3,38 +3,42 @@ const path = require('path');
 
 const BASE_URL = 'https://butterflyeffectconcepts.com';
 
-// Define static routes
+// Define static routes with accurate priorities
 const staticRoutes = [
-  { path: '', changefreq: 'weekly', priority: '1.0' },
-  { path: '/about', changefreq: 'monthly', priority: '0.8' },
-  { path: '/services', changefreq: 'monthly', priority: '0.8' },
+  { path: '/', changefreq: 'weekly', priority: '1.0' },
   { path: '/projects', changefreq: 'weekly', priority: '0.9' },
+  { path: '/services', changefreq: 'monthly', priority: '0.8' },
+  { path: '/about', changefreq: 'monthly', priority: '0.8' },
   { path: '/contact', changefreq: 'monthly', priority: '0.8' }
 ];
 
-function getProjectIds() {
-  const ids = new Set();
+function getProjects() {
+  const projects = [];
   const filePath = path.join(__dirname, '../src/data/portfolioProjects.js');
   
   try {
     if (fs.existsSync(filePath)) {
       const content = fs.readFileSync(filePath, 'utf8');
-      // Look for id: '...' where hasDetailPage: true or in general
+      // Regex to capture project objects with id and hasDetailPage: true
       const regex = /id:\s*['"]([^'"]+)['"][\s\S]*?hasDetailPage:\s*true/g;
       let match;
+      const seen = new Set();
       while ((match = regex.exec(content)) !== null) {
-        ids.add(match[1]);
+        if (!seen.has(match[1])) {
+          seen.add(match[1]);
+          projects.push(match[1]);
+        }
       }
     }
   } catch (err) {
     console.error('Error reading portfolioProjects.js for sitemap:', err);
   }
   
-  return Array.from(ids);
+  return projects;
 }
 
 function generateSitemap() {
-  const projectIds = getProjectIds();
+  const projectIds = getProjects();
   const currentDate = new Date().toISOString().split('T')[0];
 
   let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
@@ -42,15 +46,16 @@ function generateSitemap() {
 
   // Add static routes
   staticRoutes.forEach(route => {
+    const loc = route.path === '/' ? `${BASE_URL}/` : `${BASE_URL}${route.path}`;
     xml += '  <url>\n';
-    xml += `    <loc>${BASE_URL}${route.path}</loc>\n`;
+    xml += `    <loc>${loc}</loc>\n`;
     xml += `    <lastmod>${currentDate}</lastmod>\n`;
     xml += `    <changefreq>${route.changefreq}</changefreq>\n`;
     xml += `    <priority>${route.priority}</priority>\n`;
     xml += '  </url>\n';
   });
 
-  // Add dynamic project routes
+  // Add dynamic project case study routes
   projectIds.forEach(id => {
     xml += '  <url>\n';
     xml += `    <loc>${BASE_URL}/projects/${id}</loc>\n`;

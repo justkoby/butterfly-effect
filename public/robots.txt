@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://butterflyeffectconcepts.com/sitemap.xml
+Host: https://butterflyeffectconcepts.com
+

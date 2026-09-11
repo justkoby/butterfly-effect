@@ -7,16 +7,17 @@ export default function ServicesPage() {
   return (
     <div className="services-page">
       <SEO 
-        title="Services" 
-        description="Our services include Product Design, UI/UX Design, and Web Design tailored to help your brand build clarity and digital presence." 
+        title="Creative Design Services &amp; Visual Systems — Accra, Ghana" 
+        description="Explore brand identity design, packaging, campaign collateral, digital platforms, and creative direction services by Butterfly Effect Concepts in Accra, Ghana." 
         path="/services" 
+        keywords="Butterfly Effect Concepts services, brand identity design Accra, web design Ghana, packaging design studio Accra, visual systems Ghana, creative direction Accra"
       />
       <section className="page-section">
         <div className="section-container">
           <span className="section-subtitle">What We Excel At</span>
-          <h1 className="section-title">Our Creative Catalog</h1>
+          <h1 className="section-title">Our Creative Capabilities</h1>
           <p className="section-desc">
-            We deliver specialized digital design, comprehensive user experience transformation, and bold brand strategies that transform digital horizons.
+            We deliver high-impact visual identity systems, bespoke digital design, packaging solutions, and bold brand strategies for companies in Ghana and globally.
           </p>
 
           <div className="services-grid" style={{ marginBottom: '5rem' }}>

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
 import { ArrowUpRight, ArrowRight } from 'lucide-react';
 import WorkSlideshow from '../components/WorkSlideshow';
 import SEO from '../components/SEO';
@@ -8,7 +8,17 @@ import { portfolioProjects } from '../data/portfolioProjects';
 const filterCategories = ['All', 'Websites', 'Branding', 'Graphic Design', 'Campaigns', 'Packaging', 'Posters'];
 
 export default function ProjectsPage() {
-  const [activeFilter, setActiveFilter] = useState('All');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const urlFilter = searchParams.get('filter');
+  const [activeFilter, setActiveFilter] = useState(urlFilter || 'All');
+
+  useEffect(() => {
+    if (urlFilter && filterCategories.includes(urlFilter)) {
+      setActiveFilter(urlFilter);
+    } else if (!urlFilter) {
+      setActiveFilter('All');
+    }
+  }, [urlFilter]);
 
   const filteredProjects = activeFilter === 'All' 
     ? portfolioProjects 
@@ -38,9 +48,10 @@ export default function ProjectsPage() {
   return (
     <div className="projects-page">
       <SEO 
-        title="Our Work" 
-        description="Explore our high-impact visual design systems that enabled distinct brands to build real presence and reach." 
+        title="Selected Work &amp; Brand Systems — Portfolio | Accra, Ghana" 
+        description="Explore brand identity, visual systems, packaging, and digital platform case studies created by Butterfly Effect Concepts in Accra, Ghana." 
         path="/projects" 
+        keywords="Butterfly Effect Concepts portfolio, branding portfolio Ghana, graphic design case studies Accra, packaging design portfolio, logo design Accra"
       />
       <section className="page-section">
         <div className="section-container">
