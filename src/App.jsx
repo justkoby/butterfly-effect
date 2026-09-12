@@ -166,11 +166,10 @@ export default function App() {
             </div>
             <div>
               <h4 style={{ fontSize: '1rem', color: 'var(--text-primary)', margin: '0 0 1.5rem', fontWeight: 600 }}>Social Media</h4>
-              <div style={{ display: 'flex', gap: '1.25rem', fontSize: '0.95rem', flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', gap: '1.5rem', fontSize: '0.95rem' }}>
                 <a href="https://wa.me/233546379235" target="_blank" rel="noreferrer" style={{ color: 'var(--text-secondary)' }}>WhatsApp</a>
                 <a href="https://www.instagram.com/butterfly_effect.concepts/" target="_blank" rel="me noreferrer" style={{ color: 'var(--text-secondary)' }} aria-label="Butterfly Effect Concepts on Instagram">Instagram</a>
                 <a href="https://www.behance.net/kobbydarko" target="_blank" rel="me noreferrer" style={{ color: 'var(--text-secondary)' }} aria-label="Butterfly Effect Concepts on Behance">Behance</a>
-                <a href="https://www.linkedin.com/in/solomon-darko-9504b1129/" target="_blank" rel="me noreferrer" style={{ color: 'var(--text-secondary)' }} aria-label="Solomon Darko on LinkedIn">LinkedIn</a>
               </div>
             </div>
           </div>

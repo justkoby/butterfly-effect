@@ -83,7 +83,7 @@ export default function SEO({
     setMetaTag('property', 'og:title', metaTitle);
     setMetaTag('property', 'og:description', metaDesc);
     setMetaTag('property', 'og:image', metaImage);
-    setMetaTag('property', 'og:locale', 'en_US');
+    setMetaTag('property', 'og:locale', 'en_GH');
 
     // Twitter Card
     setMetaTag('name', 'twitter:card', 'summary_large_image');
@@ -128,7 +128,7 @@ export default function SEO({
       <meta property="og:title" content={metaTitle} />
       <meta property="og:description" content={metaDesc} />
       <meta property="og:image" content={metaImage} />
-      <meta property="og:locale" content="en_US" />
+      <meta property="og:locale" content="en_GH" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
