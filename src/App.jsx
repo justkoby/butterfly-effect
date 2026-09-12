@@ -85,14 +85,21 @@ export default function App() {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/services" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
-                  Services
-                </NavLink>
-              </li>
-              <li>
                 <NavLink to="/about" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
                   About
                 </NavLink>
+              </li>
+              <li>
+                <a 
+                  href="https://www.butterflyeffectphotographs.com/"
+                  target="_blank"
+                  rel="noopener"
+                  className="nav-link"
+                  aria-label="Visit our sister company, Butterfly Effect Photographs"
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: '3px' }}
+                >
+                  Photography <ArrowUpRight size={13} strokeWidth={2.2} />
+                </a>
               </li>
               <li>
                 <NavLink to="/contact" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
@@ -122,8 +129,19 @@ export default function App() {
           <nav className="mobile-nav">
             <ul className="mobile-nav-links">
               <li><NavLink to="/projects" className="mobile-nav-link">Work</NavLink></li>
-              <li><NavLink to="/services" className="mobile-nav-link">Services</NavLink></li>
               <li><NavLink to="/about" className="mobile-nav-link">About</NavLink></li>
+              <li>
+                <a 
+                  href="https://www.butterflyeffectphotographs.com/"
+                  target="_blank"
+                  rel="noopener"
+                  className="mobile-nav-link"
+                  aria-label="Visit our sister company, Butterfly Effect Photographs"
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+                >
+                  Photography <ArrowUpRight size={18} strokeWidth={2.2} />
+                </a>
+              </li>
               <li><NavLink to="/contact" className="mobile-nav-link">Contact</NavLink></li>
             </ul>
             <div className="mobile-menu-footer">
