@@ -6,838 +6,1553 @@
  */
 
 export const portfolioProjects = [
-  // --- Case Studies & Flagship Projects ---
   {
-    id: 'osomafo-pinto-music',
-    title: 'Osomafo Pinto Music — Logo & Album Artwork',
-    category: 'Logo Design & Album Artwork',
-    role: 'Logo Design & Album Artwork',
-    description: 'Logo design for Osomafo Pinto Music and artwork for Praise Medley Volume 1, presented through digital music-player mockups.',
-    image: '/praise-mock-1.jpg',
-    hasDetailPage: true,
-    featuredInHero: true,
-    overview: 'Logo design for Osomafo Pinto Music and artwork for Praise Medley Volume 1, presented through digital music-player mockups.',
-    sections: [
-      { type: 'text', title: 'Artist Logo', subtitle: 'The core logo mark designed for Osomafo Pinto Music.' },
-      { type: 'presentation-page', image: '/praise-logo.jpg', title: 'Osomafo Pinto Music Logo' },
-      { type: 'text', title: 'Album Artwork', subtitle: 'Cover and accompanying visual artwork created for Praise Medley Volume 1.' },
-      { type: 'presentation-page', image: '/praise2-01.jpg', title: 'Praise Medley Volume 1 — Cover Artwork' },
-      { type: 'presentation-page', image: '/praise2-01-01.jpg', title: 'Praise Medley Volume 1 — Accompanying Artwork' },
-      { type: 'text', title: 'Presentation Mockups', subtitle: 'Visual concepts illustrating how the album artwork appears within digital music player screens and streaming interfaces.' },
-      { type: 'presentation-page', image: '/praise-mock-1.jpg', title: 'Digital Music Player Presentation Mockup 01' },
-      { type: 'presentation-page', image: '/praise-mock-2.jpg', title: 'Digital Music Player Presentation Mockup 02' }
-    ]
+    "id": "e-waste-management-report",
+    "title": "A Decade of Pioneering E-Waste Management in Ghana",
+    "category": "Publications",
+    "displayLabel": "INSTITUTIONAL PUBLICATION",
+    "role": "Editorial Design · Long-form Publication",
+    "description": "An institutional publication documenting ten years of pioneering electronic waste management, environmental policy milestones, and sustainable recycling frameworks in Ghana.",
+    "image": "/A%20DECADE%20OF%20PIONEERING%20E-WASTE%20MANAGEMENT%20IN%20GHANA.jpg",
+    "route": "/work/e-waste-management-report",
+    "ctaLabel": "Case Study",
+    "link": "https://drive.google.com/file/d/1kiBisS-FrrkUwa-ionpx0utE86uzPEwC/view",
+    "linkLabel": "View Report",
+    "hasDetailPage": true,
+    "overview": "An institutional publication documenting ten years of pioneering electronic waste management, environmental policy milestones, and sustainable recycling frameworks in Ghana.",
+    "imageFit": "contain"
   },
   {
-    id: 'adas-cosmetics',
-    title: 'Ada’s Cosmetics — Logo Design & Brand Applications',
-    category: 'Logo Design',
-    role: 'Logo Design & Visual Applications',
-    description: 'Logo design for Ada’s Cosmetics, with product mockups exploring how the identity appears across cosmetic packaging.',
-    image: '/ada-cos-mock-1.jpg',
-    hasDetailPage: true,
-    featuredInHero: true,
-    overview: 'Logo design for Ada’s Cosmetics, with product mockups exploring how the identity appears across cosmetic packaging.',
-    sections: [
-      { type: 'text', title: 'Logo Design & Identity', subtitle: 'The core logo mark designed for Ada’s Cosmetics.' },
-      { type: 'presentation-page', image: '/ada-cos-logo.jpeg', title: 'Primary Brand Logo' },
-      { type: 'text', title: 'Proposed Brand Applications', subtitle: 'Visual concepts demonstrating how the identity could appear across cosmetic packaging, bottles, and product containers.' },
-      { type: 'presentation-page', image: '/ada-cos-mock-1.jpg', title: 'Proposed Cosmetic Packaging Application 01' },
-      { type: 'presentation-page', image: '/ada-cos-mock-2.jpg', title: 'Proposed Cosmetic Packaging Application 02' },
-      { type: 'presentation-page', image: '/ada-cos-mock-3.jpg', title: 'Proposed Cosmetic Packaging Application 03' }
-    ]
+    "id": "all-africa-students-union",
+    "title": "AASU — Brand Manual & Visual Identity",
+    "category": "Branding & Visual Identity",
+    "displayLabel": "BRAND IDENTITY SYSTEM",
+    "role": "Visual Identity · Brand Manual",
+    "description": "Comprehensive visual identity system and official brand manual established for the All Africa Students Union (AASU), unifying continental youth and student representation.",
+    "link": "https://drive.google.com/file/d/1KLV1kpaH3rlYfzyeIkHNodlbWQhH07qk/view",
+    "linkLabel": "View Brand Manual",
+    "ctaLabel": "Case Study",
+    "image": "/AASU BRAND MANUAL.jpg",
+    "hasDetailPage": true,
+    "featuredInHero": false,
+    "overview": "The All Africa Students Union (AASU) platform represents student unions across the continent, providing a central space for initiatives, programs, and communication. The goal was to design a platform that reflects its scale while maintaining clarity.",
+    "challenge": "The platform needed to organize a wide range of content, including programs, updates, and resources, while ensuring accessibility for a diverse audience.",
+    "approach": "A structured layout and clear navigation system were implemented to simplify access to information and improve overall usability.",
+    "details": "Visual System: A clean and consistent visual system was used to reflect the organization’s identity and authority.\nInformation Structure: Content was organized to make programs, updates, and resources easy to access.\nUser Flow: Navigation was designed to guide users efficiently through key sections.",
+    "outcome": "The final platform delivers a structured and accessible experience that supports communication and engagement across the continent."
   },
   {
-    id: 'venus-events',
-    title: 'Venus Events — Visual Identity & Brand Manual',
-    category: 'Branding & Visual Identity',
-    role: 'Visual Identity & Brand Manual',
-    description: 'Visual identity and brand manual for Venus Events, covering logo variations, colour, typography, patterns, and proposed branded applications.',
-    image: '/VENUS%20BRAND%20MANUAL/page01_1.jpg',
-    hasDetailPage: true,
-    featuredInHero: true,
-    overview: 'Visual identity and brand manual for Venus Events, covering logo variations, colour, typography, patterns, and proposed branded applications.',
-    sections: [
-      { type: 'text', title: 'Logo System & Mark Variations', subtitle: 'The core logo mark, proportion rules, and color variations for Venus Events.' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/logo.jpg', title: 'Primary Brand Mark' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page01_1.jpg', title: 'Cover Page 01' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page04_1.jpg', title: 'Logo Guidelines Page 04' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page05_1.jpg', title: 'Clearspace & Sizing Page 05' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page06_1.jpg', title: 'Mark Construction Page 06' },
-      { type: 'text', title: 'Brand Architecture & Guidelines', subtitle: 'Color palette, typographic hierarchy, and visual assets.' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page08_1.jpg', title: 'Color Palette Page 08' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/pattern.jpg', title: 'Brand Pattern System' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page13_1.jpg', title: 'Typography Page 13' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page14_1.jpg', title: 'Visual Elements Page 14' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page15_1.jpg', title: 'Imagery Guidelines Page 15' },
-      { type: 'text', title: 'Proposed Branded Applications', subtitle: 'Visual concepts demonstrating how the identity could appear across event collateral, invitations, merchandise, and environmental touchpoints.' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page16_1.jpg', title: 'Proposed Application Page 16' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page17_1.jpg', title: 'Proposed Application Page 17' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page18_1.jpg', title: 'Proposed Application Page 18' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page19_1.jpg', title: 'Proposed Application Page 19' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page20_1.jpg', title: 'Proposed Application Page 20' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page21_1.jpg', title: 'Proposed Application Page 21' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page22_1.jpg', title: 'Proposed Application Page 22' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page23_1.jpg', title: 'Proposed Application Page 23' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page24_1.jpg', title: 'Proposed Application Page 24' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page25_1.jpg', title: 'Proposed Application Page 25' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page26_1.jpg', title: 'Proposed Application Page 26' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page27_1.jpg', title: 'Proposed Application Page 27' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page28_1.jpg', title: 'Proposed Application Page 28' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page29_1.jpg', title: 'Proposed Application Page 29' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page30_1.jpg', title: 'Proposed Application Page 30' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page31_1.jpg', title: 'Proposed Application Page 31' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page32_1.jpg', title: 'Proposed Application Page 32' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page33_1.jpg', title: 'Proposed Application Page 33' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page34_1.jpg', title: 'Proposed Application Page 34' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page35_1.jpg', title: 'Proposed Application Page 35' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page36_1.jpg', title: 'Proposed Application Page 36' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page37_1.jpg', title: 'Proposed Application Page 37' },
-      { type: 'presentation-page', image: '/VENUS%20BRAND%20MANUAL/page38_1.jpg', title: 'Proposed Application Page 38' }
-    ]
+    "id": "vianexta",
+    "title": "ViaNexta — Sales & Pitch Deck",
+    "category": "Presentation / Pitch Deck",
+    "displayLabel": "STRATEGIC PRESENTATION",
+    "role": "Presentation Design · Pitch Deck",
+    "description": "High-conversion sales deck and investor presentation system created for ViaNexta, translating complex AI-driven supply chain solutions into persuasive visual storytelling.",
+    "link": "https://drive.google.com/file/d/1RuUsFnE1pZS3baP67rFTdcwilEZs3LIN/view",
+    "linkLabel": "View Deck",
+    "ctaLabel": "Case Study",
+    "image": "/vianexta sales pitch.jpg",
+    "hasDetailPage": true,
+    "featuredInHero": false,
+    "overview": "ViaNexta is an AI-powered platform built to help brands create, source, package, and launch physical products faster. The goal was to design a clean digital experience that could communicate a complex supply chain process in a simple, modern, and approachable way.",
+    "challenge": "Supply chains can feel slow, fragmented, and difficult to understand. ViaNexta needed a digital presence that made the process feel easier, smarter, and more accessible — while positioning the brand as modern, scalable, and technology-driven.",
+    "approach": "The visual direction focused on clarity, structure, and product confidence. The layout was designed to explain the platform quickly, highlight its AI-powered workflow, and guide users from understanding the concept to taking action.",
+    "details": "Visual System: A clean and modern visual system was used to support the platform’s technology-first positioning.\nInformation Structure: Content was organized to make a complex supply chain process feel simple and easy to follow.\nUser Flow: Key calls-to-action were placed throughout the experience to guide users from discovery to product creation.",
+    "outcome": "The final website presents ViaNexta as a bold, AI-powered platform for physical product creation — helping users understand the value of the platform quickly while giving the brand a stronger digital presence."
   },
   {
-    id: 'caring-therapeutics',
-    title: 'Caring Therapeutics — Visual Identity & Brand Manual',
-    category: 'Branding & Visual Identity',
-    role: 'Visual Identity & Brand Guidelines',
-    description: 'Visual identity and brand guidelines for Caring Therapeutics, a provider of physical, occupational, and speech therapy services.',
-    image: '/Caring%20Brand%20Manual/thumbnail.jpg',
-    hasDetailPage: true,
-    featuredInHero: true,
-    overview: 'Visual identity and brand guidelines for Caring Therapeutics, a provider of physical, occupational, and speech therapy services.',
-    sections: [
-      { type: 'text', title: 'Logo System & Brand Mark', subtitle: 'The core logo system, construction, and identity guidelines for Caring Therapeutics.' },
-      { type: 'presentation-page', image: '/Caring%20Brand%20Manual/logo.jpg', title: 'Primary Brand Logo' },
-      { type: 'presentation-page', image: '/Caring%20Brand%20Manual/page01_1.jpg', title: 'Manual Cover Page 01' },
-      { type: 'presentation-page', image: '/Caring%20Brand%20Manual/page02_1.jpg', title: 'Introduction Page 02' },
-      { type: 'presentation-page', image: '/Caring%20Brand%20Manual/page03_1.jpg', title: 'Logo Concept Page 03' },
-      { type: 'presentation-page', image: '/Caring%20Brand%20Manual/page05_1.jpg', title: 'Construction & Clearspace Page 05' },
-      { type: 'presentation-page', image: '/Caring%20Brand%20Manual/page06_1.jpg', title: 'Color Specifications Page 06' },
-      { type: 'presentation-page', image: '/Caring%20Brand%20Manual/page07_1.jpg', title: 'Typography Page 07' },
-      { type: 'text', title: 'Brand Guidelines & Collateral', subtitle: 'Standards for print collateral, stationery, digital touchpoints, and clinic touchpoints.' },
-      { type: 'presentation-page', image: '/Caring%20Brand%20Manual/page08_1.jpg', title: 'Brand Application Page 08' },
-      { type: 'presentation-page', image: '/Caring%20Brand%20Manual/page09_1.jpg', title: 'Brand Application Page 09' },
-      { type: 'presentation-page', image: '/Caring%20Brand%20Manual/page10_1.jpg', title: 'Stationery Page 10' },
-      { type: 'presentation-page', image: '/Caring%20Brand%20Manual/page11_1.jpg', title: 'Collateral Page 11' },
-      { type: 'presentation-page', image: '/Caring%20Brand%20Manual/page12_1.jpg', title: 'Application Page 12' },
-      { type: 'presentation-page', image: '/Caring%20Brand%20Manual/page13_1.jpg', title: 'Application Page 13' },
-      { type: 'presentation-page', image: '/Caring%20Brand%20Manual/page14_1.jpg', title: 'Clinic Touchpoints Page 14' },
-      { type: 'presentation-page', image: '/Caring%20Brand%20Manual/page15_1.jpg', title: 'Clinic Touchpoints Page 15' },
-      { type: 'presentation-page', image: '/Caring%20Brand%20Manual/page16_1.jpg', title: 'Environmental Signage Page 16' },
-      { type: 'presentation-page', image: '/Caring%20Brand%20Manual/page17_1.jpg', title: 'Apparel & Uniforms Page 17' },
-      { type: 'presentation-page', image: '/Caring%20Brand%20Manual/page18_1.jpg', title: 'Digital Presentation Page 18' },
-      { type: 'presentation-page', image: '/Caring%20Brand%20Manual/page19_1.jpg', title: 'Digital Presentation Page 19' },
-      { type: 'presentation-page', image: '/Caring%20Brand%20Manual/page20_1.jpg', title: 'Vehicle Branding Page 20' },
-      { type: 'presentation-page', image: '/Caring%20Brand%20Manual/page21_1.jpg', title: 'Merchandise Page 21' },
-      { type: 'presentation-page', image: '/Caring%20Brand%20Manual/page22_1.jpg', title: 'Signage Concept Page 22' },
-      { type: 'presentation-page', image: '/Caring%20Brand%20Manual/page23_1.jpg', title: 'Summary Page 23' },
-      { type: 'presentation-page', image: '/Caring%20Brand%20Manual/page24_1.jpg', title: 'Standards Page 24' },
-      { type: 'presentation-page', image: '/Caring%20Brand%20Manual/page25_1.jpg', title: 'Closing Page 25' }
-    ]
-  },
-  {
-    id: 'mfa-ghana-proposal',
-    title: 'Ministry of Foreign Affairs, Ghana — Brand Identity Proposal',
-    category: 'Branding & Visual Identity',
-    role: 'Brand Identity Proposal',
-    status: 'Proposal / Concept',
-    description: 'A proposed visual identity system for Ghana’s Ministry of Foreign Affairs, exploring logo treatments and consistent brand applications.',
-    image: '/Brand%20Proposal%20(MFA)%20draft/page01_1.jpg',
-    hasDetailPage: true,
-    featuredInHero: true,
-    overview: 'A proposed visual identity system for Ghana’s Ministry of Foreign Affairs, exploring logo treatments and consistent brand applications. This proposal explores potential visual coherence for diplomatic communications and international representation.',
-    sections: [
-      { type: 'text', title: 'Proposed Identity Concept', subtitle: 'A concept proposal exploring visual identity, symbol refinement, and typographic structure for diplomatic representation.' },
-      { type: 'presentation-page', image: '/Brand%20Proposal%20(MFA)%20draft/logo.jpg', title: 'Proposed Emblem Concept' },
-      { type: 'presentation-page', image: '/Brand%20Proposal%20(MFA)%20draft/page01_1.jpg', title: 'Proposal Cover Page 01' },
-      { type: 'presentation-page', image: '/Brand%20Proposal%20(MFA)%20draft/page02_1.jpg', title: 'Concept Overview Page 02' },
-      { type: 'presentation-page', image: '/Brand%20Proposal%20(MFA)%20draft/page03_1.jpg', title: 'Emblem Structure Page 03' },
-      { type: 'presentation-page', image: '/Brand%20Proposal%20(MFA)%20draft/page04_1.jpg', title: 'Design Philosophy Page 04' },
-      { type: 'presentation-page', image: '/Brand%20Proposal%20(MFA)%20draft/page05_1.jpg', title: 'Color Intentions Page 05' },
-      { type: 'presentation-page', image: '/Brand%20Proposal%20(MFA)%20draft/page06_1.jpg', title: 'Typography Proposal Page 06' },
-      { type: 'text', title: 'Proposed Brand Applications', subtitle: 'Conceptual explorations of how the identity could appear across diplomatic stationery, official publications, event collateral, and architectural signage.' },
-      { type: 'presentation-page', image: '/Brand%20Proposal%20(MFA)%20draft/page07_1.jpg', title: 'Proposed Application Page 07' },
-      { type: 'presentation-page', image: '/Brand%20Proposal%20(MFA)%20draft/page08_1.jpg', title: 'Proposed Application Page 08' },
-      { type: 'presentation-page', image: '/Brand%20Proposal%20(MFA)%20draft/page09_1.jpg', title: 'Proposed Stationery Page 09' },
-      { type: 'presentation-page', image: '/Brand%20Proposal%20(MFA)%20draft/page10_1.jpg', title: 'Proposed Collateral Page 10' },
-      { type: 'presentation-page', image: '/Brand%20Proposal%20(MFA)%20draft/page11_1.jpg', title: 'Proposed Publication Page 11' },
-      { type: 'presentation-page', image: '/Brand%20Proposal%20(MFA)%20draft/page12_1.jpg', title: 'Proposed Signage Page 12' },
-      { type: 'presentation-page', image: '/Brand%20Proposal%20(MFA)%20draft/page13_1.jpg', title: 'Proposed Environment Page 13' },
-      { type: 'presentation-page', image: '/Brand%20Proposal%20(MFA)%20draft/page15_1.jpg', title: 'Proposed Digital Page 15' },
-      { type: 'presentation-page', image: '/Brand%20Proposal%20(MFA)%20draft/page16_1.jpg', title: 'Proposed Materials Page 16' },
-      { type: 'presentation-page', image: '/Brand%20Proposal%20(MFA)%20draft/page17_1.jpg', title: 'Proposed Overview Page 17' },
-      { type: 'presentation-page', image: '/Brand%20Proposal%20(MFA)%20draft/page18_1.jpg', title: 'Proposed Summary Page 18' }
-    ]
-  },
-  {
-    id: 'mcu-branding',
-    title: 'Magna Charta Universitatum (MCU) — Branding',
-    category: 'Branding & Visual Identity',
-    role: 'Logo Design & Brand Guidelines',
-    description: 'Logo design and brand guidelines for Magna Charta Universitatum, exploring academic identity through logo variations, colour, typography, and visual applications.',
-    image: '/MCU%20BRANING/page01_1.jpg',
-    hasDetailPage: true,
-    featuredInHero: true,
-    overview: 'Logo design and brand guidelines for Magna Charta Universitatum (MCU) and Magna Charta Observatory (MCO), exploring academic identity through logo variations, colour architecture, typography, and visual applications.',
-    sections: [
-      { type: 'text', title: 'Academic Identity & Logo Architecture', subtitle: 'Guidelines and logo variations preserving the respective identities of Magna Charta Universitatum (MCU) and Magna Charta Observatory (MCO).' },
-      { type: 'presentation-page', image: '/MCU%20BRANING/page01_1.jpg', title: 'Manual Cover Page 01' },
-      { type: 'presentation-page', image: '/MCU%20BRANING/page02_1.jpg', title: 'Introduction Page 02' },
-      { type: 'presentation-page', image: '/MCU%20BRANING/page03_1.jpg', title: 'Core Identity Page 03' },
-      { type: 'presentation-page', image: '/MCU%20BRANING/page04_1.jpg', title: 'Symbol Variations Page 04' },
-      { type: 'presentation-page', image: '/MCU%20BRANING/page05_1.jpg', title: 'Clearspace & Sizing Page 05' },
-      { type: 'presentation-page', image: '/MCU%20BRANING/page06_1.jpg', title: 'Color Specifications Page 06' },
-      { type: 'presentation-page', image: '/MCU%20BRANING/page07_1.jpg', title: 'Typography Page 07' },
-      { type: 'text', title: 'Visual Applications & Collateral Concepts', subtitle: 'Visual concepts illustrating how MCU and MCO identities appear across academic publications, banners, stationery, and event collateral.' },
-      { type: 'presentation-page', image: '/MCU%20BRANING/page08_1.jpg', title: 'Collateral Concept Page 08' },
-      { type: 'presentation-page', image: '/MCU%20BRANING/page09_1.jpg', title: 'Publication Concept Page 09' },
-      { type: 'presentation-page', image: '/MCU%20BRANING/page10_1.jpg', title: 'Application Concept Page 10' },
-      { type: 'presentation-page', image: '/MCU%20BRANING/page11_1.jpg', title: 'Application Concept Page 11' },
-      { type: 'presentation-page', image: '/MCU%20BRANING/page12_1.jpg', title: 'Stationery Concept Page 12' },
-      { type: 'presentation-page', image: '/MCU%20BRANING/page13_1.jpg', title: 'Stationery Concept Page 13' },
-      { type: 'presentation-page', image: '/MCU%20BRANING/page14_1.jpg', title: 'Presentation Concept Page 14' },
-      { type: 'presentation-page', image: '/MCU%20BRANING/page15_1.jpg', title: 'Digital Concept Page 15' },
-      { type: 'presentation-page', image: '/MCU%20BRANING/page16_1.jpg', title: 'Digital Concept Page 16' },
-      { type: 'presentation-page', image: '/MCU%20BRANING/page17_1.jpg', title: 'Merchandise Concept Page 17' },
-      { type: 'presentation-page', image: '/MCU%20BRANING/page18_1.jpg', title: 'Event Concept Page 18' },
-      { type: 'presentation-page', image: '/MCU%20BRANING/page19_1.jpg', title: 'Banner Concept Page 19' },
-      { type: 'presentation-page', image: '/MCU%20BRANING/page20_1.jpg', title: 'Signage Concept Page 20' },
-      { type: 'presentation-page', image: '/MCU%20BRANING/page21_1.jpg', title: 'Signage Concept Page 21' },
-      { type: 'presentation-page', image: '/MCU%20BRANING/page22_1.jpg', title: 'Signage Concept Page 22' },
-      { type: 'presentation-page', image: '/MCU%20BRANING/page23_1.jpg', title: 'Summary Concept Page 23' },
-      { type: 'presentation-page', image: '/MCU%20BRANING/page24_1.jpg', title: 'Guidelines Summary Page 24' },
-      { type: 'presentation-page', image: '/MCU%20BRANING/page25_1.jpg', title: 'Closing Page 25' }
-    ]
-  },
-  {
-    id: '52-homes-and-lounge',
-    title: '52 Homes & Lounge',
-    category: 'Branding & Visual Identity',
-    role: 'Branding & Visual Identity',
-    description: 'Brand identity and visual presentation for 52 Homes & Lounge, featuring logo mark exploration, color palette, typography, and hospitality mockups.',
-    image: '/52%20Homes%20%26%20Lounge%20branding/page1_1.jpg',
-    hasDetailPage: true,
-    featuredInHero: true,
-    overview: 'Visual presentation deck showcasing the logo mark, color architecture, typography, and hospitality environment concepts for 52 Homes & Lounge.',
-    sections: [
-      { type: 'presentation-page', image: '/52%20Homes%20%26%20Lounge%20branding/page1_1.jpg', title: 'Presentation Cover' },
-      { type: 'presentation-page', image: '/52%20Homes%20%26%20Lounge%20branding/page2_1.jpg', title: 'Logo Mark & Identity' },
-      { type: 'presentation-page', image: '/52%20Homes%20%26%20Lounge%20branding/page3_1.jpg', title: 'Color Palette & Typography' },
-      { type: 'presentation-page', image: '/52%20Homes%20%26%20Lounge%20branding/page4_1.jpg', title: 'Exterior & Signage Mockup' },
-      { type: 'presentation-page', image: '/52%20Homes%20%26%20Lounge%20branding/page5_1.jpg', title: 'Interior & Lounge Mockup' },
-      { type: 'presentation-page', image: '/52%20Homes%20%26%20Lounge%20branding/page6_1.jpg', title: 'Stationery & Collateral Mockup' }
-    ]
-  },
-  {
-    id: 'ams',
-    title: 'AMS — Logo Design & Brand Applications',
-    category: 'Logo Design',
-    role: 'Logo Design & Visual Applications',
-    description: 'Logo design for AMS, accompanied by visual concepts showing how the identity could appear across branded materials.',
-    presentationPdf: '/AMS%20BRANDING/BRANDING%20(UPDATED)-compressed.pdf',
-    image: '/AMS%20BRANDING/logo%20and%20thumbnail.jpg',
-    hasDetailPage: true,
-    featuredInHero: true,
-    overview: 'Logo design for AMS, accompanied by visual concepts showing how the identity could appear across branded materials.',
-    sections: [
-      { type: 'text', title: 'Logo Concept & Identity', subtitle: 'The core logo mark and visual identity designed for AMS.' },
-      { type: 'presentation-page', image: '/AMS%20BRANDING/page01_1.jpg', title: 'Logo Presentation Page 01' },
-      { type: 'presentation-page', image: '/AMS%20BRANDING/page02_1.jpg', title: 'Logo Presentation Page 02' },
-      { type: 'presentation-page', image: '/AMS%20BRANDING/page03_1.jpg', title: 'Logo Presentation Page 03' },
-      { type: 'text', title: 'Proposed Brand Applications', subtitle: 'Visual concepts demonstrating how the identity could appear across branded materials, merchandise, and digital environments.' },
-      { type: 'presentation-page', image: '/AMS%20BRANDING/page04_1.jpg', title: 'Proposed Application Page 04' },
-      { type: 'presentation-page', image: '/AMS%20BRANDING/page05_1.jpg', title: 'Proposed Application Page 05' },
-      { type: 'presentation-page', image: '/AMS%20BRANDING/page06_1.jpg', title: 'Proposed Application Page 06' },
-      { type: 'presentation-page', image: '/AMS%20BRANDING/page07_1.jpg', title: 'Proposed Application Page 07' },
-      { type: 'presentation-page', image: '/AMS%20BRANDING/page08_1.jpg', title: 'Proposed Application Page 08' },
-      { type: 'presentation-page', image: '/AMS%20BRANDING/page09_1.jpg', title: 'Proposed Application Page 09' },
-      { type: 'presentation-page', image: '/AMS%20BRANDING/page10_1.jpg', title: 'Proposed Application Page 10' },
-      { type: 'presentation-page', image: '/AMS%20BRANDING/page11_1.jpg', title: 'Proposed Application Page 11' },
-      { type: 'presentation-page', image: '/AMS%20BRANDING/page12_1.jpg', title: 'Proposed Application Page 12' },
-      { type: 'presentation-page', image: '/AMS%20BRANDING/page13_1.jpg', title: 'Proposed Application Page 13' },
-      { type: 'presentation-page', image: '/AMS%20BRANDING/page14_1.jpg', title: 'Proposed Application Page 14' },
-      { type: 'presentation-page', image: '/AMS%20BRANDING/page15_1.jpg', title: 'Proposed Application Page 15' },
-      { type: 'presentation-page', image: '/AMS%20BRANDING/page16_1.jpg', title: 'Proposed Application Page 16' },
-      { type: 'presentation-page', image: '/AMS%20BRANDING/page17_1.jpg', title: 'Proposed Application Page 17' }
-    ]
-  },
-  {
-    id: 'africa-youth-network',
-    title: 'Africa Youth Network',
-    category: 'Branding',
-    role: 'Brand Identity & Web Design',
-    description: 'Comprehensive brand identity system, official 18-page brand manual, and digital platform design for Africa Youth Network.',
-    link: 'https://darkgreen-goshawk-346267.hostingersite.com/',
-    linkLabel: 'Visit Website',
-    manualPdf: '/Africa%20Youth%20Network%20Brand%20Manual/Africa%20Youth%20Network%20Brand%20Manua;.pdf',
-    image: '/Africa%20Youth%20Network%20Brand%20Manual/page01_1.jpg',
-    hasDetailPage: true,
-    featuredInHero: true,
-    overview: 'Africa Youth Network is a continental organization uniting faith, fellowship, and future opportunities for youth across Africa. We created a unified visual system covering the brand mark, typography, color architecture, official brand manual, and digital web experience.',
-    challenge: 'The organization required an authoritative, scalable visual language that could be consistently applied across print documentation, continental summits, official correspondence, and digital channels.',
-    approach: 'The visual direction was formalized in an 18-page brand manual detailing logo variations, clearspace rules, typographic hierarchy, and collateral templates, seamlessly translating into an engaging web presence.',
-    details: 'Brand Identity: A bold, symbolic logo system representing connection, faith, and youth empowerment.\nBrand Manual: An 18-page comprehensive style guide establishing rules for digital and print execution.\nDigital Platform: A responsive website structure designed to present missions, programs, and community initiatives.',
-    outcome: 'A unified identity and functional digital platform providing Africa Youth Network with a cohesive, professional presence continent-wide.',
-    sections: [
-      { type: 'full-image', image: '/Africa%20Youth%20Network%20Brand%20Manual/page01_1.jpg' },
-      { type: 'text', title: 'Brand Identity & Visual Guidelines', subtitle: 'An 18-page comprehensive brand manual establishing logo integrity, typography rules, color standards, and digital application principles.' },
-      { 
-        type: 'grid-2', 
-        items: [
-          { type: 'image', url: '/Africa%20Youth%20Network%20Brand%20Manual/page02_1.jpg' },
-          { type: 'image', url: '/Africa%20Youth%20Network%20Brand%20Manual/page03_1.jpg' }
-        ] 
+    "id": "venus-events",
+    "title": "Venus Events — Visual Identity & Brand Manual",
+    "category": "Branding & Visual Identity",
+    "role": "Visual Identity & Brand Manual",
+    "description": "Visual identity and brand manual for Venus Events, covering logo variations, colour, typography, patterns, and proposed branded applications.",
+    "image": "/VENUS%20BRAND%20MANUAL/page01_1.jpg",
+    "hasDetailPage": true,
+    "featuredInHero": true,
+    "overview": "Visual identity and brand manual for Venus Events, covering logo variations, colour, typography, patterns, and proposed branded applications.",
+    "sections": [
+      {
+        "type": "text",
+        "title": "Logo System & Mark Variations",
+        "subtitle": "The core logo mark, proportion rules, and color variations for Venus Events."
       },
-      { type: 'text', title: 'Logo System & Construction Grids', subtitle: 'Official mark variations, proportional construction grids, and clearspace boundaries ensuring legibility across physical and digital executions.' },
-      { 
-        type: 'grid-2', 
-        items: [
-          { type: 'image', url: '/Africa%20Youth%20Network%20Brand%20Manual/page04_1.jpg' },
-          { type: 'image', url: '/Africa%20Youth%20Network%20Brand%20Manual/page05_1.jpg' }
-        ] 
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/logo.jpg",
+        "title": "Primary Brand Mark"
       },
-      { 
-        type: 'grid-2', 
-        items: [
-          { type: 'image', url: '/Africa%20Youth%20Network%20Brand%20Manual/page06_1.jpg' },
-          { type: 'image', url: '/Africa%20Youth%20Network%20Brand%20Manual/page07_1.jpg' }
-        ] 
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page01_1.jpg",
+        "title": "Cover Page 01"
       },
-      { type: 'text', title: 'Typography & Corporate Color Architecture', subtitle: 'Curated corporate color specifications, secondary accents, and modern typographic weights designed for high visual contrast and editorial clarity.' },
-      { 
-        type: 'grid-2', 
-        items: [
-          { type: 'image', url: '/Africa%20Youth%20Network%20Brand%20Manual/page08_1.jpg' },
-          { type: 'image', url: '/Africa%20Youth%20Network%20Brand%20Manual/page09_1.jpg' }
-        ] 
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page04_1.jpg",
+        "title": "Logo Guidelines Page 04"
       },
-      { 
-        type: 'grid-2', 
-        items: [
-          { type: 'image', url: '/Africa%20Youth%20Network%20Brand%20Manual/page10_1.jpg' },
-          { type: 'image', url: '/Africa%20Youth%20Network%20Brand%20Manual/page11_1.jpg' }
-        ] 
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page05_1.jpg",
+        "title": "Clearspace & Sizing Page 05"
       },
-      { type: 'text', title: 'Brand Collateral & Environmental Applications', subtitle: 'Standardized applications across corporate stationery, digital media touchpoints, and event collateral.' },
-      { 
-        type: 'grid-2', 
-        items: [
-          { type: 'image', url: '/Africa%20Youth%20Network%20Brand%20Manual/page12_1.jpg' },
-          { type: 'image', url: '/Africa%20Youth%20Network%20Brand%20Manual/page13_1.jpg' }
-        ] 
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page06_1.jpg",
+        "title": "Mark Construction Page 06"
       },
-      { 
-        type: 'grid-2', 
-        items: [
-          { type: 'image', url: '/Africa%20Youth%20Network%20Brand%20Manual/page14_1.jpg' },
-          { type: 'image', url: '/Africa%20Youth%20Network%20Brand%20Manual/page15_1.jpg' }
-        ] 
+      {
+        "type": "text",
+        "title": "Brand Architecture & Guidelines",
+        "subtitle": "Color palette, typographic hierarchy, and visual assets."
       },
-      { 
-        type: 'grid-2', 
-        items: [
-          { type: 'image', url: '/Africa%20Youth%20Network%20Brand%20Manual/page16_1.jpg' },
-          { type: 'image', url: '/Africa%20Youth%20Network%20Brand%20Manual/page17_1.jpg' }
-        ] 
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page08_1.jpg",
+        "title": "Color Palette Page 08"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/pattern.jpg",
+        "title": "Brand Pattern System"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page13_1.jpg",
+        "title": "Typography Page 13"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page14_1.jpg",
+        "title": "Visual Elements Page 14"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page15_1.jpg",
+        "title": "Imagery Guidelines Page 15"
+      },
+      {
+        "type": "text",
+        "title": "Proposed Branded Applications",
+        "subtitle": "Visual concepts demonstrating how the identity could appear across event collateral, invitations, merchandise, and environmental touchpoints."
+      },
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page16_1.jpg",
+        "title": "Proposed Application Page 16"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page17_1.jpg",
+        "title": "Proposed Application Page 17"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page18_1.jpg",
+        "title": "Proposed Application Page 18"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page19_1.jpg",
+        "title": "Proposed Application Page 19"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page20_1.jpg",
+        "title": "Proposed Application Page 20"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page21_1.jpg",
+        "title": "Proposed Application Page 21"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page22_1.jpg",
+        "title": "Proposed Application Page 22"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page23_1.jpg",
+        "title": "Proposed Application Page 23"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page24_1.jpg",
+        "title": "Proposed Application Page 24"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page25_1.jpg",
+        "title": "Proposed Application Page 25"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page26_1.jpg",
+        "title": "Proposed Application Page 26"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page27_1.jpg",
+        "title": "Proposed Application Page 27"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page28_1.jpg",
+        "title": "Proposed Application Page 28"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page29_1.jpg",
+        "title": "Proposed Application Page 29"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page30_1.jpg",
+        "title": "Proposed Application Page 30"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page31_1.jpg",
+        "title": "Proposed Application Page 31"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page32_1.jpg",
+        "title": "Proposed Application Page 32"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page33_1.jpg",
+        "title": "Proposed Application Page 33"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page34_1.jpg",
+        "title": "Proposed Application Page 34"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page35_1.jpg",
+        "title": "Proposed Application Page 35"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page36_1.jpg",
+        "title": "Proposed Application Page 36"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page37_1.jpg",
+        "title": "Proposed Application Page 37"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/VENUS%20BRAND%20MANUAL/page38_1.jpg",
+        "title": "Proposed Application Page 38"
       }
     ]
   },
   {
-    id: 'idbf',
-    title: 'IDBF',
-    category: 'Campaign & Event Design',
-    role: 'Visual Communication & Event Branding',
-    description: 'Comprehensive visual system and promotional collateral for the IDBF international basketball festival.',
-    link: '#',
-    image: '/cover-idbf-01.jpg',
-    heroVideo: 'https://res.cloudinary.com/justkoby/video/upload/v1778860137/0515_nyfplc.mp4',
-    hasDetailPage: true,
-    featuredInHero: true,
-    overview: 'IDBF required a powerful and cohesive visual identity to support its international event presence.',
-    outcome: 'A successful and visually unified event presence that helped strengthen the brand’s international recognition.',
-    sections: [
-      { type: 'full-image', image: 'https://res.cloudinary.com/justkoby/image/upload/v1778860814/ChatGPT_Image_May_15_2026_03_58_27_PM_huncio.png' },
-      { type: 'text', title: 'Independence Day Basketball Festival', subtitle: 'A vibrant visual system built to capture the energy of a premium international basketball event.' },
-      { type: 'full-image', image: 'https://res.cloudinary.com/justkoby/image/upload/v1778861642/ChatGPT_Image_May_15_2026_04_13_15_PM_bozsj2.png' },
-      { 
-        type: 'grid-2', 
-        items: [
-          { type: 'video', url: 'https://res.cloudinary.com/justkoby/video/upload/v1778845759/0120_qi5blb.mp4' },
-          { type: 'image', url: 'https://res.cloudinary.com/justkoby/image/upload/v1778861754/ChatGPT_Image_May_15_2026_04_15_02_PM_wpjzhz.png' }
-        ] 
+    "id": "caring-therapeutics",
+    "title": "Caring Therapeutics — Visual Identity & Brand Manual",
+    "category": "Branding & Visual Identity",
+    "role": "Visual Identity & Brand Guidelines",
+    "description": "Visual identity and brand guidelines for Caring Therapeutics, a provider of physical, occupational, and speech therapy services.",
+    "image": "/Caring%20Brand%20Manual/thumbnail.jpg",
+    "hasDetailPage": true,
+    "featuredInHero": true,
+    "overview": "Visual identity and brand guidelines for Caring Therapeutics, a provider of physical, occupational, and speech therapy services.",
+    "sections": [
+      {
+        "type": "text",
+        "title": "Logo System & Brand Mark",
+        "subtitle": "The core logo system, construction, and identity guidelines for Caring Therapeutics."
       },
-      { type: 'text', subtitle: 'IDBF 2025 was designed as more than a basketball event. The goal was to create a visual identity system that merged Ghanaian independence culture with the rising energy of basketball among the youth. The project explored how sport, music, food, and community could coexist under one scalable event brand.' },
-      { 
-        type: 'grid-2', 
-        variant: 'portrait',
-        items: [
-          { type: 'video', url: 'https://res.cloudinary.com/justkoby/video/upload/v1778863791/Recording_2025-01-04_155221_ym9fny.mp4' },
-          { type: 'video', url: 'https://res.cloudinary.com/justkoby/video/upload/v1778863795/Recording_2025-01-04_160440_u5dry1.mp4' }
-        ] 
+      {
+        "type": "presentation-page",
+        "image": "/Caring%20Brand%20Manual/logo.jpg",
+        "title": "Primary Brand Logo"
       },
-      { type: 'text', title: 'The Challenge', subtitle: 'Designing a visual language that feels global and inclusive while maintaining high-energy engagement for a diverse international audience.' },
-      { 
-        type: 'grid-2', 
-        items: [
-          { type: 'image', url: 'https://res.cloudinary.com/justkoby/image/upload/v1778864404/ChatGPT_Image_May_15_2026_04_59_38_PM_p6ingg.png' },
-          { type: 'image', url: 'https://res.cloudinary.com/justkoby/image/upload/v1778864380/Poster-01_qqdbcb.jpg' }
-        ] 
+      {
+        "type": "presentation-page",
+        "image": "/Caring%20Brand%20Manual/page01_1.jpg",
+        "title": "Manual Cover Page 01"
       },
-      { type: 'full-image', image: 'https://res.cloudinary.com/justkoby/image/upload/v1778865750/ChatGPT_Image_May_15_2026_05_21_02_PM_jfyfb3.png' }
+      {
+        "type": "presentation-page",
+        "image": "/Caring%20Brand%20Manual/page02_1.jpg",
+        "title": "Introduction Page 02"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Caring%20Brand%20Manual/page03_1.jpg",
+        "title": "Logo Concept Page 03"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Caring%20Brand%20Manual/page05_1.jpg",
+        "title": "Construction & Clearspace Page 05"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Caring%20Brand%20Manual/page06_1.jpg",
+        "title": "Color Specifications Page 06"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Caring%20Brand%20Manual/page07_1.jpg",
+        "title": "Typography Page 07"
+      },
+      {
+        "type": "text",
+        "title": "Brand Guidelines & Collateral",
+        "subtitle": "Standards for print collateral, stationery, digital touchpoints, and clinic touchpoints."
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Caring%20Brand%20Manual/page08_1.jpg",
+        "title": "Brand Application Page 08"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Caring%20Brand%20Manual/page09_1.jpg",
+        "title": "Brand Application Page 09"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Caring%20Brand%20Manual/page10_1.jpg",
+        "title": "Stationery Page 10"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Caring%20Brand%20Manual/page11_1.jpg",
+        "title": "Collateral Page 11"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Caring%20Brand%20Manual/page12_1.jpg",
+        "title": "Application Page 12"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Caring%20Brand%20Manual/page13_1.jpg",
+        "title": "Application Page 13"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Caring%20Brand%20Manual/page14_1.jpg",
+        "title": "Clinic Touchpoints Page 14"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Caring%20Brand%20Manual/page15_1.jpg",
+        "title": "Clinic Touchpoints Page 15"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Caring%20Brand%20Manual/page16_1.jpg",
+        "title": "Environmental Signage Page 16"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Caring%20Brand%20Manual/page17_1.jpg",
+        "title": "Apparel & Uniforms Page 17"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Caring%20Brand%20Manual/page18_1.jpg",
+        "title": "Digital Presentation Page 18"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Caring%20Brand%20Manual/page19_1.jpg",
+        "title": "Digital Presentation Page 19"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Caring%20Brand%20Manual/page20_1.jpg",
+        "title": "Vehicle Branding Page 20"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Caring%20Brand%20Manual/page21_1.jpg",
+        "title": "Merchandise Page 21"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Caring%20Brand%20Manual/page22_1.jpg",
+        "title": "Signage Concept Page 22"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Caring%20Brand%20Manual/page23_1.jpg",
+        "title": "Summary Page 23"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Caring%20Brand%20Manual/page24_1.jpg",
+        "title": "Standards Page 24"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Caring%20Brand%20Manual/page25_1.jpg",
+        "title": "Closing Page 25"
+      }
     ]
   },
   {
-    id: 'vianexta',
-    title: 'ViaNexta',
-    category: 'Websites',
-    role: 'UI/UX Design & Development',
-    description: 'AI-powered supply chain platform designed to simplify physical product creation and distribution.',
-    link: 'https://vianexta.com',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600',
-    hasDetailPage: true,
-    featuredInHero: false,
-    overview: 'ViaNexta is an AI-powered platform built to help brands create, source, package, and launch physical products faster. The goal was to design a clean digital experience that could communicate a complex supply chain process in a simple, modern, and approachable way.',
-    challenge: 'Supply chains can feel slow, fragmented, and difficult to understand. ViaNexta needed a digital presence that made the process feel easier, smarter, and more accessible — while positioning the brand as modern, scalable, and technology-driven.',
-    approach: 'The visual direction focused on clarity, structure, and product confidence. The layout was designed to explain the platform quickly, highlight its AI-powered workflow, and guide users from understanding the concept to taking action.',
-    details: 'Visual System: A clean and modern visual system was used to support the platform’s technology-first positioning.\nInformation Structure: Content was organized to make a complex supply chain process feel simple and easy to follow.\nUser Flow: Key calls-to-action were placed throughout the experience to guide users from discovery to product creation.',
-    outcome: 'The final website presents ViaNexta as a bold, AI-powered platform for physical product creation — helping users understand the value of the platform quickly while giving the brand a stronger digital presence.'
+    "id": "mfa-ghana-proposal",
+    "title": "Ministry of Foreign Affairs, Ghana — Brand Identity Proposal",
+    "category": "Branding & Visual Identity",
+    "role": "Brand Identity Proposal",
+    "status": "Proposal / Concept",
+    "description": "A proposed visual identity system for Ghana’s Ministry of Foreign Affairs, exploring logo treatments and consistent brand applications.",
+    "image": "/Brand%20Proposal%20(MFA)%20draft/page01_1.jpg",
+    "hasDetailPage": true,
+    "featuredInHero": true,
+    "overview": "A proposed visual identity system for Ghana’s Ministry of Foreign Affairs, exploring logo treatments and consistent brand applications. This proposal explores potential visual coherence for diplomatic communications and international representation.",
+    "sections": [
+      {
+        "type": "text",
+        "title": "Proposed Identity Concept",
+        "subtitle": "A concept proposal exploring visual identity, symbol refinement, and typographic structure for diplomatic representation."
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Brand%20Proposal%20(MFA)%20draft/logo.jpg",
+        "title": "Proposed Emblem Concept"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Brand%20Proposal%20(MFA)%20draft/page01_1.jpg",
+        "title": "Proposal Cover Page 01"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Brand%20Proposal%20(MFA)%20draft/page02_1.jpg",
+        "title": "Concept Overview Page 02"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Brand%20Proposal%20(MFA)%20draft/page03_1.jpg",
+        "title": "Emblem Structure Page 03"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Brand%20Proposal%20(MFA)%20draft/page04_1.jpg",
+        "title": "Design Philosophy Page 04"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Brand%20Proposal%20(MFA)%20draft/page05_1.jpg",
+        "title": "Color Intentions Page 05"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Brand%20Proposal%20(MFA)%20draft/page06_1.jpg",
+        "title": "Typography Proposal Page 06"
+      },
+      {
+        "type": "text",
+        "title": "Proposed Brand Applications",
+        "subtitle": "Conceptual explorations of how the identity could appear across diplomatic stationery, official publications, event collateral, and architectural signage."
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Brand%20Proposal%20(MFA)%20draft/page07_1.jpg",
+        "title": "Proposed Application Page 07"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Brand%20Proposal%20(MFA)%20draft/page08_1.jpg",
+        "title": "Proposed Application Page 08"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Brand%20Proposal%20(MFA)%20draft/page09_1.jpg",
+        "title": "Proposed Stationery Page 09"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Brand%20Proposal%20(MFA)%20draft/page10_1.jpg",
+        "title": "Proposed Collateral Page 10"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Brand%20Proposal%20(MFA)%20draft/page11_1.jpg",
+        "title": "Proposed Publication Page 11"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Brand%20Proposal%20(MFA)%20draft/page12_1.jpg",
+        "title": "Proposed Signage Page 12"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Brand%20Proposal%20(MFA)%20draft/page13_1.jpg",
+        "title": "Proposed Environment Page 13"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Brand%20Proposal%20(MFA)%20draft/page15_1.jpg",
+        "title": "Proposed Digital Page 15"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Brand%20Proposal%20(MFA)%20draft/page16_1.jpg",
+        "title": "Proposed Materials Page 16"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Brand%20Proposal%20(MFA)%20draft/page17_1.jpg",
+        "title": "Proposed Overview Page 17"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/Brand%20Proposal%20(MFA)%20draft/page18_1.jpg",
+        "title": "Proposed Summary Page 18"
+      }
+    ]
   },
   {
-    id: 'ug-src-welfare-scheme',
-    title: 'UG SRC Welfare Scheme',
-    category: 'Websites',
-    role: 'UI/UX Design & Branding',
-    description: 'Digital platform supporting student welfare services and access to essential campus resources.',
-    link: 'https://ugsrcwelfarescheme.ug.edu.gh/',
-    image: '/welfare-thumbnail-01.jpg',
-    hasDetailPage: true,
-    featuredInHero: true,
-    overview: 'The UG SRC Welfare Scheme portal provides students with immediate access to direct resource assistance. The focus was simple: a completely friction-free design for students to submit applications effortlessly.',
-    details: 'Direct layout patterns combined with a clear visual hierarchy ensure high scannability across mobile viewports.',
-    outcome: 'A scalable system that simplifies critical request workflows, accelerating student support processing.'
+    "id": "mcu-branding",
+    "title": "Magna Charta Universitatum (MCU) — Branding",
+    "category": "Branding & Visual Identity",
+    "role": "Logo Design & Brand Guidelines",
+    "description": "Logo design and brand guidelines for Magna Charta Universitatum, exploring academic identity through logo variations, colour, typography, and visual applications.",
+    "image": "/MCU%20BRANING/page01_1.jpg",
+    "hasDetailPage": true,
+    "featuredInHero": true,
+    "overview": "Logo design and brand guidelines for Magna Charta Universitatum (MCU) and Magna Charta Observatory (MCO), exploring academic identity through logo variations, colour architecture, typography, and visual applications.",
+    "sections": [
+      {
+        "type": "text",
+        "title": "Academic Identity & Logo Architecture",
+        "subtitle": "Guidelines and logo variations preserving the respective identities of Magna Charta Universitatum (MCU) and Magna Charta Observatory (MCO)."
+      },
+      {
+        "type": "presentation-page",
+        "image": "/MCU%20BRANING/page01_1.jpg",
+        "title": "Manual Cover Page 01"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/MCU%20BRANING/page02_1.jpg",
+        "title": "Introduction Page 02"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/MCU%20BRANING/page03_1.jpg",
+        "title": "Core Identity Page 03"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/MCU%20BRANING/page04_1.jpg",
+        "title": "Symbol Variations Page 04"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/MCU%20BRANING/page05_1.jpg",
+        "title": "Clearspace & Sizing Page 05"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/MCU%20BRANING/page06_1.jpg",
+        "title": "Color Specifications Page 06"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/MCU%20BRANING/page07_1.jpg",
+        "title": "Typography Page 07"
+      },
+      {
+        "type": "text",
+        "title": "Visual Applications & Collateral Concepts",
+        "subtitle": "Visual concepts illustrating how MCU and MCO identities appear across academic publications, banners, stationery, and event collateral."
+      },
+      {
+        "type": "presentation-page",
+        "image": "/MCU%20BRANING/page08_1.jpg",
+        "title": "Collateral Concept Page 08"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/MCU%20BRANING/page09_1.jpg",
+        "title": "Publication Concept Page 09"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/MCU%20BRANING/page10_1.jpg",
+        "title": "Application Concept Page 10"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/MCU%20BRANING/page11_1.jpg",
+        "title": "Application Concept Page 11"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/MCU%20BRANING/page12_1.jpg",
+        "title": "Stationery Concept Page 12"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/MCU%20BRANING/page13_1.jpg",
+        "title": "Stationery Concept Page 13"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/MCU%20BRANING/page14_1.jpg",
+        "title": "Presentation Concept Page 14"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/MCU%20BRANING/page15_1.jpg",
+        "title": "Digital Concept Page 15"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/MCU%20BRANING/page16_1.jpg",
+        "title": "Digital Concept Page 16"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/MCU%20BRANING/page17_1.jpg",
+        "title": "Merchandise Concept Page 17"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/MCU%20BRANING/page18_1.jpg",
+        "title": "Event Concept Page 18"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/MCU%20BRANING/page19_1.jpg",
+        "title": "Banner Concept Page 19"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/MCU%20BRANING/page20_1.jpg",
+        "title": "Signage Concept Page 20"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/MCU%20BRANING/page21_1.jpg",
+        "title": "Signage Concept Page 21"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/MCU%20BRANING/page22_1.jpg",
+        "title": "Signage Concept Page 22"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/MCU%20BRANING/page23_1.jpg",
+        "title": "Summary Concept Page 23"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/MCU%20BRANING/page24_1.jpg",
+        "title": "Guidelines Summary Page 24"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/MCU%20BRANING/page25_1.jpg",
+        "title": "Closing Page 25"
+      }
+    ]
   },
   {
-    id: 'win-win-coffee',
-    title: 'Win Win Coffee',
-    category: 'Branding',
-    role: 'UI/UX Design & Branding',
-    description: 'E-commerce platform and visual brand experience for a specialty coffee business.',
-    link: 'https://winwin.coffee/',
-    image: '/win-win-new-site-background.jpg',
-    hasDetailPage: true,
-    featuredInHero: true,
-    overview: 'Win Win Coffee is a specialty coffee brand focused on delivering quality products through a strong visual identity and digital experience. The goal was to create a cohesive brand and e-commerce presence.',
-    challenge: 'The brand needed a consistent visual identity and a digital platform that reflects its personality while supporting product presentation and sales.',
-    approach: 'The design combined branding and digital experience, creating a cohesive system that works across packaging, visuals, and the website.',
-    details: 'Visual System: A bold and cohesive visual identity was developed to reflect the brand’s personality.\nInformation Structure: The layout was designed to highlight products and simplify browsing.\nUser Flow: The experience guides users from discovery to product exploration and purchase.',
-    outcome: 'The final result is a cohesive brand and digital experience that strengthens identity and supports e-commerce growth.'
+    "id": "africa-youth-network",
+    "title": "Africa Youth Network",
+    "category": "Branding",
+    "role": "Brand Identity & Web Design",
+    "description": "Comprehensive brand identity system, official 18-page brand manual, and digital platform design for Africa Youth Network.",
+    "link": "https://darkgreen-goshawk-346267.hostingersite.com/",
+    "linkLabel": "Visit Website",
+    "manualPdf": "/Africa%20Youth%20Network%20Brand%20Manual/Africa%20Youth%20Network%20Brand%20Manua;.pdf",
+    "image": "/Africa%20Youth%20Network%20Brand%20Manual/page01_1.jpg",
+    "hasDetailPage": true,
+    "featuredInHero": true,
+    "overview": "Africa Youth Network is a continental organization uniting faith, fellowship, and future opportunities for youth across Africa. We created a unified visual system covering the brand mark, typography, color architecture, official brand manual, and digital web experience.",
+    "challenge": "The organization required an authoritative, scalable visual language that could be consistently applied across print documentation, continental summits, official correspondence, and digital channels.",
+    "approach": "The visual direction was formalized in an 18-page brand manual detailing logo variations, clearspace rules, typographic hierarchy, and collateral templates, seamlessly translating into an engaging web presence.",
+    "details": "Brand Identity: A bold, symbolic logo system representing connection, faith, and youth empowerment.\nBrand Manual: An 18-page comprehensive style guide establishing rules for digital and print execution.\nDigital Platform: A responsive website structure designed to present missions, programs, and community initiatives.",
+    "outcome": "A unified identity and functional digital platform providing Africa Youth Network with a cohesive, professional presence continent-wide.",
+    "sections": [
+      {
+        "type": "full-image",
+        "image": "/Africa%20Youth%20Network%20Brand%20Manual/page01_1.jpg"
+      },
+      {
+        "type": "text",
+        "title": "Brand Identity & Visual Guidelines",
+        "subtitle": "An 18-page comprehensive brand manual establishing logo integrity, typography rules, color standards, and digital application principles."
+      },
+      {
+        "type": "grid-2",
+        "items": [
+          {
+            "type": "image",
+            "url": "/Africa%20Youth%20Network%20Brand%20Manual/page02_1.jpg"
+          },
+          {
+            "type": "image",
+            "url": "/Africa%20Youth%20Network%20Brand%20Manual/page03_1.jpg"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "title": "Logo System & Construction Grids",
+        "subtitle": "Official mark variations, proportional construction grids, and clearspace boundaries ensuring legibility across physical and digital executions."
+      },
+      {
+        "type": "grid-2",
+        "items": [
+          {
+            "type": "image",
+            "url": "/Africa%20Youth%20Network%20Brand%20Manual/page04_1.jpg"
+          },
+          {
+            "type": "image",
+            "url": "/Africa%20Youth%20Network%20Brand%20Manual/page05_1.jpg"
+          }
+        ]
+      },
+      {
+        "type": "grid-2",
+        "items": [
+          {
+            "type": "image",
+            "url": "/Africa%20Youth%20Network%20Brand%20Manual/page06_1.jpg"
+          },
+          {
+            "type": "image",
+            "url": "/Africa%20Youth%20Network%20Brand%20Manual/page07_1.jpg"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "title": "Typography & Corporate Color Architecture",
+        "subtitle": "Curated corporate color specifications, secondary accents, and modern typographic weights designed for high visual contrast and editorial clarity."
+      },
+      {
+        "type": "grid-2",
+        "items": [
+          {
+            "type": "image",
+            "url": "/Africa%20Youth%20Network%20Brand%20Manual/page08_1.jpg"
+          },
+          {
+            "type": "image",
+            "url": "/Africa%20Youth%20Network%20Brand%20Manual/page09_1.jpg"
+          }
+        ]
+      },
+      {
+        "type": "grid-2",
+        "items": [
+          {
+            "type": "image",
+            "url": "/Africa%20Youth%20Network%20Brand%20Manual/page10_1.jpg"
+          },
+          {
+            "type": "image",
+            "url": "/Africa%20Youth%20Network%20Brand%20Manual/page11_1.jpg"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "title": "Brand Collateral & Environmental Applications",
+        "subtitle": "Standardized applications across corporate stationery, digital media touchpoints, and event collateral."
+      },
+      {
+        "type": "grid-2",
+        "items": [
+          {
+            "type": "image",
+            "url": "/Africa%20Youth%20Network%20Brand%20Manual/page12_1.jpg"
+          },
+          {
+            "type": "image",
+            "url": "/Africa%20Youth%20Network%20Brand%20Manual/page13_1.jpg"
+          }
+        ]
+      },
+      {
+        "type": "grid-2",
+        "items": [
+          {
+            "type": "image",
+            "url": "/Africa%20Youth%20Network%20Brand%20Manual/page14_1.jpg"
+          },
+          {
+            "type": "image",
+            "url": "/Africa%20Youth%20Network%20Brand%20Manual/page15_1.jpg"
+          }
+        ]
+      },
+      {
+        "type": "grid-2",
+        "items": [
+          {
+            "type": "image",
+            "url": "/Africa%20Youth%20Network%20Brand%20Manual/page16_1.jpg"
+          },
+          {
+            "type": "image",
+            "url": "/Africa%20Youth%20Network%20Brand%20Manual/page17_1.jpg"
+          }
+        ]
+      }
+    ]
   },
   {
-    id: 'foreign-africa',
-    title: 'Foreign Africa',
-    category: 'Websites',
-    role: 'UI/UX Design & Development',
-    description: 'A modern web platform connecting African voices, ideas, and opportunities across borders.',
-    link: 'https://foreignafrica.org/',
-    linkLabel: 'Visit Website',
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=600',
-    hasDetailPage: true,
-    featuredInHero: false,
-    overview: 'Foreign Africa is a digital platform designed to connect African voices, ideas, and opportunities across borders. The goal was to create a modern, engaging interface that reflects its identity and supports content discovery.',
-    challenge: 'The platform needed a strong visual identity and a clear structure to present diverse content while maintaining a modern and cohesive experience.',
-    approach: 'A clean and contemporary layout was developed to highlight content, improve readability, and create a visually engaging user experience.',
-    details: 'Visual System: A modern visual direction was used to create a bold and engaging brand presence.\nInformation Structure: Content was organized to support easy discovery and seamless navigation.\nUser Flow: Layout and structure guide users through content in a simple and intuitive way.',
-    outcome: 'The final platform delivers a modern and cohesive experience that supports content exploration and strengthens the brand’s digital presence.'
+    "id": "52-homes-and-lounge",
+    "title": "52 Homes & Lounge",
+    "category": "Branding & Visual Identity",
+    "role": "Branding & Visual Identity",
+    "description": "Brand identity and visual presentation for 52 Homes & Lounge, featuring logo mark exploration, color palette, typography, and hospitality mockups.",
+    "image": "/52%20Homes%20%26%20Lounge%20branding/page1_1.jpg",
+    "hasDetailPage": true,
+    "featuredInHero": true,
+    "overview": "Visual presentation deck showcasing the logo mark, color architecture, typography, and hospitality environment concepts for 52 Homes & Lounge.",
+    "sections": [
+      {
+        "type": "presentation-page",
+        "image": "/52%20Homes%20%26%20Lounge%20branding/page1_1.jpg",
+        "title": "Presentation Cover"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/52%20Homes%20%26%20Lounge%20branding/page2_1.jpg",
+        "title": "Logo Mark & Identity"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/52%20Homes%20%26%20Lounge%20branding/page3_1.jpg",
+        "title": "Color Palette & Typography"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/52%20Homes%20%26%20Lounge%20branding/page4_1.jpg",
+        "title": "Exterior & Signage Mockup"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/52%20Homes%20%26%20Lounge%20branding/page5_1.jpg",
+        "title": "Interior & Lounge Mockup"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/52%20Homes%20%26%20Lounge%20branding/page6_1.jpg",
+        "title": "Stationery & Collateral Mockup"
+      }
+    ]
   },
   {
-    id: 'rxnetwork',
-    title: 'RxNetwork',
-    category: 'Websites',
-    role: 'UI/UX Design & Development',
-    description: 'Healthcare communications and digital media platform connecting medical practitioners and clinical campaigns.',
-    link: 'https://rxnetwork.net/',
-    linkLabel: 'Visit Website',
-    image: '/rxnetwork-img.jpg',
-    hasDetailPage: true,
-    featuredInHero: true,
-    overview: 'RxNetwork required an elegant visual communication portal that connects medical professionals and healthcare campaigns. We crafted a high-performance system for swift resource discovery and data security.',
-    details: 'Sleek dark themes paired with serene clinical accents establish immediate visual trust and ease of use.',
-    outcome: 'A highly effective digital platform that organizes resources and drives medical campaign engagement.'
+    "id": "ug-src-welfare-scheme",
+    "title": "UG SRC Welfare Scheme",
+    "category": "Websites",
+    "role": "UI/UX Design & Branding",
+    "description": "Digital platform supporting student welfare services and access to essential campus resources.",
+    "link": "https://ugsrcwelfarescheme.ug.edu.gh/",
+    "image": "/welfare-thumbnail-01.jpg",
+    "hasDetailPage": true,
+    "featuredInHero": true,
+    "overview": "The UG SRC Welfare Scheme portal provides students with immediate access to direct resource assistance. The focus was simple: a completely friction-free design for students to submit applications effortlessly.",
+    "details": "Direct layout patterns combined with a clear visual hierarchy ensure high scannability across mobile viewports.",
+    "outcome": "A scalable system that simplifies critical request workflows, accelerating student support processing."
   },
   {
-    id: 'the-bag-shop-gh',
-    title: 'The Bag Shop GH',
-    category: 'Branding',
-    role: 'UI/UX Design',
-    description: 'E-commerce interface designed to present and sell fashion accessories online.',
-    link: 'https://www.thebagshopgh.com/',
-    image: 'https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&q=80&w=600',
-    hasDetailPage: true,
-    featuredInHero: false,
-    overview: 'The Bag Shop GH platform serves as a modern accessories e-commerce marketplace. The primary goal was to create highly interactive product catalogs that highlight luxury and functional quality.',
-    details: 'Large minimal layouts and rich imagery create an exclusive, aspirational fashion retail experience.',
-    outcome: 'A conversion-optimized e-commerce storefront with intuitive navigation and highly engaging layouts.'
-  },
-
-  // --- Client & Organizational Websites ---
-  {
-    id: 'dellor',
-    title: 'Dellor Company LTD',
-    category: 'Websites',
-    role: 'Web Design & Development',
-    description: 'Commercial platform for Dellor Company LTD showcasing diversified corporate services, equipment supplies, and logistics in Ghana.',
-    link: 'https://purple-pony-528197.hostingersite.com/',
-    linkLabel: 'Visit Website',
-    image: '/dellor-website.webp',
-    hasDetailPage: false,
-    featuredInHero: true
+    "id": "foreign-africa",
+    "title": "Foreign Africa",
+    "category": "Websites",
+    "role": "UI/UX Design & Development",
+    "description": "A modern web platform connecting African voices, ideas, and opportunities across borders.",
+    "link": "https://foreignafrica.org/",
+    "linkLabel": "Visit Website",
+    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=600",
+    "hasDetailPage": true,
+    "featuredInHero": false,
+    "overview": "Foreign Africa is a digital platform designed to connect African voices, ideas, and opportunities across borders. The goal was to create a modern, engaging interface that reflects its identity and supports content discovery.",
+    "challenge": "The platform needed a strong visual identity and a clear structure to present diverse content while maintaining a modern and cohesive experience.",
+    "approach": "A clean and contemporary layout was developed to highlight content, improve readability, and create a visually engaging user experience.",
+    "details": "Visual System: A modern visual direction was used to create a bold and engaging brand presence.\nInformation Structure: Content was organized to support easy discovery and seamless navigation.\nUser Flow: Layout and structure guide users through content in a simple and intuitive way.",
+    "outcome": "The final platform delivers a modern and cohesive experience that supports content exploration and strengthens the brand’s digital presence."
   },
   {
-    id: 'crex-africa',
-    title: 'CREX Africa',
-    category: 'Websites',
-    role: 'Web Design & Development',
-    description: 'Centre for Retired Experts mobilizing senior professionals, executives, and specialists to support governance and advisory across Africa.',
-    link: 'https://crexafrica.org/',
-    linkLabel: 'Visit Website',
-    image: '/crex-website.jpg',
-    hasDetailPage: false,
-    featuredInHero: true
+    "id": "rxnetwork",
+    "title": "RxNetwork",
+    "category": "Websites",
+    "role": "UI/UX Design & Development",
+    "description": "Healthcare communications and digital media platform connecting medical practitioners and clinical campaigns.",
+    "link": "https://rxnetwork.net/",
+    "linkLabel": "Visit Website",
+    "image": "/rxnetwork-img.jpg",
+    "hasDetailPage": true,
+    "featuredInHero": true,
+    "overview": "RxNetwork required an elegant visual communication portal that connects medical professionals and healthcare campaigns. We crafted a high-performance system for swift resource discovery and data security.",
+    "details": "Sleek dark themes paired with serene clinical accents establish immediate visual trust and ease of use.",
+    "outcome": "A highly effective digital platform that organizes resources and drives medical campaign engagement."
   },
   {
-    id: 'jas-apparels',
-    title: 'JAS Apparels',
-    category: 'Websites',
-    role: 'Web Design & Development',
-    description: 'Multi-category lifestyle boutique in Ghana featuring curated fashion, beauty, fragrance, and living essentials.',
-    link: 'https://jas-lake.vercel.app/',
-    linkLabel: 'Visit Website',
-    image: '/jas-web.jpg',
-    video: '/jas-web-video.mp4',
-    hasDetailPage: false,
-    featuredInHero: true
+    "id": "dellor",
+    "title": "Dellor Company LTD",
+    "category": "Websites",
+    "role": "Web Design & Development",
+    "description": "Commercial platform for Dellor Company LTD showcasing diversified corporate services, equipment supplies, and logistics in Ghana.",
+    "link": "https://purple-pony-528197.hostingersite.com/",
+    "linkLabel": "Visit Website",
+    "image": "/dellor-website.webp",
+    "hasDetailPage": false,
+    "featuredInHero": true
   },
   {
-    id: 'matt-nam',
-    title: 'Matthew Nam',
-    category: 'Websites',
-    role: 'Web Design & Development',
-    description: 'Commercial leadership portfolio showcasing executive expertise in digital health, programmatic media, and AdTech scaling.',
-    link: 'https://matt-nam-eight.vercel.app/',
-    linkLabel: 'Visit Website',
-    image: '/matt-hero-web.jpg',
-    hasDetailPage: false,
-    featuredInHero: true
+    "id": "crex-africa",
+    "title": "CREX Africa",
+    "category": "Websites",
+    "role": "Web Design & Development",
+    "description": "Centre for Retired Experts mobilizing senior professionals, executives, and specialists to support governance and advisory across Africa.",
+    "link": "https://crexafrica.org/",
+    "linkLabel": "Visit Website",
+    "image": "/crex-website.jpg",
+    "hasDetailPage": false,
+    "featuredInHero": true
   },
   {
-    id: 'powerworld',
-    title: 'Power World Limited',
-    category: 'Websites',
-    role: 'Web Design & Development',
-    description: 'Corporate platform showcasing power quality engineering, industrial electrical installations, and renewable energy systems in Ghana.',
-    link: 'https://powerworld.vercel.app/',
-    linkLabel: 'Visit Website',
-    image: '/powerworld-website.jpg',
-    hasDetailPage: false,
-    featuredInHero: true
+    "id": "global-student-forum",
+    "title": "Global Student Forum",
+    "category": "Websites",
+    "role": "UI/UX Design",
+    "description": "Global digital platform supporting student leadership, advocacy, and international collaboration.",
+    "link": "http://globalstudentforum.org/",
+    "linkLabel": "Visit Website",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600",
+    "hasDetailPage": true,
+    "featuredInHero": false,
+    "overview": "Global Student Forum is an international platform supporting student leadership, advocacy, and collaboration across regions. The goal was to design a clear and structured interface that reflects its global presence while making information accessible and easy to navigate.",
+    "challenge": "The platform needed to communicate diverse initiatives, programs, and resources to a global audience while maintaining clarity and consistency across content-heavy sections.",
+    "approach": "The design focused on structure and readability, using clean layouts and clear navigation to organize content effectively and support user engagement across different regions.",
+    "details": "Visual System: A clean and professional visual style was used to reflect the organization’s global reach and credibility.\nInformation Structure: Content was structured to make programs, resources, and updates easy to find and navigate.\nUser Flow: Navigation and layout were designed to guide users efficiently across key sections of the platform.",
+    "outcome": "The final platform presents Global Student Forum as a well-structured and accessible international organization, improving how users interact with its content and initiatives."
   },
   {
-    id: 'pro-perfume',
-    title: 'Pro Perfume',
-    category: 'Websites',
-    role: 'Web Design & Development',
-    description: 'E-commerce boutique offering curated Arabian and niche fragrances in Ghana.',
-    link: 'https://pro-perfume.vercel.app/',
-    linkLabel: 'Visit Website',
-    image: '/pro-perfume.jpg',
-    hasDetailPage: false,
-    featuredInHero: true
+    "id": "justice-for-africa",
+    "title": "Justice for Africa",
+    "category": "Websites",
+    "role": "UI/UX Design & Development",
+    "description": "A civic-focused platform built to drive awareness, advocacy, and justice-oriented initiatives.",
+    "link": "https://justice4africa.org/",
+    "linkLabel": "Visit Website",
+    "image": "https://images.unsplash.com/photo-1554224155-1696413565d3?auto=format&fit=crop&q=80&w=600",
+    "hasDetailPage": true,
+    "featuredInHero": false,
+    "overview": "Justice for Africa is a civic-focused platform designed to support advocacy, awareness, and social impact initiatives. The goal was to create a clear and impactful digital presence that communicates its mission effectively.",
+    "challenge": "The platform needed to balance strong messaging with clarity, ensuring that users could easily understand its purpose and engage with its initiatives.",
+    "approach": "The design focused on simplicity and structure, allowing key messages to stand out while supporting a clean and accessible user experience.",
+    "details": "Visual System: A minimal and focused visual style was used to emphasize content and messaging.\nInformation Structure: Content was structured to clearly present initiatives, goals, and calls to action.\nUser Flow: Layout and navigation guide users toward key information and engagement points.",
+    "outcome": "The final platform provides a clear and focused digital presence that supports advocacy efforts and improves user engagement."
   },
   {
-    id: 'sarai-nam',
-    title: 'Sarai Nam',
-    category: 'Websites',
-    role: 'Web Design & Development',
-    description: 'Personal brand website and digital portfolio highlighting creative design, content, and personal projects.',
-    link: 'https://sarai-nam.vercel.app/',
-    linkLabel: 'Visit Website',
-    image: '/Sarai-Nam-image.jpg',
-    hasDetailPage: false,
-    featuredInHero: true
+    "id": "democrat-union-of-africa",
+    "title": "Democrat Union of Africa",
+    "category": "Websites",
+    "role": "UI/UX Design & Development",
+    "description": "Political and organizational platform designed to communicate vision, structure, and initiatives.",
+    "link": "https://democratunionofafrica.org/",
+    "linkLabel": "Visit Website",
+    "image": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=600",
+    "hasDetailPage": true,
+    "featuredInHero": false,
+    "overview": "As a primary political organizational hub, the Democrat Union of Africa platform coordinates regional updates. We created a modern visual architecture that showcases core strategies and organizational structure.",
+    "details": "Authoritative brand blues and high-contrast styling elevate programmatic messaging and visual trust.",
+    "outcome": "A robust, easily navigable visual platform that supports continuous information dissemination."
   },
   {
-    id: 'youth-leadership-cohort',
-    title: 'Youth Leadership Cohort',
-    category: 'Websites',
-    role: 'Web Design & Development',
-    description: 'Continental student leadership initiative and Model UN General Assembly organized by the All Africa Students Union (AASU).',
-    link: 'https://ylc.aasuonline.org/',
-    linkLabel: 'Visit Website',
-    image: '/ylc-cohort-website.jpeg',
-    hasDetailPage: false,
-    featuredInHero: true
+    "id": "youth-leadership-cohort",
+    "title": "Youth Leadership Cohort",
+    "category": "Websites",
+    "role": "Web Design & Development",
+    "description": "Continental student leadership initiative and Model UN General Assembly organized by the All Africa Students Union (AASU).",
+    "link": "https://ylc.aasuonline.org/",
+    "linkLabel": "Visit Website",
+    "image": "/ylc-cohort-website.jpeg",
+    "hasDetailPage": false,
+    "featuredInHero": true
   },
   {
-    id: 'with-integrity-consult',
-    title: 'With Integrity Consult',
-    category: 'Websites',
-    role: 'Web Design & Development',
-    description: 'Website design and development for With Integrity Consult.',
-    link: 'https://lightpink-kangaroo-568501.hostingersite.com/',
-    linkLabel: 'View Website',
-    image: null,
-    hasDetailPage: false,
-    featuredInHero: false
+    "id": "upsa-enterprise",
+    "title": "UPSA Enterprise and Innovation Center",
+    "category": "Websites",
+    "role": "Web Design & Development",
+    "status": "Proposed Website",
+    "description": "A proposed website for the UPSA Enterprise and Innovation Center.",
+    "link": "https://mediumvioletred-dove-430635.hostingersite.com/",
+    "linkLabel": "View Concept",
+    "image": null,
+    "hasDetailPage": false,
+    "featuredInHero": false
   },
   {
-    id: 'upsa-enterprise',
-    title: 'UPSA Enterprise and Innovation Center',
-    category: 'Websites',
-    role: 'Web Design & Development',
-    status: 'Proposed Website',
-    description: 'A proposed website for the UPSA Enterprise and Innovation Center.',
-    link: 'https://mediumvioletred-dove-430635.hostingersite.com/',
-    linkLabel: 'View Concept',
-    image: null,
-    hasDetailPage: false,
-    featuredInHero: false
+    "id": "grasag-upsa",
+    "title": "GRASAG UPSA",
+    "category": "Websites",
+    "role": "Web Design & Development",
+    "description": "Official digital platform for the Graduate Students’ Association of Ghana at the University of Professional Studies, Accra.",
+    "link": "https://grasag.upsa.edu.gh/",
+    "linkLabel": "Visit Website",
+    "image": "/GRASAG-LOGO-text.png",
+    "hasDetailPage": false,
+    "featuredInHero": false
   },
   {
-    id: 'grasag-upsa',
-    title: 'GRASAG UPSA',
-    category: 'Websites',
-    role: 'Web Design & Development',
-    description: 'Official digital platform for the Graduate Students’ Association of Ghana at the University of Professional Studies, Accra.',
-    link: 'https://grasag.upsa.edu.gh/',
-    linkLabel: 'Visit Website',
-    image: '/GRASAG-LOGO-text.png',
-    hasDetailPage: false,
-    featuredInHero: false
+    "id": "ebibiman",
+    "title": "Ebibiman Tech Alliance",
+    "category": "Websites",
+    "role": "Web Design & Development",
+    "description": "Pan-African tech alliance focused on ethical, sustainable, and indigenous technology innovation.",
+    "link": "https://ebibiman.vercel.app/",
+    "linkLabel": "Visit Website",
+    "image": null,
+    "hasDetailPage": false,
+    "featuredInHero": false
   },
   {
-    id: 'raul-landscaping',
-    title: 'Raul Landscaping',
-    category: 'Websites',
-    role: 'Web Design & Development',
-    description: 'Professional landscaping, residential garden design, and outdoor property maintenance services.',
-    link: 'https://raul-landscaping.vercel.app/',
-    linkLabel: 'Visit Website',
-    image: null,
-    hasDetailPage: false,
-    featuredInHero: false
+    "id": "pknb-consult",
+    "title": "PKNB Consult",
+    "category": "Websites",
+    "role": "Web Design & Development",
+    "description": "Industrial engineering and energy consultancy providing off-grid solar systems, MEP engineering, and energy audits.",
+    "link": "https://pknbconsult.com/",
+    "linkLabel": "Visit Website",
+    "image": null,
+    "hasDetailPage": false,
+    "featuredInHero": false
   },
   {
-    id: 'emis-epic-remodeling',
-    title: 'Emins Epic Remodeling',
-    category: 'Websites',
-    role: 'Web Design & Development',
-    description: 'Luxury home renovation, interior remodeling, and outdoor living transformations tailored around bespoke client visions.',
-    link: 'https://emis-epic-remodeling.vercel.app/',
-    linkLabel: 'Visit Website',
-    image: null,
-    hasDetailPage: false,
-    featuredInHero: false
+    "id": "ran-tranz",
+    "title": "Ran Tranz",
+    "category": "Websites",
+    "role": "Web Design & Development",
+    "description": "Global freight forwarding, international trade procurement, shipping logistics, and customs clearance.",
+    "link": "https://ran-tranz-tan.vercel.app/",
+    "linkLabel": "Visit Website",
+    "image": null,
+    "hasDetailPage": false,
+    "featuredInHero": false
   },
   {
-    id: 'dean-weisgold',
-    title: 'Dean Weisgold Law Firm',
-    category: 'Websites',
-    role: 'Web Design & Development',
-    description: 'Civil, commercial, and real estate litigation representation across Pennsylvania and New Jersey.',
-    link: 'https://dean-weisgold.vercel.app/',
-    linkLabel: 'Visit Website',
-    image: null,
-    hasDetailPage: false,
-    featuredInHero: false
+    "id": "cosmotech-projects",
+    "title": "Cosmotech Projects",
+    "category": "Websites",
+    "role": "UI/UX Design & Development",
+    "description": "Corporate website for a technology and infrastructure solutions company in Ghana.",
+    "link": "https://www.cosmotechprojects.com/",
+    "linkLabel": "Visit Website",
+    "image": "/cosmotech-website.jpg",
+    "hasDetailPage": true,
+    "featuredInHero": false,
+    "overview": "Cosmotech Projects is a technology and infrastructure solutions company in Ghana. The goal was to design a corporate website that clearly presents its services, expertise, and projects.",
+    "challenge": "The website needed to communicate technical services in a clear and professional way while maintaining a modern and trustworthy appearance.",
+    "approach": "A clean and structured layout was used to present services, projects, and company information clearly, improving readability and user understanding.",
+    "details": "Visual System: A professional and minimal visual style was used to reinforce trust and credibility.\nInformation Structure: Content was organized to clearly present services and project capabilities.\nUser Flow: Layout guides users through services, projects, and contact points effectively.",
+    "outcome": "The final website provides a clear and professional digital presence that supports business visibility and client engagement."
   },
   {
-    id: 'ebibiman',
-    title: 'Ebibiman Tech Alliance',
-    category: 'Websites',
-    role: 'Web Design & Development',
-    description: 'Pan-African tech alliance focused on ethical, sustainable, and indigenous technology innovation.',
-    link: 'https://ebibiman.vercel.app/',
-    linkLabel: 'Visit Website',
-    image: null,
-    hasDetailPage: false,
-    featuredInHero: false
+    "id": "alice-talk-world",
+    "title": "Alice Talk World",
+    "category": "Websites",
+    "role": "UI/UX Design & Development",
+    "description": "A storytelling and media platform focused on conversations, perspectives, and digital engagement.",
+    "link": "https://alicetalkworld.org/",
+    "linkLabel": "Visit Website",
+    "image": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80&w=600",
+    "hasDetailPage": true,
+    "featuredInHero": false,
+    "overview": "Alice Talk World focuses on sharing compelling audio, visual, and written perspectives. Our team built an interactive digital narrative space that optimizes reading, listening, and digital media access.",
+    "details": "Dynamic responsive grid configurations and fluid typographic spacing improve content discovery.",
+    "outcome": "An inviting storytelling and media layout that drives long-term community presence and deeper digital interaction."
   },
   {
-    id: 'pknb-consult',
-    title: 'PKNB Consult',
-    category: 'Websites',
-    role: 'Web Design & Development',
-    description: 'Industrial engineering and energy consultancy providing off-grid solar systems, MEP engineering, and energy audits.',
-    link: 'https://pknbconsult.com/',
-    linkLabel: 'Visit Website',
-    image: null,
-    hasDetailPage: false,
-    featuredInHero: false
+    "id": "powerworld",
+    "title": "Power World Limited",
+    "category": "Websites",
+    "role": "Web Design & Development",
+    "description": "Corporate platform showcasing power quality engineering, industrial electrical installations, and renewable energy systems in Ghana.",
+    "link": "https://powerworld.vercel.app/",
+    "linkLabel": "Visit Website",
+    "image": "/powerworld-website.jpg",
+    "hasDetailPage": false,
+    "featuredInHero": true
   },
   {
-    id: 'ran-tranz',
-    title: 'Ran Tranz',
-    category: 'Websites',
-    role: 'Web Design & Development',
-    description: 'Global freight forwarding, international trade procurement, shipping logistics, and customs clearance.',
-    link: 'https://ran-tranz-tan.vercel.app/',
-    linkLabel: 'Visit Website',
-    image: null,
-    hasDetailPage: false,
-    featuredInHero: false
+    "id": "pro-perfume",
+    "title": "Pro Perfume",
+    "category": "Websites",
+    "role": "Web Design & Development",
+    "description": "E-commerce boutique offering curated Arabian and niche fragrances in Ghana.",
+    "link": "https://pro-perfume.vercel.app/",
+    "linkLabel": "Visit Website",
+    "image": "/pro-perfume.jpg",
+    "hasDetailPage": false,
+    "featuredInHero": true
   },
   {
-    id: 'green-ad-ghana',
-    title: 'Green AD Ghana',
-    category: 'Websites',
-    role: 'Web Design & Development',
-    description: 'Environmental advocacy organization promoting sustainable development, education, and ecological conservation in Ghana.',
-    link: 'https://greenadghana.com/',
-    linkLabel: 'Visit Website',
-    image: null,
-    hasDetailPage: false,
-    featuredInHero: false
-  },
-
-  // --- Established Portfolio Projects (Preserved) ---
-  {
-    id: 'cosmotech-projects',
-    title: 'Cosmotech Projects',
-    category: 'Websites',
-    role: 'UI/UX Design & Development',
-    description: 'Corporate website for a technology and infrastructure solutions company in Ghana.',
-    link: 'https://www.cosmotechprojects.com/',
-    linkLabel: 'Visit Website',
-    image: '/cosmotech-website.jpg',
-    hasDetailPage: true,
-    featuredInHero: false,
-    overview: 'Cosmotech Projects is a technology and infrastructure solutions company in Ghana. The goal was to design a corporate website that clearly presents its services, expertise, and projects.',
-    challenge: 'The website needed to communicate technical services in a clear and professional way while maintaining a modern and trustworthy appearance.',
-    approach: 'A clean and structured layout was used to present services, projects, and company information clearly, improving readability and user understanding.',
-    details: 'Visual System: A professional and minimal visual style was used to reinforce trust and credibility.\nInformation Structure: Content was organized to clearly present services and project capabilities.\nUser Flow: Layout guides users through services, projects, and contact points effectively.',
-    outcome: 'The final website provides a clear and professional digital presence that supports business visibility and client engagement.'
+    "id": "sarai-nam",
+    "title": "Sarai Nam",
+    "category": "Websites",
+    "role": "Web Design & Development",
+    "description": "Personal brand website and digital portfolio highlighting creative design, content, and personal projects.",
+    "link": "https://sarai-nam.vercel.app/",
+    "linkLabel": "Visit Website",
+    "image": "/Sarai-Nam-image.jpg",
+    "hasDetailPage": false,
+    "featuredInHero": true
   },
   {
-    id: 'global-student-forum',
-    title: 'Global Student Forum',
-    category: 'Websites',
-    role: 'UI/UX Design',
-    description: 'Global digital platform supporting student leadership, advocacy, and international collaboration.',
-    link: 'http://globalstudentforum.org/',
-    linkLabel: 'Visit Website',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600',
-    hasDetailPage: true,
-    featuredInHero: false,
-    overview: 'Global Student Forum is an international platform supporting student leadership, advocacy, and collaboration across regions. The goal was to design a clear and structured interface that reflects its global presence while making information accessible and easy to navigate.',
-    challenge: 'The platform needed to communicate diverse initiatives, programs, and resources to a global audience while maintaining clarity and consistency across content-heavy sections.',
-    approach: 'The design focused on structure and readability, using clean layouts and clear navigation to organize content effectively and support user engagement across different regions.',
-    details: 'Visual System: A clean and professional visual style was used to reflect the organization’s global reach and credibility.\nInformation Structure: Content was structured to make programs, resources, and updates easy to find and navigate.\nUser Flow: Navigation and layout were designed to guide users efficiently across key sections of the platform.',
-    outcome: 'The final platform presents Global Student Forum as a well-structured and accessible international organization, improving how users interact with its content and initiatives.'
+    "id": "matt-nam",
+    "title": "Matthew Nam",
+    "category": "Websites",
+    "role": "Web Design & Development",
+    "description": "Commercial leadership portfolio showcasing executive expertise in digital health, programmatic media, and AdTech scaling.",
+    "link": "https://matt-nam-eight.vercel.app/",
+    "linkLabel": "Visit Website",
+    "image": "/matt-hero-web.jpg",
+    "hasDetailPage": false,
+    "featuredInHero": true
   },
   {
-    id: 'justice-for-africa',
-    title: 'Justice for Africa',
-    category: 'Websites',
-    role: 'UI/UX Design & Development',
-    description: 'A civic-focused platform built to drive awareness, advocacy, and justice-oriented initiatives.',
-    link: 'https://justice4africa.org/',
-    linkLabel: 'Visit Website',
-    image: 'https://images.unsplash.com/photo-1554224155-1696413565d3?auto=format&fit=crop&q=80&w=600',
-    hasDetailPage: true,
-    featuredInHero: false,
-    overview: 'Justice for Africa is a civic-focused platform designed to support advocacy, awareness, and social impact initiatives. The goal was to create a clear and impactful digital presence that communicates its mission effectively.',
-    challenge: 'The platform needed to balance strong messaging with clarity, ensuring that users could easily understand its purpose and engage with its initiatives.',
-    approach: 'The design focused on simplicity and structure, allowing key messages to stand out while supporting a clean and accessible user experience.',
-    details: 'Visual System: A minimal and focused visual style was used to emphasize content and messaging.\nInformation Structure: Content was structured to clearly present initiatives, goals, and calls to action.\nUser Flow: Layout and navigation guide users toward key information and engagement points.',
-    outcome: 'The final platform provides a clear and focused digital presence that supports advocacy efforts and improves user engagement.'
+    "id": "jas-apparels",
+    "title": "JAS Apparels",
+    "category": "Websites",
+    "role": "Web Design & Development",
+    "description": "Multi-category lifestyle boutique in Ghana featuring curated fashion, beauty, fragrance, and living essentials.",
+    "link": "https://jas-lake.vercel.app/",
+    "linkLabel": "Visit Website",
+    "image": "/jas-web.jpg",
+    "video": "/jas-web-video.mp4",
+    "hasDetailPage": false,
+    "featuredInHero": true
   },
   {
-    id: 'all-africa-students-union',
-    title: 'All Africa Students Union (AASU)',
-    category: 'Websites',
-    role: 'UI/UX Design & Development',
-    description: 'Official digital platform representing student unions across Africa and driving continental initiatives.',
-    link: 'https://aasuonline.org/',
-    linkLabel: 'Visit Website',
-    image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=600',
-    hasDetailPage: true,
-    featuredInHero: false,
-    overview: 'The All Africa Students Union (AASU) platform represents student unions across the continent, providing a central space for initiatives, programs, and communication. The goal was to design a platform that reflects its scale while maintaining clarity.',
-    challenge: 'The platform needed to organize a wide range of content, including programs, updates, and resources, while ensuring accessibility for a diverse audience.',
-    approach: 'A structured layout and clear navigation system were implemented to simplify access to information and improve overall usability.',
-    details: 'Visual System: A clean and consistent visual system was used to reflect the organization’s identity and authority.\nInformation Structure: Content was organized to make programs, updates, and resources easy to access.\nUser Flow: Navigation was designed to guide users efficiently through key sections.',
-    outcome: 'The final platform delivers a structured and accessible experience that supports communication and engagement across the continent.'
+    "id": "with-integrity-consult",
+    "title": "With Integrity Consult",
+    "category": "Websites",
+    "role": "Web Design & Development",
+    "description": "Website design and development for With Integrity Consult.",
+    "link": "https://lightpink-kangaroo-568501.hostingersite.com/",
+    "linkLabel": "View Website",
+    "image": null,
+    "hasDetailPage": false,
+    "featuredInHero": false
   },
   {
-    id: 'the-jeans-shop-gh',
-    title: 'The Jeans Shop GH',
-    category: 'Websites',
-    role: 'UI/UX Design & Branding',
-    description: 'Fashion e-commerce platform designed to showcase and sell contemporary apparel online.',
-    link: 'https://www.thejeansshopgh.com/',
-    linkLabel: 'Visit Website',
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=600',
-    hasDetailPage: true,
-    featuredInHero: false,
-    overview: 'The Jeans Shop GH is a fashion brand focused on contemporary apparel and online retail. The goal was to design an e-commerce experience that showcases products clearly and supports online sales.',
-    challenge: 'The platform needed to present products in a clean and appealing way while maintaining a smooth and intuitive browsing experience.',
-    approach: 'A minimal and product-focused layout was developed to highlight items and simplify navigation across the store.',
-    details: 'Visual System: A clean and modern visual style was used to keep focus on the products.\nInformation Structure: The layout was designed to make browsing and product discovery simple.\nUser Flow: The experience guides users smoothly from browsing to purchase.',
-    outcome: 'The final platform delivers a clear and user-friendly shopping experience that supports product visibility and sales.'
+    "id": "raul-landscaping",
+    "title": "Raul Landscaping",
+    "category": "Websites",
+    "role": "Web Design & Development",
+    "description": "Professional landscaping, residential garden design, and outdoor property maintenance services.",
+    "link": "https://raul-landscaping.vercel.app/",
+    "linkLabel": "Visit Website",
+    "image": null,
+    "hasDetailPage": false,
+    "featuredInHero": false
   },
   {
-    id: 'democrat-union-of-africa',
-    title: 'Democrat Union of Africa',
-    category: 'Websites',
-    role: 'UI/UX Design & Development',
-    description: 'Political and organizational platform designed to communicate vision, structure, and initiatives.',
-    link: 'https://democratunionofafrica.org/',
-    linkLabel: 'Visit Website',
-    image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=600',
-    hasDetailPage: true,
-    featuredInHero: false,
-    overview: 'As a primary political organizational hub, the Democrat Union of Africa platform coordinates regional updates. We created a modern visual architecture that showcases core strategies and organizational structure.',
-    details: 'Authoritative brand blues and high-contrast styling elevate programmatic messaging and visual trust.',
-    outcome: 'A robust, easily navigable visual platform that supports continuous information dissemination.'
+    "id": "emis-epic-remodeling",
+    "title": "Emins Epic Remodeling",
+    "category": "Websites",
+    "role": "Web Design & Development",
+    "description": "Luxury home renovation, interior remodeling, and outdoor living transformations tailored around bespoke client visions.",
+    "link": "https://emis-epic-remodeling.vercel.app/",
+    "linkLabel": "Visit Website",
+    "image": null,
+    "hasDetailPage": false,
+    "featuredInHero": false
   },
   {
-    id: 'alice-talk-world',
-    title: 'Alice Talk World',
-    category: 'Websites',
-    role: 'UI/UX Design & Development',
-    description: 'A storytelling and media platform focused on conversations, perspectives, and digital engagement.',
-    link: 'https://alicetalkworld.org/',
-    linkLabel: 'Visit Website',
-    image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80&w=600',
-    hasDetailPage: true,
-    featuredInHero: false,
-    overview: 'Alice Talk World focuses on sharing compelling audio, visual, and written perspectives. Our team built an interactive digital narrative space that optimizes reading, listening, and digital media access.',
-    details: 'Dynamic responsive grid configurations and fluid typographic spacing improve content discovery.',
-    outcome: 'An inviting storytelling and media layout that drives long-term community presence and deeper digital interaction.'
+    "id": "dean-weisgold",
+    "title": "Dean Weisgold Law Firm",
+    "category": "Websites",
+    "role": "Web Design & Development",
+    "description": "Civil, commercial, and real estate litigation representation across Pennsylvania and New Jersey.",
+    "link": "https://dean-weisgold.vercel.app/",
+    "linkLabel": "Visit Website",
+    "image": null,
+    "hasDetailPage": false,
+    "featuredInHero": false
   },
   {
-    id: 'stillwaters-campaign',
-    title: 'Stillwaters',
-    category: 'Campaigns',
-    role: 'Creative Direction & Motion',
-    description: 'Visual campaign and motion graphics for a premium lifestyle brand.',
-    link: '#',
-    image: '/_MG_6758.jpeg',
-    hasDetailPage: false,
-    featuredInHero: true
+    "id": "green-ad-ghana",
+    "title": "Green AD Ghana",
+    "category": "Websites",
+    "role": "Web Design & Development",
+    "description": "Environmental advocacy organization promoting sustainable development, education, and ecological conservation in Ghana.",
+    "link": "https://greenadghana.com/",
+    "linkLabel": "Visit Website",
+    "image": null,
+    "hasDetailPage": false,
+    "featuredInHero": false
   },
   {
-    id: 'adonteng-eid',
-    title: 'Adonteng Eid',
-    category: 'Posters',
-    role: 'Graphic Design',
-    description: 'Thematic poster series celebrating cultural heritage and festive joy.',
-    link: '#',
-    image: '/adonteng-eid v2.jpg',
-    hasDetailPage: false,
-    featuredInHero: true
+    "id": "the-jeans-shop-gh",
+    "title": "The Jeans Shop GH",
+    "category": "Websites",
+    "role": "UI/UX Design & Branding",
+    "description": "Fashion e-commerce platform designed to showcase and sell contemporary apparel online.",
+    "link": "https://www.thejeansshopgh.com/",
+    "linkLabel": "Visit Website",
+    "image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=600",
+    "hasDetailPage": true,
+    "featuredInHero": false,
+    "overview": "The Jeans Shop GH is a fashion brand focused on contemporary apparel and online retail. The goal was to design an e-commerce experience that showcases products clearly and supports online sales.",
+    "challenge": "The platform needed to present products in a clean and appealing way while maintaining a smooth and intuitive browsing experience.",
+    "approach": "A minimal and product-focused layout was developed to highlight items and simplify navigation across the store.",
+    "details": "Visual System: A clean and modern visual style was used to keep focus on the products.\nInformation Structure: The layout was designed to make browsing and product discovery simple.\nUser Flow: The experience guides users smoothly from browsing to purchase.",
+    "outcome": "The final platform delivers a clear and user-friendly shopping experience that supports product visibility and sales."
+  },
+  {
+    "id": "idbf",
+    "title": "IDBF",
+    "category": "Campaign & Event Design",
+    "role": "Visual Communication & Event Branding",
+    "description": "Comprehensive visual system and promotional collateral for the IDBF international basketball festival.",
+    "link": "#",
+    "image": "/cover-idbf-01.jpg",
+    "heroVideo": "https://res.cloudinary.com/justkoby/video/upload/v1778860137/0515_nyfplc.mp4",
+    "hasDetailPage": true,
+    "featuredInHero": true,
+    "overview": "IDBF required a powerful and cohesive visual identity to support its international event presence.",
+    "outcome": "A successful and visually unified event presence that helped strengthen the brand’s international recognition.",
+    "sections": [
+      {
+        "type": "full-image",
+        "image": "https://res.cloudinary.com/justkoby/image/upload/v1778860814/ChatGPT_Image_May_15_2026_03_58_27_PM_huncio.png"
+      },
+      {
+        "type": "text",
+        "title": "Independence Day Basketball Festival",
+        "subtitle": "A vibrant visual system built to capture the energy of a premium international basketball event."
+      },
+      {
+        "type": "full-image",
+        "image": "https://res.cloudinary.com/justkoby/image/upload/v1778861642/ChatGPT_Image_May_15_2026_04_13_15_PM_bozsj2.png"
+      },
+      {
+        "type": "grid-2",
+        "items": [
+          {
+            "type": "video",
+            "url": "https://res.cloudinary.com/justkoby/video/upload/v1778845759/0120_qi5blb.mp4"
+          },
+          {
+            "type": "image",
+            "url": "https://res.cloudinary.com/justkoby/image/upload/v1778861754/ChatGPT_Image_May_15_2026_04_15_02_PM_wpjzhz.png"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "subtitle": "IDBF 2025 was designed as more than a basketball event. The goal was to create a visual identity system that merged Ghanaian independence culture with the rising energy of basketball among the youth. The project explored how sport, music, food, and community could coexist under one scalable event brand."
+      },
+      {
+        "type": "grid-2",
+        "variant": "portrait",
+        "items": [
+          {
+            "type": "video",
+            "url": "https://res.cloudinary.com/justkoby/video/upload/v1778863791/Recording_2025-01-04_155221_ym9fny.mp4"
+          },
+          {
+            "type": "video",
+            "url": "https://res.cloudinary.com/justkoby/video/upload/v1778863795/Recording_2025-01-04_160440_u5dry1.mp4"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "title": "The Challenge",
+        "subtitle": "Designing a visual language that feels global and inclusive while maintaining high-energy engagement for a diverse international audience."
+      },
+      {
+        "type": "grid-2",
+        "items": [
+          {
+            "type": "image",
+            "url": "https://res.cloudinary.com/justkoby/image/upload/v1778864404/ChatGPT_Image_May_15_2026_04_59_38_PM_p6ingg.png"
+          },
+          {
+            "type": "image",
+            "url": "https://res.cloudinary.com/justkoby/image/upload/v1778864380/Poster-01_qqdbcb.jpg"
+          }
+        ]
+      },
+      {
+        "type": "full-image",
+        "image": "https://res.cloudinary.com/justkoby/image/upload/v1778865750/ChatGPT_Image_May_15_2026_05_21_02_PM_jfyfb3.png"
+      }
+    ]
+  },
+  {
+    "id": "stillwaters-campaign",
+    "title": "Stillwaters",
+    "category": "Campaigns",
+    "role": "Creative Direction & Motion",
+    "description": "Visual campaign and motion graphics for a premium lifestyle brand.",
+    "link": "#",
+    "image": "/_MG_6758.jpeg",
+    "hasDetailPage": false,
+    "featuredInHero": true
+  },
+  {
+    "id": "adas-cosmetics",
+    "title": "Ada’s Cosmetics — Logo Design & Brand Applications",
+    "category": "Logo Design",
+    "role": "Logo Design & Visual Applications",
+    "description": "Logo design for Ada’s Cosmetics, with product mockups exploring how the identity appears across cosmetic packaging.",
+    "image": "/ada-cos-mock-1.jpg",
+    "hasDetailPage": true,
+    "featuredInHero": true,
+    "overview": "Logo design for Ada’s Cosmetics, with product mockups exploring how the identity appears across cosmetic packaging.",
+    "sections": [
+      {
+        "type": "text",
+        "title": "Logo Design & Identity",
+        "subtitle": "The core logo mark designed for Ada’s Cosmetics."
+      },
+      {
+        "type": "presentation-page",
+        "image": "/ada-cos-logo.jpeg",
+        "title": "Primary Brand Logo"
+      },
+      {
+        "type": "text",
+        "title": "Proposed Brand Applications",
+        "subtitle": "Visual concepts demonstrating how the identity could appear across cosmetic packaging, bottles, and product containers."
+      },
+      {
+        "type": "presentation-page",
+        "image": "/ada-cos-mock-1.jpg",
+        "title": "Proposed Cosmetic Packaging Application 01"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/ada-cos-mock-2.jpg",
+        "title": "Proposed Cosmetic Packaging Application 02"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/ada-cos-mock-3.jpg",
+        "title": "Proposed Cosmetic Packaging Application 03"
+      }
+    ]
+  },
+  {
+    "id": "win-win-coffee",
+    "title": "Win Win Coffee",
+    "category": "Branding",
+    "role": "UI/UX Design & Branding",
+    "description": "E-commerce platform and visual brand experience for a specialty coffee business.",
+    "link": "https://winwin.coffee/",
+    "image": "/win-win-new-site-background.jpg",
+    "hasDetailPage": true,
+    "featuredInHero": true,
+    "overview": "Win Win Coffee is a specialty coffee brand focused on delivering quality products through a strong visual identity and digital experience. The goal was to create a cohesive brand and e-commerce presence.",
+    "challenge": "The brand needed a consistent visual identity and a digital platform that reflects its personality while supporting product presentation and sales.",
+    "approach": "The design combined branding and digital experience, creating a cohesive system that works across packaging, visuals, and the website.",
+    "details": "Visual System: A bold and cohesive visual identity was developed to reflect the brand’s personality.\nInformation Structure: The layout was designed to highlight products and simplify browsing.\nUser Flow: The experience guides users from discovery to product exploration and purchase.",
+    "outcome": "The final result is a cohesive brand and digital experience that strengthens identity and supports e-commerce growth."
+  },
+  {
+    "id": "the-bag-shop-gh",
+    "title": "The Bag Shop GH",
+    "category": "Branding",
+    "role": "UI/UX Design",
+    "description": "E-commerce interface designed to present and sell fashion accessories online.",
+    "link": "https://www.thebagshopgh.com/",
+    "image": "https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&q=80&w=600",
+    "hasDetailPage": true,
+    "featuredInHero": false,
+    "overview": "The Bag Shop GH platform serves as a modern accessories e-commerce marketplace. The primary goal was to create highly interactive product catalogs that highlight luxury and functional quality.",
+    "details": "Large minimal layouts and rich imagery create an exclusive, aspirational fashion retail experience.",
+    "outcome": "A conversion-optimized e-commerce storefront with intuitive navigation and highly engaging layouts."
+  },
+  {
+    "id": "ams",
+    "title": "AMS — Logo Design & Brand Applications",
+    "category": "Logo Design",
+    "role": "Logo Design & Visual Applications",
+    "description": "Logo design for AMS, accompanied by visual concepts showing how the identity could appear across branded materials.",
+    "presentationPdf": "/AMS%20BRANDING/BRANDING%20(UPDATED)-compressed.pdf",
+    "image": "/AMS%20BRANDING/logo%20and%20thumbnail.jpg",
+    "hasDetailPage": true,
+    "featuredInHero": true,
+    "overview": "Logo design for AMS, accompanied by visual concepts showing how the identity could appear across branded materials.",
+    "sections": [
+      {
+        "type": "text",
+        "title": "Logo Concept & Identity",
+        "subtitle": "The core logo mark and visual identity designed for AMS."
+      },
+      {
+        "type": "presentation-page",
+        "image": "/AMS%20BRANDING/page01_1.jpg",
+        "title": "Logo Presentation Page 01"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/AMS%20BRANDING/page02_1.jpg",
+        "title": "Logo Presentation Page 02"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/AMS%20BRANDING/page03_1.jpg",
+        "title": "Logo Presentation Page 03"
+      },
+      {
+        "type": "text",
+        "title": "Proposed Brand Applications",
+        "subtitle": "Visual concepts demonstrating how the identity could appear across branded materials, merchandise, and digital environments."
+      },
+      {
+        "type": "presentation-page",
+        "image": "/AMS%20BRANDING/page04_1.jpg",
+        "title": "Proposed Application Page 04"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/AMS%20BRANDING/page05_1.jpg",
+        "title": "Proposed Application Page 05"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/AMS%20BRANDING/page06_1.jpg",
+        "title": "Proposed Application Page 06"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/AMS%20BRANDING/page07_1.jpg",
+        "title": "Proposed Application Page 07"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/AMS%20BRANDING/page08_1.jpg",
+        "title": "Proposed Application Page 08"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/AMS%20BRANDING/page09_1.jpg",
+        "title": "Proposed Application Page 09"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/AMS%20BRANDING/page10_1.jpg",
+        "title": "Proposed Application Page 10"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/AMS%20BRANDING/page11_1.jpg",
+        "title": "Proposed Application Page 11"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/AMS%20BRANDING/page12_1.jpg",
+        "title": "Proposed Application Page 12"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/AMS%20BRANDING/page13_1.jpg",
+        "title": "Proposed Application Page 13"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/AMS%20BRANDING/page14_1.jpg",
+        "title": "Proposed Application Page 14"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/AMS%20BRANDING/page15_1.jpg",
+        "title": "Proposed Application Page 15"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/AMS%20BRANDING/page16_1.jpg",
+        "title": "Proposed Application Page 16"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/AMS%20BRANDING/page17_1.jpg",
+        "title": "Proposed Application Page 17"
+      }
+    ]
+  },
+  {
+    "id": "osomafo-pinto-music",
+    "title": "Osomafo Pinto Music — Logo & Album Artwork",
+    "category": "Logo Design & Album Artwork",
+    "role": "Logo Design & Album Artwork",
+    "description": "Logo design for Osomafo Pinto Music and artwork for Praise Medley Volume 1, presented through digital music-player mockups.",
+    "image": "/praise-mock-1.jpg",
+    "hasDetailPage": true,
+    "featuredInHero": true,
+    "overview": "Logo design for Osomafo Pinto Music and artwork for Praise Medley Volume 1, presented through digital music-player mockups.",
+    "sections": [
+      {
+        "type": "text",
+        "title": "Artist Logo",
+        "subtitle": "The core logo mark designed for Osomafo Pinto Music."
+      },
+      {
+        "type": "presentation-page",
+        "image": "/praise-logo.jpg",
+        "title": "Osomafo Pinto Music Logo"
+      },
+      {
+        "type": "text",
+        "title": "Album Artwork",
+        "subtitle": "Cover and accompanying visual artwork created for Praise Medley Volume 1."
+      },
+      {
+        "type": "presentation-page",
+        "image": "/praise2-01.jpg",
+        "title": "Praise Medley Volume 1 — Cover Artwork"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/praise2-01-01.jpg",
+        "title": "Praise Medley Volume 1 — Accompanying Artwork"
+      },
+      {
+        "type": "text",
+        "title": "Presentation Mockups",
+        "subtitle": "Visual concepts illustrating how the album artwork appears within digital music player screens and streaming interfaces."
+      },
+      {
+        "type": "presentation-page",
+        "image": "/praise-mock-1.jpg",
+        "title": "Digital Music Player Presentation Mockup 01"
+      },
+      {
+        "type": "presentation-page",
+        "image": "/praise-mock-2.jpg",
+        "title": "Digital Music Player Presentation Mockup 02"
+      }
+    ]
+  },
+  {
+    "id": "adonteng-eid",
+    "title": "Adonteng Eid",
+    "category": "Posters",
+    "role": "Graphic Design",
+    "description": "Thematic poster series celebrating cultural heritage and festive joy.",
+    "link": "#",
+    "image": "/adonteng-eid v2.jpg",
+    "hasDetailPage": false,
+    "featuredInHero": true
   }
 ];
-
-export default portfolioProjects;

@@ -172,7 +172,11 @@ export default function InteractiveServicesSection() {
 
           {/* Right Column: Sticky Media Showcase Preview */}
           <div className="services-preview-panel">
-            <div className="services-preview-card">
+            <div 
+              className="services-preview-card"
+              onClick={() => handleRowClick(activeService)}
+              style={{ cursor: 'pointer' }}
+            >
               {servicesData.map((service, index) => {
                 const isActive = activeIndex === index;
                 return (

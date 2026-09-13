@@ -163,8 +163,8 @@ export default function HomePage() {
             {[
               { id: 'ug-src-welfare', title: 'UG SRC Welfare Scheme', category: 'Digital Platform', sub: 'UI/UX Design & Development', img: '/welfare-thumbnail-01.jpg' },
               { id: 'idbf', title: 'IDBF', category: 'Campaign & Event Design', img: '/cover-idbf-01.jpg' },
-              { id: 'aasu-summit', title: 'AASU / Africa Students & Youth Summit', category: 'Campaign & Event Design', img: 'https://images.unsplash.com/photo-1540575861501-7ad0582371f3?auto=format&fit=crop&q=80&w=1000' },
-              { id: 'vianexta', title: 'ViaNexta', category: 'Digital & Web', img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000' },
+              { id: 'all-africa-students-union', title: 'AASU — Brand Manual & Visual Identity', category: 'Brand Identity System', sub: 'Visual Identity · Brand Manual', img: '/AASU BRAND MANUAL.jpg' },
+              { id: 'vianexta', title: 'ViaNexta — Sales & Pitch Deck', category: 'Strategic Presentation', sub: 'Presentation Design · Pitch Deck', img: '/vianexta sales pitch.jpg' },
               { id: 'foreign-africa', title: 'Foreign Africa', category: 'Digital & Web', img: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1000' },
               { id: 'democrat-union', title: 'Democrat Union of Africa', category: 'Digital & Web', img: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=1000' },
               { id: 'global-student', title: 'Global Student Forum', category: 'Digital & Web', img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000' },

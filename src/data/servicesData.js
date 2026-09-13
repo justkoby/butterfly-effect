@@ -57,11 +57,11 @@ export const servicesData = [
     number: '05',
     title: 'Publications & Editorial Design',
     description: 'Multi-page brand manuals, strategic proposals, annual reports, and structured typographic publications.',
-    projectName: 'Africa Youth Network Brand Manual',
-    categoryLabel: 'Editorial & Brand Manual',
+    projectName: 'A Decade of Pioneering E-Waste Management',
+    categoryLabel: 'Institutional Publication',
     type: 'image',
-    src: '/Africa%20Youth%20Network%20Brand%20Manual/page01_1.jpg',
-    filterLink: '/projects?filter=Branding'
+    src: '/A%20DECADE%20OF%20PIONEERING%20E-WASTE%20MANAGEMENT%20IN%20GHANA.jpg',
+    filterLink: '/projects?filter=Publications'
   },
   {
     id: 'creative-direction',

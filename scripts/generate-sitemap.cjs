@@ -13,28 +13,28 @@ const staticRoutes = [
 ];
 
 function getProjects() {
-  const projects = [];
   const filePath = path.join(__dirname, '../src/data/portfolioProjects.js');
   
   try {
     if (fs.existsSync(filePath)) {
       const content = fs.readFileSync(filePath, 'utf8');
-      // Regex to capture project objects with id and hasDetailPage: true
-      const regex = /id:\s*['"]([^'"]+)['"][\s\S]*?hasDetailPage:\s*true/g;
+      const regex = /["']?id["']?\s*:\s*['"]([^'"]+)['"][\s\S]*?["']?hasDetailPage["']?\s*:\s*true/g;
       let match;
       const seen = new Set();
+      const projects = [];
       while ((match = regex.exec(content)) !== null) {
         if (!seen.has(match[1])) {
           seen.add(match[1]);
           projects.push(match[1]);
         }
       }
+      return projects;
     }
   } catch (err) {
     console.error('Error reading portfolioProjects.js for sitemap:', err);
   }
   
-  return projects;
+  return [];
 }
 
 function generateSitemap() {
@@ -57,8 +57,9 @@ function generateSitemap() {
 
   // Add dynamic project case study routes
   projectIds.forEach(id => {
+    const projectPath = id === 'e-waste-management-report' ? '/work/e-waste-management-report' : `/projects/${id}`;
     xml += '  <url>\n';
-    xml += `    <loc>${BASE_URL}/projects/${id}</loc>\n`;
+    xml += `    <loc>${BASE_URL}${projectPath}</loc>\n`;
     xml += `    <lastmod>${currentDate}</lastmod>\n`;
     xml += `    <changefreq>weekly</changefreq>\n`;
     xml += `    <priority>0.7</priority>\n`;

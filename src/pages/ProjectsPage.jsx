@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { ArrowUpRight, ArrowRight } from 'lucide-react';
 import WorkSlideshow from '../components/WorkSlideshow';
 import SEO from '../components/SEO';
 import { portfolioProjects } from '../data/portfolioProjects';
 
-const filterCategories = ['All', 'Websites', 'Branding', 'Graphic Design', 'Campaigns', 'Packaging', 'Posters'];
+const filterCategories = ['All', 'Websites', 'Branding', 'Publications', 'Graphic Design', 'Campaigns', 'Packaging', 'Posters'];
 
 export default function ProjectsPage() {
+  const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const urlFilter = searchParams.get('filter');
   const [activeFilter, setActiveFilter] = useState(urlFilter || 'All');
@@ -15,6 +16,12 @@ export default function ProjectsPage() {
   useEffect(() => {
     if (urlFilter && filterCategories.includes(urlFilter)) {
       setActiveFilter(urlFilter);
+      setTimeout(() => {
+        const target = document.getElementById('selected-work');
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 150);
     } else if (!urlFilter) {
       setActiveFilter('All');
     }
@@ -30,6 +37,10 @@ export default function ProjectsPage() {
                  p.category === 'Logo Design & Album Artwork' ||
                  p.category.includes('Branding') ||
                  p.category.includes('Logo');
+        }
+        if (activeFilter === 'Publications') {
+          return p.category === 'Publications' ||
+                 p.category.includes('Publication');
         }
         if (activeFilter === 'Graphic Design') {
           return p.category === 'Graphic Design' ||
@@ -57,7 +68,7 @@ export default function ProjectsPage() {
         <div className="section-container">
           <WorkSlideshow height="600px" borderRadius="32px" marginBottom="4rem" />
           <span className="section-subtitle">Our Portfolios</span>
-          <h1 className="section-title">Selected Work</h1>
+          <h1 className="section-title" id="selected-work">Selected Work</h1>
           <p className="section-desc">
             Explore our high-impact visual design systems that enabled distinct brands to build real presence and reach.
           </p>
@@ -73,7 +84,14 @@ export default function ProjectsPage() {
               <button
                 key={cat}
                 type="button"
-                onClick={() => setActiveFilter(cat)}
+                onClick={() => {
+                  setActiveFilter(cat);
+                  if (cat === 'All') {
+                    setSearchParams({});
+                  } else {
+                    setSearchParams({ filter: cat });
+                  }
+                }}
                 style={{
                   padding: '0.65rem 1.5rem',
                   borderRadius: '100px',
@@ -91,17 +109,66 @@ export default function ProjectsPage() {
             ))}
           </div>
 
+          {activeFilter === 'Publications' && (
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              flexWrap: 'wrap',
+              gap: '1.25rem',
+              background: 'var(--bg-secondary)',
+              border: '1px solid var(--border-color)',
+              borderRadius: '20px',
+              padding: '1.5rem 2rem',
+              marginBottom: '2.5rem'
+            }}>
+              <div>
+                <h3 style={{ margin: '0 0 0.35rem', fontSize: '1.15rem', fontWeight: 700 }}>
+                  Publications &amp; Reports Repository
+                </h3>
+                <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+                  Explore the full archive of institutional research, policy documents, and published editorial designs.
+                </p>
+              </div>
+              <a
+                href="https://drive.google.com/drive/folders/14t-KidUoHbsw8q2S5igdXSKBOyjVuTu7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card-btn card-btn-primary"
+                style={{ padding: '0.65rem 1.4rem' }}
+              >
+                View All Publications <ArrowUpRight size={15} />
+              </a>
+            </div>
+          )}
+
           <div className="projects-grid">
             {filteredProjects.map((proj) => {
               const hasExternalLink = Boolean(proj.link && proj.link !== '#');
-              const hasCaseStudy = Boolean(proj.hasDetailPage);
+              const hasCaseStudy = Boolean(proj.hasDetailPage || proj.route);
+              const targetRoute = proj.route || (hasCaseStudy ? `/projects/${proj.id}` : null);
               const linkText = proj.linkLabel || 'Visit Website';
+              const ctaText = proj.ctaLabel || 'Case Study';
 
               return (
-                <div className="project-card" key={proj.id}>
+                <div 
+                  className="project-card" 
+                  key={proj.id}
+                  onClick={(e) => {
+                    if (targetRoute && !e.target.closest('a') && !e.target.closest('button')) {
+                      navigate(targetRoute);
+                    }
+                  }}
+                  style={{ cursor: targetRoute ? 'pointer' : 'default' }}
+                >
                   <div className="project-visual">
                     {proj.image ? (
-                      <img src={proj.image} alt={proj.title} className="project-img" loading="lazy" />
+                      <img 
+                        src={proj.image} 
+                        alt={proj.title} 
+                        className={`project-img ${proj.imageFit === 'contain' ? 'is-contain' : ''}`} 
+                        loading="lazy" 
+                      />
                     ) : (
                       <div style={{
                         width: '100%',
@@ -139,10 +206,10 @@ export default function ProjectsPage() {
                       </div>
                     )}
                   </div>
-                  <div className="project-content" style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', flex: 1 }}>
-                    <div className="project-meta" style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+                  <div className="project-content">
+                    <div className="project-meta">
                       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem', flexWrap: 'wrap' }}>
-                        <span className="project-category">{proj.category}</span>
+                        <span className="project-category">{proj.displayLabel || proj.category}</span>
                         {proj.status && (
                           <span style={{ 
                             background: 'rgba(244, 63, 94, 0.15)', 
@@ -158,89 +225,89 @@ export default function ProjectsPage() {
                           </span>
                         )}
                       </div>
-                      <span className="project-year" style={{ color: 'var(--accent-secondary)' }}>Role: {proj.role}</span>
+                      <span className="project-year" title={proj.role}>Role: {proj.role}</span>
                     </div>
-                    <h3 className="project-title" style={{ margin: 0 }}>{proj.title}</h3>
-                    <p className="project-desc" style={{ flexGrow: 1, margin: 0 }}>{proj.description}</p>
+                    <h3 className="project-title">{proj.title}</h3>
+                    <p className="project-desc">{proj.description}</p>
                     
                     {/* Action Links */}
-                    {hasCaseStudy && hasExternalLink ? (
-                      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', marginTop: '0.75rem' }}>
-                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
-                          <Link 
-                            to={`/projects/${proj.id}`} 
-                            className="outline-button" 
-                            style={{ justifyContent: 'center', display: 'flex', alignItems: 'center', gap: '0.35rem', padding: '0.65rem 0.75rem' }}
-                          >
-                            Case Study <ArrowRight size={14} />
-                          </Link>
+                    <div className="project-actions">
+                      {hasCaseStudy && hasExternalLink ? (
+                        <>
+                          <div className="card-actions-grid">
+                            <Link 
+                              to={targetRoute} 
+                              className="card-btn card-btn-secondary" 
+                            >
+                              {ctaText} <ArrowRight size={14} />
+                            </Link>
+                            <a
+                              href={proj.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="card-btn card-btn-primary"
+                            >
+                              {linkText} <ArrowUpRight size={14} />
+                            </a>
+                          </div>
+                          {(proj.manualPdf || proj.presentationPdf) && (
+                            <a
+                              href={proj.presentationPdf || proj.manualPdf}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="outline-button"
+                              style={{ width: '100%', justifyContent: 'center', display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.6rem 1rem' }}
+                            >
+                              {proj.presentationPdf ? 'View Brand Presentation' : 'View Brand Manual'} <ArrowUpRight size={14} />
+                            </a>
+                          )}
+                        </>
+                      ) : hasExternalLink ? (
+                        <>
                           <a
                             href={proj.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="cta-button"
-                            style={{ justifyContent: 'center', display: 'flex', alignItems: 'center', gap: '0.35rem', padding: '0.65rem 0.75rem' }}
+                            className="card-btn card-btn-primary"
+                            style={{ width: '100%' }}
                           >
                             {linkText} <ArrowUpRight size={14} />
                           </a>
-                        </div>
-                        {(proj.manualPdf || proj.presentationPdf) && (
-                          <a
-                            href={proj.presentationPdf || proj.manualPdf}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="outline-button"
-                            style={{ width: '100%', justifyContent: 'center', display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.6rem 1rem' }}
+                          {(proj.manualPdf || proj.presentationPdf) && (
+                            <a
+                              href={proj.presentationPdf || proj.manualPdf}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="outline-button"
+                              style={{ width: '100%', justifyContent: 'center', display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.6rem 1rem' }}
+                            >
+                              {proj.presentationPdf ? 'View Brand Presentation' : 'View Brand Manual'} <ArrowUpRight size={14} />
+                            </a>
+                          )}
+                        </>
+                      ) : hasCaseStudy ? (
+                        <>
+                          <Link 
+                            to={targetRoute} 
+                            className="card-btn card-btn-primary" 
+                            style={{ width: '100%' }}
                           >
-                            {proj.presentationPdf ? 'View Brand Presentation' : 'View Brand Manual'} <ArrowUpRight size={14} />
-                          </a>
-                        )}
-                      </div>
-                    ) : hasExternalLink ? (
-                      <div style={{ marginTop: '0.75rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                        <a
-                          href={proj.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="cta-button"
-                          style={{ width: '100%', justifyContent: 'center', display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.6rem 1rem' }}
-                        >
-                          {linkText} <ArrowUpRight size={14} />
-                        </a>
-                        {(proj.manualPdf || proj.presentationPdf) && (
-                          <a
-                            href={proj.presentationPdf || proj.manualPdf}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="outline-button"
-                            style={{ width: '100%', justifyContent: 'center', display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.6rem 1rem' }}
-                          >
-                            {proj.presentationPdf ? 'View Brand Presentation' : 'View Brand Manual'} <ArrowUpRight size={14} />
-                          </a>
-                        )}
-                      </div>
-                    ) : hasCaseStudy ? (
-                      <div style={{ marginTop: '0.75rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                        <Link 
-                          to={`/projects/${proj.id}`} 
-                          className="cta-button" 
-                          style={{ width: '100%', justifyContent: 'center', display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.65rem 1rem' }}
-                        >
-                          Case Study <ArrowRight size={14} />
-                        </Link>
-                        {(proj.manualPdf || proj.presentationPdf) && (
-                          <a
-                            href={proj.presentationPdf || proj.manualPdf}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="outline-button"
-                            style={{ width: '100%', justifyContent: 'center', display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.6rem 1rem' }}
-                          >
-                            {proj.presentationPdf ? 'View Brand Presentation' : 'View Brand Manual'} <ArrowUpRight size={14} />
-                          </a>
-                        )}
-                      </div>
-                    ) : null}
+                            {ctaText} <ArrowRight size={14} />
+                          </Link>
+                          {(proj.manualPdf || proj.presentationPdf) && (
+                            <a
+                              href={proj.presentationPdf || proj.manualPdf}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="outline-button"
+                              style={{ width: '100%', justifyContent: 'center', display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.6rem 1rem' }}
+                            >
+                              {proj.presentationPdf ? 'View Brand Presentation' : 'View Brand Manual'} <ArrowUpRight size={14} />
+                            </a>
+                          )}
+                        </>
+                      ) : null}
+                    </div>
                   </div>
                 </div>
               );

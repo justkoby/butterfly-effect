@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Routes, Route, Link, NavLink, useLocation } from 'react-router-dom';
+import { Routes, Route, Link, NavLink, useLocation, Navigate } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ContactPage from './pages/ContactPage';
 import ProjectDetailPage from './pages/ProjectDetailPage';
+import EWasteReportPlaceholderPage from './pages/EWasteReportPlaceholderPage';
 import { ArrowRight, MessageCircle, ShoppingBag, ArrowUpRight, Sun, Moon, Menu, X } from 'lucide-react';
 import ThemeToggle from './components/ThemeToggle';
 import './App.css';
@@ -160,6 +161,8 @@ export default function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/work/e-waste-management-report" element={<EWasteReportPlaceholderPage />} />
+          <Route path="/projects/e-waste-management-report" element={<Navigate to="/work/e-waste-management-report" replace />} />
           <Route path="/projects/:id" element={<ProjectDetailPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<HomePage />} />
