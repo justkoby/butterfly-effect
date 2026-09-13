@@ -178,7 +178,7 @@ export default function App() {
             </div>
             <div>
               <h4 style={{ fontSize: '1rem', color: 'var(--text-primary)', margin: '0 0 1.5rem', fontWeight: 600 }}>Get in Touch</h4>
-              <a href="mailto:kobbydarko2016@gmail.com" style={{ display: 'block', color: 'var(--text-secondary)', fontSize: '0.95rem', margin: '0 0 0.5rem' }}>kobbydarko2016@gmail.com</a>
+              <a href="mailto:info@butterflyeffectconcepts.com" style={{ display: 'block', color: 'var(--text-secondary)', fontSize: '0.95rem', margin: '0 0 0.5rem' }}>info@butterflyeffectconcepts.com</a>
               <span style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', display: 'block', marginBottom: '0.5rem' }}>+233 54 637 9235</span>
               <span style={{ color: 'var(--text-secondary)', fontSize: '0.88rem', opacity: 0.85 }}>Adenta Housing Down, Accra, Ghana</span>
             </div>
