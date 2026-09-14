@@ -1,0 +1,626 @@
+/* ==========================================================================
+   Editorial Publication Case Study - Design System
+   "A Decade of Pioneering E-Waste Management in Ghana"
+   Modular, institutional editorial layout for long-form publications.
+   ========================================================================== */
+
+.editorial-case-study {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  padding-top: 100px;
+  padding-bottom: 120px;
+  font-family: var(--font-body);
+  transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+.editorial-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .editorial-container {
+    padding: 0 1.25rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Breadcrumb / Back Link
+   -------------------------------------------------------------------------- */
+.editorial-back-nav {
+  margin-bottom: 3.5rem;
+}
+
+.editorial-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.editorial-back-link:hover {
+  color: var(--text-primary);
+  transform: translateX(-4px);
+}
+
+/* --------------------------------------------------------------------------
+   1. Editorial Hero
+   -------------------------------------------------------------------------- */
+.editorial-hero {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 7rem;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.editorial-hero-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.editorial-eyebrow-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.eyebrow-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-secondary, #F43F5E);
+  background: rgba(244, 63, 94, 0.1);
+  padding: 4px 12px;
+  border-radius: 100px;
+}
+
+.eyebrow-year {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.editorial-hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 4.2vw, 3.8rem);
+  font-weight: 750;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin: 0 0 1.25rem;
+}
+
+.editorial-hero-subtitle {
+  font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+  font-weight: 450;
+  line-height: 1.45;
+  color: var(--text-secondary);
+  margin: 0 0 1.5rem;
+}
+
+.editorial-hero-role {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  margin-bottom: 2.5rem;
+}
+
+.editorial-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.editorial-hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.report-cover-wrapper {
+  max-width: 440px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.25), 0 0 0 1px var(--border-color);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s ease;
+  background: var(--bg-secondary);
+}
+
+.report-cover-wrapper:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 35px 75px -15px rgba(0, 0, 0, 0.35), 0 0 0 1px var(--border-hover);
+}
+
+.report-cover-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* --------------------------------------------------------------------------
+   2. Project Overview & Metadata Grid
+   -------------------------------------------------------------------------- */
+.editorial-overview-section {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 5rem;
+  align-items: start;
+  margin-bottom: 7rem;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.overview-lead-text {
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin: 0 0 2rem;
+}
+
+.overview-meta-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 2.25rem;
+}
+
+.meta-group {
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.meta-group:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.meta-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.meta-value {
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.meta-tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.meta-tag {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+/* --------------------------------------------------------------------------
+   3. The Challenge Section
+   -------------------------------------------------------------------------- */
+.editorial-challenge-section {
+  display: grid;
+  grid-template-columns: 0.35fr 0.65fr;
+  gap: 4rem;
+  align-items: start;
+  margin-bottom: 7rem;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section-editorial-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-secondary);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.section-editorial-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.85rem, 2.8vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.challenge-editorial-copy {
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   4. Design Approach Grid
+   -------------------------------------------------------------------------- */
+.editorial-approach-section {
+  margin-bottom: 7rem;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.approach-item {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 16px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.approach-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+}
+
+.approach-item-num {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--accent-secondary);
+  margin-bottom: 1.25rem;
+}
+
+.approach-item-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  margin: 0 0 0.85rem;
+}
+
+.approach-item-desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   5. Selected Spreads Gallery
+   -------------------------------------------------------------------------- */
+.editorial-spreads-section {
+  margin-bottom: 7rem;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.spreads-intro-bar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+}
+
+.spreads-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.spread-display {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.spread-display.full-width {
+  width: 100%;
+}
+
+.spread-row-paired {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.spread-frame {
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #EFEFEF;
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.12), 0 0 0 1px var(--border-color);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease;
+}
+
+[data-theme='dark'] .spread-frame {
+  background: #181818;
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.6), 0 0 0 1px var(--border-color);
+}
+
+.spread-frame:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.22), 0 0 0 1px var(--border-hover);
+}
+
+.spread-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.spread-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  padding: 0 0.5rem;
+  flex-wrap: wrap;
+}
+
+.spread-caption-title {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   6. Key Design Features (Publication System)
+   -------------------------------------------------------------------------- */
+.editorial-system-section {
+  display: grid;
+  grid-template-columns: 0.35fr 0.65fr;
+  gap: 4rem;
+  align-items: start;
+  margin-bottom: 7rem;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.system-features-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem 2rem;
+}
+
+.system-feature-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem;
+}
+
+.feature-desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   7. Deliverables Section
+   -------------------------------------------------------------------------- */
+.editorial-deliverables-section {
+  display: grid;
+  grid-template-columns: 0.35fr 0.65fr;
+  gap: 4rem;
+  align-items: start;
+  margin-bottom: 7rem;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.deliverables-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 2rem;
+}
+
+.deliverable-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.deliverable-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   8. Final Closing CTA
+   -------------------------------------------------------------------------- */
+.editorial-closing-section {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 28px;
+  padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 4vw, 3.5rem);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.closing-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  font-weight: 750;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin: 0 0 1rem;
+}
+
+.closing-text {
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 620px;
+  margin: 0 auto 2.5rem;
+}
+
+.closing-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.closing-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.closing-back-link:hover {
+  color: var(--text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .editorial-hero {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    margin-bottom: 5rem;
+    padding-bottom: 4rem;
+  }
+
+  .editorial-hero-visual {
+    order: -1;
+    justify-content: flex-start;
+  }
+
+  .report-cover-wrapper {
+    max-width: 360px;
+  }
+
+  .editorial-overview-section {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-bottom: 5rem;
+    padding-bottom: 4rem;
+  }
+
+  .approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .editorial-challenge-section,
+  .editorial-system-section,
+  .editorial-deliverables-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 5rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .editorial-case-study {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .report-cover-wrapper {
+    max-width: 100%;
+  }
+
+  .spread-row-paired {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .approach-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .system-features-list {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .deliverables-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .editorial-hero-actions,
+  .closing-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .editorial-hero-actions .cta-button,
+  .editorial-hero-actions .outline-button,
+  .closing-actions .cta-button,
+  .closing-actions .outline-button {
+    width: 100%;
+  }
+}

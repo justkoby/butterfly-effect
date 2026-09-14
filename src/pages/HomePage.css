@@ -129,18 +129,6 @@
   color: rgba(255, 255, 255, 0.55) !important;
 }
 
-.about-seamless-section .about-learn-more-btn {
-  border: 1px solid rgba(255, 255, 255, 0.18) !important;
-  color: #ffffff !important;
-  background: rgba(255, 255, 255, 0.04);
-}
-
-.about-seamless-section .about-learn-more-btn:hover {
-  background: rgba(255, 255, 255, 0.1) !important;
-  border-color: rgba(255, 255, 255, 0.35) !important;
-  color: #ffffff !important;
-}
-
 .about-seamless-section .about-slideshow-box {
   background: #141414 !important;
   border: 1px solid rgba(255, 255, 255, 0.08);

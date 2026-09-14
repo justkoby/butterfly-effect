@@ -294,7 +294,7 @@ export default function InteractiveServicesSection() {
 
                     <Link 
                       to={service.filterLink} 
-                      className="mobile-view-work-btn"
+                      className="cta-button button-accent"
                     >
                       <span>View Related Work</span>
                       <ArrowUpRight size={18} />

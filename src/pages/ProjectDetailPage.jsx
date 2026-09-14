@@ -16,7 +16,7 @@ export default function ProjectDetailPage() {
       <div className="section-container" style={{ padding: '6rem 2rem', textAlign: 'center' }}>
         <h2>Project Not Found</h2>
         <p style={{ margin: '1rem 0 2rem' }}>Sorry, the requested project detail could not be found.</p>
-        <Link to="/projects" className="cta-button" style={{ display: 'inline-flex' }}>
+        <Link to="/projects" className="cta-button">
           Back to Work
         </Link>
       </div>
@@ -181,7 +181,6 @@ export default function ProjectDetailPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="cta-button"
-                  style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.75rem 1.75rem' }}
                 >
                   {project.linkLabel || 'Visit Website'} <ArrowUpRight size={16} />
                 </a>
@@ -192,7 +191,6 @@ export default function ProjectDetailPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="outline-button"
-                  style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.75rem 1.75rem' }}
                 >
                   {project.presentationPdf ? 'View Brand Presentation' : 'View Brand Manual'} <ArrowUpRight size={16} />
                 </a>
@@ -373,7 +371,7 @@ export default function ProjectDetailPage() {
         <div className="section-container" style={{ textAlign: 'center' }}>
           <span style={{ fontSize: '0.9rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '2px' }}>Next Project</span>
           <h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginTop: '1rem', marginBottom: '3rem', color: 'var(--text-primary)' }}>{nextProject.title}</h2>
-          <Link to={`/projects/${nextProject.id}`} className="cta-button" style={{ background: 'var(--text-primary)', color: 'var(--bg-primary)' }}>
+          <Link to={`/projects/${nextProject.id}`} className="cta-button">
             View Case Study <ArrowRight size={18} />
           </Link>
         </div>

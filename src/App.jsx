@@ -6,7 +6,8 @@ import ServicesPage from './pages/ServicesPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ContactPage from './pages/ContactPage';
 import ProjectDetailPage from './pages/ProjectDetailPage';
-import EWasteReportPlaceholderPage from './pages/EWasteReportPlaceholderPage';
+import EWasteCaseStudyPage from './pages/EWasteCaseStudyPage';
+import AASU2025AnnualReportPage from './pages/AASU2025AnnualReportPage';
 import { ArrowRight, MessageCircle, ShoppingBag, ArrowUpRight, Sun, Moon, Menu, X } from 'lucide-react';
 import ThemeToggle from './components/ThemeToggle';
 import './App.css';
@@ -23,7 +24,10 @@ function ScrollToTop() {
 export default function App() {
   const [showWA, setShowWA] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null); // 'pages' or null
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+  const [theme, setTheme] = useState(() => {
+    const saved = localStorage.getItem('theme');
+    return saved === 'light' || saved === 'dark' ? saved : 'dark';
+  });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -146,7 +150,7 @@ export default function App() {
               <li><NavLink to="/contact" className="mobile-nav-link">Contact</NavLink></li>
             </ul>
             <div className="mobile-menu-footer">
-              <Link to="/contact" className="cta-button" style={{ width: '100%', justifyContent: 'center' }}>
+              <Link to="/contact" className="cta-button" style={{ width: '100%' }}>
                 Start a Project <ArrowUpRight size={18} />
               </Link>
             </div>
@@ -161,8 +165,11 @@ export default function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/work/e-waste-management-report" element={<EWasteReportPlaceholderPage />} />
+          <Route path="/work" element={<Navigate to="/projects" replace />} />
+          <Route path="/work/e-waste-management-report" element={<EWasteCaseStudyPage />} />
           <Route path="/projects/e-waste-management-report" element={<Navigate to="/work/e-waste-management-report" replace />} />
+          <Route path="/work/aasu-2025-annual-report" element={<AASU2025AnnualReportPage />} />
+          <Route path="/projects/aasu-2025-annual-report" element={<Navigate to="/work/aasu-2025-annual-report" replace />} />
           <Route path="/projects/:id" element={<ProjectDetailPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<HomePage />} />

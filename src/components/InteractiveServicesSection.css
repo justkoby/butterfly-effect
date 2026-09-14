@@ -470,26 +470,6 @@
     color: #fff;
   }
 
-  .mobile-view-work-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.6rem;
-    background: #F43F5E;
-    color: #FFFFFF;
-    padding: 0.85rem 1.25rem;
-    border-radius: 100px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background 0.3s ease, transform 0.2s ease;
-  }
-
-  .mobile-view-work-btn:hover,
-  .mobile-view-work-btn:active {
-    background: #E11D48;
-    transform: scale(0.98);
-  }
 }
 
 /* Reduced Motion Preferences */
@@ -497,8 +477,7 @@
   .service-row-item,
   .preview-media-layer,
   .service-row-arrow,
-  .mobile-accordion-content,
-  .mobile-view-work-btn {
+  .mobile-accordion-content {
     transition: none !important;
   }
 }

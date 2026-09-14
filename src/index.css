@@ -27,6 +27,13 @@
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 24px;
+
+  --button-radius: var(--radius-md);
+  --button-height: 48px;
+  --button-padding-x: 1rem;
+  --button-gap: 0.5rem;
+  --button-font-size: 0.9rem;
+  --button-font-weight: 600;
   
   --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -157,38 +164,115 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: var(--shadow-md);
 }
 
-.cta-button {
-  background: #0A0A0A;
-  color: #ffffff !important;
-  border-radius: 12px;
-  padding: 12px 20px;
-  font-weight: 600;
+/* Shared CTA system. Filter chips, media controls, and icon buttons are separate. */
+.cta-button,
+.outline-button {
+  --button-ink: var(--text-primary);
+  --button-surface: var(--bg-primary);
+  --button-background: var(--button-ink);
+  --button-color: var(--button-surface);
+  --button-border: var(--button-ink);
+  --button-hover-background: var(--text-secondary);
+  --button-hover-border: var(--text-secondary);
+
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  border: 1px solid #0A0A0A;
-  transition: opacity 0.2s ease;
-}
-
-.cta-button:hover {
-  opacity: 0.9;
+  justify-content: center;
+  gap: var(--button-gap);
+  box-sizing: border-box;
+  height: var(--button-height);
+  min-height: var(--button-height);
+  max-width: 100%;
+  padding: 0 var(--button-padding-x);
+  border: 1px solid var(--button-border);
+  border-radius: var(--button-radius);
+  background: var(--button-background);
+  color: var(--button-color);
+  font-family: var(--font-body);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: background-color var(--transition-base), border-color var(--transition-base), color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
 }
 
 .outline-button {
-  background: transparent;
-  color: #0A0A0A;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 12px;
-  padding: 12px 20px;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: background 0.2s ease;
+  --button-background: transparent;
+  --button-color: var(--button-ink);
+  --button-border: var(--border-hover);
+  --button-hover-background: var(--bg-tertiary);
+  --button-hover-border: var(--button-ink);
 }
 
-.outline-button:hover {
-  background: rgba(0, 0, 0, 0.03);
+/* Fixed dark surfaces retain their white CTAs in either theme. */
+.button-on-dark {
+  --button-ink: #FFFFFF;
+  --button-surface: #0A0A0A;
+  --button-hover-background: #EAEAEA;
+  --button-hover-border: #EAEAEA;
+}
+
+.outline-button.button-on-dark {
+  --button-background: rgba(255, 255, 255, 0.08);
+  --button-border: rgba(255, 255, 255, 0.22);
+  --button-hover-background: rgba(255, 255, 255, 0.16);
+  --button-hover-border: rgba(255, 255, 255, 0.4);
+}
+
+.cta-button.button-accent {
+  --button-background: var(--accent-primary);
+  --button-color: #FFFFFF;
+  --button-border: var(--accent-primary);
+  --button-hover-background: var(--accent-hover);
+  --button-hover-border: var(--accent-hover);
+}
+
+:is(.cta-button, .outline-button) > svg {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+@media (hover: hover) {
+  :is(.cta-button, .outline-button):hover:not(:disabled):not([aria-disabled='true']) {
+    background: var(--button-hover-background);
+    border-color: var(--button-hover-border);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+  }
+}
+
+:is(.cta-button, .outline-button):focus-visible {
+  outline: 3px solid var(--accent-secondary);
+  outline-offset: 3px;
+}
+
+:is(.cta-button, .outline-button):active:not(:disabled):not([aria-disabled='true']) {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Disabled links must also omit href and any activation handler. */
+:is(.cta-button, .outline-button):is(:disabled, [aria-disabled='true']) {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-button,
+  .outline-button {
+    transition: none;
+  }
+
+  :is(.cta-button, .outline-button):hover:not(:disabled):not([aria-disabled='true']) {
+    transform: none;
+  }
 }
 
 .section-title {

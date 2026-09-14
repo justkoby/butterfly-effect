@@ -57,7 +57,11 @@ function generateSitemap() {
 
   // Add dynamic project case study routes
   projectIds.forEach(id => {
-    const projectPath = id === 'e-waste-management-report' ? '/work/e-waste-management-report' : `/projects/${id}`;
+    const publicationRoutes = {
+      'e-waste-management-report': '/work/e-waste-management-report',
+      'aasu-2025-annual-report': '/work/aasu-2025-annual-report'
+    };
+    const projectPath = publicationRoutes[id] || `/projects/${id}`;
     xml += '  <url>\n';
     xml += `    <loc>${BASE_URL}${projectPath}</loc>\n`;
     xml += `    <lastmod>${currentDate}</lastmod>\n`;

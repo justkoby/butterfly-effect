@@ -98,7 +98,7 @@ export default function ContactPage() {
                     ></textarea>
                   </div>
 
-                  <button type="submit" className="cta-button" style={{ width: '100%', justifyContent: 'center' }}>
+                  <button type="submit" className="cta-button" style={{ width: '100%' }}>
                     Send Message <Send size={18} />
                   </button>
                 </form>

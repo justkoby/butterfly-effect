@@ -61,6 +61,22 @@ export const portfolioProjects = [
     "outcome": "The final website presents ViaNexta as a bold, AI-powered platform for physical product creation — helping users understand the value of the platform quickly while giving the brand a stronger digital presence."
   },
   {
+    "id": "aasu-2025-annual-report",
+    "title": "AASU 2025 Annual Report",
+    "category": "Publications",
+    "displayLabel": "ANNUAL REPORT",
+    "role": "Editorial Design · Annual Reporting",
+    "description": "Comprehensive annual report documenting programmes, partnerships, advocacy and student impact across 54 African nations for the All-Africa Students Union.",
+    "image": "/aasu-2025-annual-report.jpg",
+    "route": "/work/aasu-2025-annual-report",
+    "ctaLabel": "Case Study",
+    "link": "https://drive.google.com/drive/folders/14t-KidUoHbsw8q2S5igdXSKBOyjVuTu7",
+    "linkLabel": "View Report",
+    "hasDetailPage": true,
+    "overview": "The AASU 2025 Annual Report brings together a year of programmes, partnerships, advocacy initiatives, institutional activities and student-focused interventions into one cohesive publication.",
+    "imageFit": "contain"
+  },
+  {
     "id": "venus-events",
     "title": "Venus Events — Visual Identity & Brand Manual",
     "category": "Branding & Visual Identity",

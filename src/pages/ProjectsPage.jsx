@@ -134,8 +134,7 @@ export default function ProjectsPage() {
                 href="https://drive.google.com/drive/folders/14t-KidUoHbsw8q2S5igdXSKBOyjVuTu7"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="card-btn card-btn-primary"
-                style={{ padding: '0.65rem 1.4rem' }}
+                className="cta-button"
               >
                 View All Publications <ArrowUpRight size={15} />
               </a>
@@ -237,7 +236,7 @@ export default function ProjectsPage() {
                           <div className="card-actions-grid">
                             <Link 
                               to={targetRoute} 
-                              className="card-btn card-btn-secondary" 
+                              className="outline-button"
                             >
                               {ctaText} <ArrowRight size={14} />
                             </Link>
@@ -245,7 +244,7 @@ export default function ProjectsPage() {
                               href={proj.link}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="card-btn card-btn-primary"
+                              className="cta-button"
                             >
                               {linkText} <ArrowUpRight size={14} />
                             </a>
@@ -256,7 +255,7 @@ export default function ProjectsPage() {
                               target="_blank"
                               rel="noopener noreferrer"
                               className="outline-button"
-                              style={{ width: '100%', justifyContent: 'center', display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.6rem 1rem' }}
+                              style={{ width: '100%' }}
                             >
                               {proj.presentationPdf ? 'View Brand Presentation' : 'View Brand Manual'} <ArrowUpRight size={14} />
                             </a>
@@ -268,7 +267,7 @@ export default function ProjectsPage() {
                             href={proj.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="card-btn card-btn-primary"
+                            className="cta-button"
                             style={{ width: '100%' }}
                           >
                             {linkText} <ArrowUpRight size={14} />
@@ -279,7 +278,7 @@ export default function ProjectsPage() {
                               target="_blank"
                               rel="noopener noreferrer"
                               className="outline-button"
-                              style={{ width: '100%', justifyContent: 'center', display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.6rem 1rem' }}
+                              style={{ width: '100%' }}
                             >
                               {proj.presentationPdf ? 'View Brand Presentation' : 'View Brand Manual'} <ArrowUpRight size={14} />
                             </a>
@@ -289,7 +288,7 @@ export default function ProjectsPage() {
                         <>
                           <Link 
                             to={targetRoute} 
-                            className="card-btn card-btn-primary" 
+                            className="cta-button"
                             style={{ width: '100%' }}
                           >
                             {ctaText} <ArrowRight size={14} />
@@ -300,7 +299,7 @@ export default function ProjectsPage() {
                               target="_blank"
                               rel="noopener noreferrer"
                               className="outline-button"
-                              style={{ width: '100%', justifyContent: 'center', display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.6rem 1rem' }}
+                              style={{ width: '100%' }}
                             >
                               {proj.presentationPdf ? 'View Brand Presentation' : 'View Brand Manual'} <ArrowUpRight size={14} />
                             </a>

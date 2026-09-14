@@ -23,19 +23,42 @@ export default function WorkSlideshow({ height = '100%', borderRadius = '0px', m
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isExiting, setIsExiting] = useState(false);
   const timerRef = useRef(null);
+  const transitionRef = useRef(null);
+  const requestedIndexRef = useRef(0);
   const videoRef = useRef(null);
 
-  const nextSlide = () => {
+  const clearTimer = (ref) => {
+    if (ref.current) {
+      clearTimeout(ref.current);
+      ref.current = null;
+    }
+  };
+
+  const goToSlide = (index) => {
+    const target = ((index % slideshowItems.length) + slideshowItems.length) % slideshowItems.length;
+    // Latest selection wins: ignore repeats of the already-requested slide
+    if (target === requestedIndexRef.current) return;
+    requestedIndexRef.current = target;
+
+    // Cancel any pending autoplay tick and in-flight transition
+    clearTimer(timerRef);
+    clearTimer(transitionRef);
+
     setIsExiting(true);
-    setTimeout(() => {
-      setCurrentIndex((prev) => (prev + 1) % slideshowItems.length);
+    transitionRef.current = setTimeout(() => {
+      transitionRef.current = null;
+      setCurrentIndex(requestedIndexRef.current);
       setIsExiting(false);
     }, 800);
   };
 
+  const nextSlide = () => {
+    goToSlide(requestedIndexRef.current + 1);
+  };
+
   useEffect(() => {
     const currentItem = slideshowItems[currentIndex];
-    
+
     if (currentItem.type === 'video' && currentItem.duration === 'auto') {
       return;
     }
@@ -43,24 +66,28 @@ export default function WorkSlideshow({ height = '100%', borderRadius = '0px', m
     const duration = currentItem.duration || 6000;
     timerRef.current = setTimeout(nextSlide, duration);
 
-    return () => clearTimeout(timerRef.current);
+    return () => clearTimer(timerRef);
   }, [currentIndex]);
+
+  // Clean up all timers on unmount
+  useEffect(() => {
+    return () => {
+      clearTimer(timerRef);
+      clearTimer(transitionRef);
+    };
+  }, []);
 
   const handleVideoEnded = () => {
     const currentItem = slideshowItems[currentIndex];
+    // Ignore stale ended events from a slide the user has already navigated away from
+    if (requestedIndexRef.current !== currentIndex) return;
     if (currentItem.type === 'video' && currentItem.duration === 'auto') {
       nextSlide();
     }
   };
 
   const handleDotClick = (index) => {
-    if (index === currentIndex) return;
-    setIsExiting(true);
-    setTimeout(() => {
-      setCurrentIndex(index);
-      setIsExiting(false);
-    }, 800);
-    clearTimeout(timerRef.current);
+    goToSlide(index);
   };
 
   const currentItem = slideshowItems[currentIndex];

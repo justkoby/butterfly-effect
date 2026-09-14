@@ -73,7 +73,7 @@ export default function HomePage() {
               Small details. Big effect.
             </h2>
             <div style={{ display: 'flex', justifyContent: isMobile ? 'flex-start' : 'flex-end' }}>
-              <Link to="/about" className="hero-cta-btn-secondary about-learn-more-btn">
+              <Link to="/about" className="outline-button button-on-dark">
                 Learn More <ArrowUpRight size={18} />
               </Link>
             </div>
@@ -85,7 +85,7 @@ export default function HomePage() {
             gap: isMobile ? '3rem' : '6rem',
             alignItems: 'center'
           }}>
-            <div className="about-slideshow-box" style={{ flex: '1', position: 'relative', borderRadius: '32px', overflow: 'hidden', height: isMobile ? '320px' : '520px', width: isMobile ? '100%' : '50%' }}>
+            <div className="about-slideshow-box" style={{ flex: isMobile ? 'none' : '1', position: 'relative', borderRadius: '32px', overflow: 'hidden', height: isMobile ? '320px' : '520px', width: isMobile ? '100%' : '50%' }}>
               <WorkSlideshow />
             </div>
             <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: '2rem', width: isMobile ? '100%' : '50%' }}>
@@ -190,17 +190,7 @@ export default function HomePage() {
                   <span style={{ fontSize: '0.85rem', color: '#F43F5E', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 700 }}>{proj.category}</span>
                   <h3 style={{ fontSize: isMobile ? '1.5rem' : '2rem', fontWeight: 600, marginTop: '0.5rem', color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>{proj.title}</h3>
                   {proj.sub && <p style={{ color: '#888', fontSize: '0.95rem', margin: '0.25rem 0 0', fontWeight: 400 }}>{proj.sub}</p>}
-                  <Link to={`/projects/${proj.id}`} style={{ 
-                    display: 'inline-flex', 
-                    alignItems: 'center', 
-                    gap: '0.6rem', 
-                    marginTop: '1.25rem',
-                    fontWeight: 600,
-                    color: 'var(--text-primary)',
-                    fontSize: '1rem',
-                    borderBottom: '1px solid transparent',
-                    paddingBottom: '2px'
-                  }} className="view-project-link">
+                  <Link to={`/projects/${proj.id}`} className="cta-button" style={{ marginTop: '1.25rem' }}>
                     View Project <ArrowUpRight size={20} />
                   </Link>
                 </div>
@@ -219,10 +209,10 @@ export default function HomePage() {
             Let’s build a visual system that helps your brand show up clearly.
           </p>
           <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '1.5rem' }}>
-            <Link to="/contact" className="hero-cta-primary">
+            <Link to="/contact" className="cta-button">
               Start a Project <ArrowRight size={18} />
             </Link>
-            <Link to="/projects" className="hero-cta-secondary" style={{ border: '1px solid var(--border-color)' }}>
+            <Link to="/projects" className="outline-button">
               View Work <ArrowUpRight size={18} />
             </Link>
           </div>
