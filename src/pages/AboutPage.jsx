@@ -422,14 +422,6 @@ export default function AboutPage() {
           Image & video slides from the FLYERS folder matching reference
           =================================================================== */}
       <section className="about-flyers-section" aria-label="Campaigns and Motion Gallery">
-        <div className="about-flyers-header">
-          <span className="about-section-kicker">Campaigns &amp; Motion</span>
-          <h2 className="about-flyers-title">Culture, Art &amp; Visual Expressions</h2>
-          <p className="about-flyers-subtitle">
-            A dynamic stream of posters, event collateral, brand activations, and motion experiments from the studio.
-          </p>
-        </div>
-
         <div className="about-marquee-container">
           {/* Row 1 — Slides Left (two identical groups; animating -50% moves exactly one group) */}
           <div className="about-marquee-track about-marquee-row-1">
@@ -459,9 +451,6 @@ export default function AboutPage() {
                         className="about-flyer-media"
                       />
                     )}
-                    <div className="about-flyer-overlay">
-                      <span className="about-flyer-label">{item.title}</span>
-                    </div>
                   </div>
                 ))}
               </div>
@@ -496,9 +485,6 @@ export default function AboutPage() {
                         className="about-flyer-media"
                       />
                     )}
-                    <div className="about-flyer-overlay">
-                      <span className="about-flyer-label">{item.title}</span>
-                    </div>
                   </div>
                 ))}
               </div>

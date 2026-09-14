@@ -8,6 +8,7 @@ import ContactPage from './pages/ContactPage';
 import ProjectDetailPage from './pages/ProjectDetailPage';
 import EWasteCaseStudyPage from './pages/EWasteCaseStudyPage';
 import AASU2025AnnualReportPage from './pages/AASU2025AnnualReportPage';
+import FIECaseStudyPage from './pages/FIECaseStudyPage';
 import { ArrowRight, MessageCircle, ShoppingBag, ArrowUpRight, Sun, Moon, Menu, X } from 'lucide-react';
 import ThemeToggle from './components/ThemeToggle';
 import './App.css';
@@ -170,6 +171,8 @@ export default function App() {
           <Route path="/projects/e-waste-management-report" element={<Navigate to="/work/e-waste-management-report" replace />} />
           <Route path="/work/aasu-2025-annual-report" element={<AASU2025AnnualReportPage />} />
           <Route path="/projects/aasu-2025-annual-report" element={<Navigate to="/work/aasu-2025-annual-report" replace />} />
+          <Route path="/work/financial-innovation-and-enterprise" element={<FIECaseStudyPage />} />
+          <Route path="/projects/financial-innovation-and-enterprise" element={<Navigate to="/work/financial-innovation-and-enterprise" replace />} />
           <Route path="/projects/:id" element={<ProjectDetailPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<HomePage />} />

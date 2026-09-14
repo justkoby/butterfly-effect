@@ -4,8 +4,20 @@ import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import HeroProjectGallery from '../components/HeroProjectGallery';
 import WorkSlideshow from '../components/WorkSlideshow';
 import InteractiveServicesSection from '../components/InteractiveServicesSection';
+import PinnedFeaturedProject from '../components/PinnedFeaturedProject';
+import { portfolioProjects } from '../data/portfolioProjects';
 import SEO from '../components/SEO';
 import './HomePage.css';
+
+// The four supporting projects shown under the flagship showcases, ordered by
+// discipline. Details (title, image, role, route) resolve from the canonical
+// portfolioProjects source, so reordering or swapping is a one-line change.
+const SUPPORTING_WORK = [
+  { id: 'e-waste-management-report', category: 'Report Design' },
+  { id: 'all-africa-students-union', category: 'Brand Identity' },
+  { id: 'idbf', category: 'Campaign & Event' },
+  { id: 'ug-src-welfare-scheme', category: 'Website Design' }
+];
 
 
 export default function HomePage() {
@@ -154,48 +166,40 @@ export default function HomePage() {
             <span style={{ color: '#F43F5E', fontWeight: 700, fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '3px' }}>Portfolio</span>
             <h2 style={{ fontSize: isMobile ? '38px' : '64px', fontWeight: 700, marginTop: '1rem', letterSpacing: '-0.03em' }}>Selected Work</h2>
           </div>
+        </div>
 
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', 
-            gap: isMobile ? '3rem' : '5rem' 
-          }}>
-            {[
-              { id: 'ug-src-welfare', title: 'UG SRC Welfare Scheme', category: 'Digital Platform', sub: 'UI/UX Design & Development', img: '/welfare-thumbnail-01.jpg' },
-              { id: 'idbf', title: 'IDBF', category: 'Campaign & Event Design', img: '/cover-idbf-01.jpg' },
-              { id: 'all-africa-students-union', title: 'AASU — Brand Manual & Visual Identity', category: 'Brand Identity System', sub: 'Visual Identity · Brand Manual', img: '/AASU BRAND MANUAL.jpg' },
-              { id: 'vianexta', title: 'ViaNexta — Sales & Pitch Deck', category: 'Strategic Presentation', sub: 'Presentation Design · Pitch Deck', img: '/vianexta sales pitch.jpg' },
-              { id: 'foreign-africa', title: 'Foreign Africa', category: 'Digital & Web', img: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1000' },
-              { id: 'democrat-union', title: 'Democrat Union of Africa', category: 'Digital & Web', img: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=1000' },
-              { id: 'global-student', title: 'Global Student Forum', category: 'Digital & Web', img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000' },
-              { id: 'lomokie', title: 'Lomokie', category: 'Fashion / Lifestyle', img: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=1000' }
-            ].map((proj) => (
-              <div key={proj.id} className="project-card-refined" style={{ display: 'flex', flexDirection: 'column', gap: '1.75rem' }}>
-                <div style={{ 
-                  width: '100%', 
-                  aspectRatio: '16/11', 
-                  borderRadius: '28px', 
-                  overflow: 'hidden',
-                  background: '#f0f0f0',
-                  boxShadow: '0 10px 30px rgba(0,0,0,0.03)'
-                }}>
-                  <img 
-                    src={proj.img} 
-                    alt={proj.title} 
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)' }} 
-                    className="hover-zoom-trigger"
-                  />
-                </div>
-                <div>
-                  <span style={{ fontSize: '0.85rem', color: '#F43F5E', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 700 }}>{proj.category}</span>
-                  <h3 style={{ fontSize: isMobile ? '1.5rem' : '2rem', fontWeight: 600, marginTop: '0.5rem', color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>{proj.title}</h3>
-                  {proj.sub && <p style={{ color: '#888', fontSize: '0.95rem', margin: '0.25rem 0 0', fontWeight: 400 }}>{proj.sub}</p>}
-                  <Link to={`/projects/${proj.id}`} className="cta-button" style={{ marginTop: '1.25rem' }}>
-                    View Project <ArrowUpRight size={20} />
-                  </Link>
-                </div>
-              </div>
-            ))}
+        {/* Flagship showcase: a scroll-pinned sequence that runs nearly
+            edge-to-edge, outside the centred container. */}
+        <PinnedFeaturedProject />
+
+        <div className="section-container">
+          <div className="sw-grid">
+            {SUPPORTING_WORK.map(({ id, category }) => {
+              const proj = portfolioProjects.find((p) => p.id === id);
+              if (!proj) return null;
+              const to = proj.route || `/projects/${proj.id}`;
+              return (
+                <Link key={id} to={to} className="sw-card">
+                  <div className="sw-card-media">
+                    <img src={proj.image} alt={proj.title} loading="lazy" decoding="async" />
+                  </div>
+                  <div className="sw-card-body">
+                    <span className="sw-card-category">{category}</span>
+                    <h3 className="sw-card-title">{proj.title}</h3>
+                    {proj.role && <p className="sw-card-role">{proj.role}</p>}
+                    <span className="sw-card-link">
+                      View Project <ArrowUpRight size={16} className="sw-card-arrow" />
+                    </span>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+
+          <div style={{ textAlign: 'center', marginTop: 'clamp(2.5rem, 5vw, 4rem)' }}>
+            <Link to="/projects" className="cta-button">
+              Explore More Projects <ArrowRight size={18} />
+            </Link>
           </div>
         </div>
       </section>

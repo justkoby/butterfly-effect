@@ -79,7 +79,11 @@ body {
   background-color: var(--bg-primary);
   min-height: 100vh;
   line-height: 1.6;
+  /* `clip` prevents horizontal overflow without creating a scroll container,
+     which would otherwise break `position: sticky` in the pinned showcase.
+     `hidden` stays first as a fallback for browsers without `clip` support. */
   overflow-x: hidden;
+  overflow-x: clip;
 }
 
 #root {

@@ -12,6 +12,11 @@ const staticRoutes = [
   { path: '/contact', changefreq: 'monthly', priority: '0.8' }
 ];
 
+// Flagship case-study routes not backed by portfolioProjects.js entries
+const caseStudyRoutes = [
+  '/work/financial-innovation-and-enterprise'
+];
+
 function getProjects() {
   const filePath = path.join(__dirname, '../src/data/portfolioProjects.js');
   
@@ -67,6 +72,16 @@ function generateSitemap() {
     xml += `    <lastmod>${currentDate}</lastmod>\n`;
     xml += `    <changefreq>weekly</changefreq>\n`;
     xml += `    <priority>0.7</priority>\n`;
+    xml += '  </url>\n';
+  });
+
+  // Add standalone case-study routes
+  caseStudyRoutes.forEach((caseStudyPath) => {
+    xml += '  <url>\n';
+    xml += `    <loc>${BASE_URL}${caseStudyPath}</loc>\n`;
+    xml += `    <lastmod>${currentDate}</lastmod>\n`;
+    xml += `    <changefreq>monthly</changefreq>\n`;
+    xml += `    <priority>0.8</priority>\n`;
     xml += '  </url>\n';
   });
 

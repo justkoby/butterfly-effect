@@ -200,3 +200,140 @@
     padding: 64px 16px;
   }
 }
+
+/* ==========================================================================
+   Selected Work — supporting project cards
+   Lighter, smaller than the flagship bento. Whole card is clickable, image
+   scales subtly on hover, a compact arrow nudges, and focus is visible.
+   ========================================================================== */
+
+.sw-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.sw-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 14px;
+}
+
+.sw-card:focus-visible {
+  outline: 3px solid var(--accent-secondary);
+  outline-offset: 4px;
+}
+
+.sw-card-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--bg-tertiary);
+}
+
+.sw-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sw-card:hover .sw-card-media img {
+  transform: scale(1.05);
+}
+
+.sw-card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.sw-card-category {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-primary);
+}
+
+.sw-card-title {
+  margin: 0.4rem 0 0;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+.sw-card-role {
+  margin: 0.3rem 0 0;
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.sw-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.sw-card-arrow {
+  transition: transform 0.3s ease;
+}
+
+.sw-card:hover .sw-card-link {
+  color: var(--text-primary);
+}
+
+.sw-card:hover .sw-card-arrow {
+  transform: translate(2px, -2px);
+}
+
+/* Tablet: two columns */
+@media (max-width: 1024px) {
+  .sw-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+/* Small mobile: one column */
+@media (max-width: 640px) {
+  .sw-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .sw-card-title {
+    font-size: 1.15rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sw-card-media img,
+  .sw-card-arrow,
+  .sw-card-link {
+    transition: none;
+  }
+
+  .sw-card:hover .sw-card-media img {
+    transform: none;
+  }
+
+  .sw-card:hover .sw-card-arrow {
+    transform: none;
+  }
+}

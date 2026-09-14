@@ -1,0 +1,219 @@
+/* ==========================================================================
+   PinnedFeaturedProject — scroll-pinned flagship sequence
+   A tall section pins a viewport-height stage; scroll progress (published as
+   --pp-* custom properties on .pinned-project by useScrollProgress) drives the
+   title rise, gradient deepening, mosaic exit and CTA fade.
+   ========================================================================== */
+
+.pinned-project {
+  position: relative;
+  width: 100%;
+  /* Tall scroll runway that keeps the stage pinned. */
+  height: 260vh;
+  /* Defaults so the very first painted frame (before rAF) looks correct. */
+  --pp-fit: 1;
+  --pp-title-opacity: 0;
+  --pp-title-y: 72px;
+  --pp-meta-opacity: 0;
+  --pp-meta-y: 52px;
+  --pp-grad-boost: 0;
+  --pp-mosaic-opacity: 1;
+  --pp-mosaic-scale: 1;
+  --pp-mosaic-y: 0px;
+  --pp-cta-opacity: 1;
+}
+
+.pinned-project-stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* --- Mosaic (the bento) ---------------------------------------------------- */
+
+.pinned-project-mosaic {
+  /* Near-full-bleed: 16px of breathing room per side, no centring max-width.
+     The stage/section are already full viewport width, so 100% here tracks the
+     layout viewport (excluding the scrollbar) and cannot cause horizontal
+     overflow the way a raw 100vw would. */
+  width: calc(100% - 32px);
+  max-width: none;
+  margin-inline: auto;
+  transform: translate3d(0, var(--pp-mosaic-y), 0)
+    scale(calc(var(--pp-fit) * var(--pp-mosaic-scale)));
+  opacity: var(--pp-mosaic-opacity);
+  will-change: transform, opacity;
+}
+
+/* Neutralise the standalone margins/width — the stage controls sizing here. */
+.pinned-project-mosaic .featured-project--pinned {
+  width: 100%;
+  margin: 0;
+}
+
+/* Keep the circular CTA legible above the dissolve until it fades out. */
+.pinned-project-mosaic .bento-magnetic-circle {
+  opacity: var(--pp-cta-opacity);
+}
+
+/* --- Bottom dissolve gradient ---------------------------------------------- */
+
+.pinned-project-gradient {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 62%;
+  pointer-events: none;
+  z-index: 2;
+  /* Transparent through the CTA band, melting into the page background. */
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 30%,
+    color-mix(in srgb, var(--bg-primary) 45%, transparent) 62%,
+    var(--bg-primary) 100%
+  );
+}
+
+/* Boost layer deepens slightly as the title enters (readability). */
+.pinned-project-gradient--boost {
+  opacity: var(--pp-grad-boost);
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 24%,
+    color-mix(in srgb, var(--bg-primary) 70%, transparent) 60%,
+    var(--bg-primary) 100%
+  );
+}
+
+/* --- Title / metadata overlay ---------------------------------------------- */
+
+.pinned-project-text {
+  position: absolute;
+  left: clamp(24px, 5vw, 84px);
+  right: clamp(24px, 5vw, 84px);
+  bottom: clamp(38px, 11vh, 120px);
+  z-index: 4;
+  max-width: 1100px;
+  pointer-events: none;
+}
+
+.pinned-project-title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(2.3rem, 6.4vw, 5.2rem);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  text-align: left;
+  color: #FFFFFF;
+  opacity: var(--pp-title-opacity);
+  transform: translate3d(0, var(--pp-title-y), 0);
+  will-change: transform, opacity;
+  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.45);
+}
+
+.pinned-project-meta {
+  margin: 1rem 0 0;
+  font-size: clamp(0.95rem, 1.5vw, 1.25rem);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.72);
+  opacity: var(--pp-meta-opacity);
+  transform: translate3d(0, var(--pp-meta-y), 0);
+  will-change: transform, opacity;
+}
+
+.pinned-project-disciplines {
+  margin: 0.6rem 0 0;
+  font-size: clamp(0.78rem, 1.1vw, 0.95rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--pp-accent, #F43F5E);
+  opacity: var(--pp-meta-opacity);
+  transform: translate3d(0, var(--pp-meta-y), 0);
+  will-change: transform, opacity;
+}
+
+/* --- Tablet ---------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+  .pinned-project {
+    height: 240vh;
+  }
+}
+
+/* --- Mobile: shorter runway, tighter type ---------------------------------- */
+
+@media (max-width: 768px) {
+  .pinned-project {
+    height: 200vh;
+  }
+
+  .pinned-project-mosaic {
+    /* The Selected Work section already pads 16px on mobile. */
+    width: 100%;
+    margin-inline: 0;
+  }
+
+  .pinned-project-text {
+    left: 20px;
+    right: 20px;
+    bottom: clamp(32px, 9vh, 72px);
+  }
+}
+
+/* --- Reduced motion -------------------------------------------------------- */
+/* The component renders the static bento (with its own info bar) instead of
+   the pinned stage; these rules keep that fallback clean and un-pinned. */
+
+.pinned-project--reduced {
+  height: auto;
+  padding: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pinned-project {
+    height: auto;
+  }
+
+  .pinned-project-stage {
+    position: static;
+    height: auto;
+    overflow: visible;
+  }
+
+  .pinned-project-mosaic {
+    transform: none;
+    opacity: 1;
+  }
+
+  .pinned-project-gradient {
+    display: none;
+  }
+
+  .pinned-project-text {
+    position: static;
+    max-width: none;
+    margin-top: 1.5rem;
+  }
+
+  .pinned-project-title,
+  .pinned-project-meta,
+  .pinned-project-disciplines {
+    opacity: 1;
+    transform: none;
+  }
+
+  .pinned-project-mosaic .bento-magnetic-circle {
+    opacity: 1;
+  }
+}

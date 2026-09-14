@@ -618,32 +618,6 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.about-flyers-header {
-  text-align: center;
-  max-width: 760px;
-  margin: 0 auto 4rem;
-  padding: 0 1.5rem;
-}
-
-.about-flyers-header .about-section-kicker {
-  color: #F43F5E;
-}
-
-.about-flyers-title {
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  color: #FFFFFF;
-  margin: 0 0 1.25rem;
-}
-
-.about-flyers-subtitle {
-  font-size: 1.1rem;
-  line-height: 1.65;
-  color: rgba(255, 255, 255, 0.75);
-  margin: 0;
-}
-
 /* Marquee Container with edge mask */
 .about-marquee-container {
   width: 100%;
@@ -750,39 +724,6 @@
   height: 100%;
   object-fit: cover;
   display: block;
-}
-
-/* Dark ambient vignette on cards */
-.about-flyer-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.05) 0%,
-    rgba(0, 0, 0, 0.15) 50%,
-    rgba(0, 0, 0, 0.75) 100%
-  );
-  opacity: 0.85;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-  display: flex;
-  align-items: flex-end;
-  padding: 1.25rem 1rem;
-}
-
-.about-flyer-card:hover .about-flyer-overlay {
-  opacity: 0.95;
-}
-
-.about-flyer-label {
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: #FFFFFF;
-  letter-spacing: 0.02em;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 /* ==========================================================================
